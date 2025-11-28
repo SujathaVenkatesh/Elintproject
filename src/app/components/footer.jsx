@@ -908,124 +908,128 @@ export default function Footer() {
           </div>
         </div>
         {/* ✅ Rise Every Seconds Section */}
-        <div className="flex flex-col lg:flex-row gap-8 md:gap-10 mt-12 md:mt-16 lg:mt-10">
-          <h2 className="text-xl md:text-2xl font-semibold lg:flex-1">
-            Rise Every Seconds
-          </h2>
-          <div className="flex-[1.5] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 text-sm">
-            {/* Resources */}
-            <div>
-              <h3 className="text-base font-semibold mb-4 -ml-3">Resources</h3>
-              <ul className="space-y-2">
-                {[
-                  { name: "Blog", tag: "New" },
-                  { name: "Elint Cloud" },
-                  { name: "UseCase", tag: "New" },
-                ].map((item, i) => (
-                  <li
-                    key={i}
-                    className="group flex  -ml-3 items-center justify-between w-full max-w-[280px] cursor-pointer text-[14.5px] whitespace-nowrap transition-colors duration-300 hover:text-[#007bff]"
-                  >
-                    <div className="flex items-center gap-2 flex-1 pr-4">
-                      <span>{item.name}</span>
-                      {item.tag && (
-                        <span className="bg-gray-200 text-[9px] px-2 py-[1px] rounded">
-                          {item.tag}
-                        </span>
-                      )}
-                    </div>
-                    <div className="relative w-3 h-3 flex-shrink-0 mr-4">
-                      <img
-                        src="/fonor.png"
-                        alt="arrow"
-                        className="absolute inset-0 w-3 h-3 opacity-100 transition-opacity duration-300 group-hover:opacity-0"
-                      />
-                      <img
-                               src="/foblue.png"
+      <div className="flex flex-col lg:flex-row gap-8 md:gap-10 mt-12 md:mt-16 lg:mt-10">
 
-                        alt="arrow-blue"
-                        className="absolute inset-0 w-3 h-3 object-contain
-             opacity-0 translate-x-5
-             transition-all duration-500 ease-in-out
-             group-hover:opacity-100 group-hover:-translate-x-10
-            "
-                      />
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Company */}
-            <div>
-              <h3 className="text-base font-semibold mb-4 ml-2 ">Company</h3>
-              <ul className="space-y-2 ml-2">
-                {["About Us", "Careers", "Events"].map((item, i) => (
-                  <li
-                    key={i}
-                    className="group flex items-center justify-between w-full max-w-[280px] cursor-pointer text-[14.5px] whitespace-nowrap transition-colors duration-300 hover:text-[#007bff]"
-                  >
-                    <span className="flex-1 pr-4">{item}</span>
-                    <div className="relative w-3 h-3 flex-shrink-0 mr-7">
-                      <img
-                         src="/fonor.png"
-                        alt="arrow"
-                        className="absolute inset-0 w-3 h-3 opacity-100 transition-opacity duration-300 group-hover:opacity-0"
-                      />
-                      <img
-                               src="/foblue.png"
+  <h2 className="text-xl md:text-2xl font-semibold lg:flex-1">
+    Rise Every Seconds
+  </h2>
 
-                        alt="arrow-blue"
-                        className="absolute inset-0 w-3 h-3 object-contain
-             opacity-0 translate-x-5
-             transition-all duration-500 ease-in-out
-             group-hover:opacity-100 group-hover:-translate-x-10
-             "
-                      />
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Download */}
-            <div>
-              <h3 className="text-base font-semibold mb-4 -ml-3">Download</h3>
-              <ul className="space-y-2 -ml-3">
-                {["Cloud - Android & IOS", "Products Data Sheet"].map(
-                  (item, i) => (
-                    <li
-                      key={i}
-                      className="group flex items-center justify-between w-full max-w-[280px] cursor-pointer text-[14.5px] whitespace-nowrap transition-colors duration-300 hover:text-[#007bff]"
-                    >
-                      <span className="flex-1 pr-4">{item}</span>
-                      <div className="relative w-3 h-3 flex-shrink-0 mr-12">
-                        <img
-                          src="/fonor.png"
-                          alt="arrow"
-                          className="absolute inset-0 w-3 h-3 opacity-100 transition-opacity duration-300 group-hover:opacity-0"
-                        />
-                        {/* <img
-                          src="/Arrow.png"
-                          alt="arrow-blue"
-                          className="absolute inset-0 w-3 h-3 opacity-0 -translate-x-10 group-hover:opacity-100 group-hover:translate-x-[-1px] transition-all duration-500 ease-in-out filter brightness-0 invert-[27%] sepia saturate-[2500%] hue-rotate-[180deg]"
-                        /> */}
-                        <img
-                                 src="/foblue.png"
+  <div className="flex-[1.5] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-gray-700 text-sm">
 
-                          alt="arrow-blue"
-                          className="absolute inset-0 w-3 h-3 object-contain
-             opacity-0 translate-x-5
-             transition-all duration-500 ease-in-out
-             group-hover:opacity-100 group-hover:-translate-x-10
-              "
-                        />
-                      </div>
-                    </li>
-                  )
-                )}
-              </ul>
+    {/* Resources */}
+    <div>
+      <h3 className="text-base font-semibold mb-4">Resources</h3>
+      <ul className="space-y-2">
+        {[
+          { name: "Blog", tag: "New" },
+          { name: "Elint Cloud" },
+          { name: "UseCase", tag: "New" },
+        ].map((item, i) => (
+          <li
+            key={i}
+            className="group flex items-center justify-between cursor-pointer text-[14.5px] 
+            transition-colors duration-300 hover:text-[#007bff]"
+          >
+            <div className="flex items-center gap-2 flex-1">
+              <span className="truncate">{item.name}</span>
+
+              {item.tag && (
+                <span className="bg-gray-200 text-[9px] px-2 py-[1px] rounded">
+                  {item.tag}
+                </span>
+              )}
             </div>
-          </div>
-        </div>
+
+            <div className="relative w-3 h-3 flex-shrink-0">
+              <img
+                src="/fonor.png"
+                alt="arrow"
+                className="absolute inset-0 w-3 h-3 opacity-100 
+                transition-opacity duration-300 group-hover:opacity-0"
+              />
+              <img
+                src="/foblue.png"
+                alt="arrow-blue"
+                className="absolute inset-0 w-3 h-3 object-contain
+                opacity-0 translate-x-5
+                transition-all duration-500 ease-in-out
+                group-hover:opacity-100 group-hover:-translate-x-10"
+              />
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Company */}
+    <div>
+      <h3 className="text-base font-semibold mb-4">Company</h3>
+      <ul className="space-y-2">
+        {["About Us", "Careers", "Events"].map((item, i) => (
+          <li
+            key={i}
+            className="group flex items-center justify-between cursor-pointer text-[14.5px] 
+            transition-colors duration-300 hover:text-[#007bff]"
+          >
+            <span className="flex-1 truncate">{item}</span>
+
+            <div className="relative w-3 h-3 flex-shrink-0">
+              <img
+                src="/fonor.png"
+                alt="arrow"
+                className="absolute inset-0 w-3 h-3 opacity-100 
+                transition-opacity duration-300 group-hover:opacity-0"
+              />
+              <img
+                src="/foblue.png"
+                alt="arrow-blue"
+                className="absolute inset-0 w-3 h-3 object-contain
+                opacity-0 translate-x-5
+                transition-all duration-500 ease-in-out
+                group-hover:opacity-100 group-hover:-translate-x-10"
+              />
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Download */}
+    <div>
+      <h3 className="text-base font-semibold mb-4">Download</h3>
+      <ul className="space-y-2">
+        {["Cloud - Android & IOS", "Products Data Sheet"].map((item, i) => (
+          <li
+            key={i}
+            className="group flex items-center justify-between cursor-pointer text-[14.5px] 
+            transition-colors duration-300 hover:text-[#007bff]"
+          >
+            <span className="flex-1 truncate">{item}</span>
+
+            <div className="relative w-3 h-3 flex-shrink-0">
+              <img
+                src="/fonor.png"
+                alt="arrow"
+                className="absolute inset-0 w-3 h-3 opacity-100 
+                transition-opacity duration-300 group-hover:opacity-0"
+              />
+              <img
+                src="/foblue.png"
+                alt="arrow-blue"
+                className="absolute inset-0 w-3 h-3 object-contain
+                opacity-0 translate-x-5
+                transition-all duration-500 ease-in-out
+                group-hover:opacity-100 group-hover:-translate-x-10"
+              />
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+  </div>
+</div>
+
         <div className="w-full flex justify-center mt-8">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-[90%] mx-auto">
     {companies.map((c, idx) => (

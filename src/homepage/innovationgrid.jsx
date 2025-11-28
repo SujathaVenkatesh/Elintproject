@@ -1,14 +1,60 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react"; // Optional: If you want JS-based detection, but we'll use Tailwind classes for simplicity
 
+// --- Shared Components ---
+
+/**
+ * Custom styled 'Explore Features' button component.
+ * Features complex gradient background and hover arrow animation.
+ */
+const ExploreButton = () => (
+  <button 
+    className="relative px-3 py-2 cursor-pointer rounded-full font-medium overflow-visible group transition-all duration-300"
+    style={{
+      fontFamily: 'Manrope, sans-serif',
+      fontSize: '15.2px',
+      fontWeight: 500,
+      color: 'white',
+      textShadow: '0px 4px 14px rgba(0, 0, 0, 0.33)',
+      background: 'linear-gradient(182.46deg, #55ABEE -59.43%, #55ABEE 8.68%, #55ABEE 21.36%, #55ABEE 76.22%, #E4F1FB 131.66%)',
+      boxShadow: `
+        0px 1.53px 10.41px 0px #00000030,
+        inset 0px -0.77px 9.8px 0px #71BBF6,
+        0px 15.31px 73.7px 0px #00000033
+      `
+    }}
+  >
+    <span 
+      className="absolute left-1/2 bottom-0 -translate-x-1/2 -translate-y-[10%] 
+                 w-[90%] h-[10px] rounded-full opacity-0 
+                 transition-all duration-500 ease-out
+                 group-hover:opacity-90"
+    />
+    <span className="relative z-10 flex justify-center items-center gap-2 text-[12.35px]">
+      Explore Features
+      <img
+        src="/Layer_1.png"
+        alt="arrow"
+        className="w-[20.96px] h-[24.91px] transition-all duration-500 transform 
+                   group-hover:translate-x-7 group-hover:opacity-0"
+      />
+    </span>
+  </button>
+);
+
+
+// --- Desktop Component (lg+) ---
+
+/**
+ * Displays the product grid in a specialized 12-column layout for large screens.
+ */
 const DesktopInnovationsGrid = () => {
   return (
     <div className="hidden lg:block"> {/* Hidden on mobile, shown on lg+ */}
       <div className="max-w-5xl xl:max-w-7xl mx-auto">
-        {/* Header - Shared, but duplicated for simplicity; in practice, extract to shared */}
-        <div className="mb-6 md:mb-6 lg:mb-6 text-center lg:text-left">
+        {/* Header - Desktop */}
+        <div className="mb-6 text-center lg:text-left">
           <h1 className="text-[24px] md:text-[29px] font-light lg:text-[37px] text-[#1A1A1C] mb-4 tracking-[0.02em] leading-[1.15]">
             Top Innovations Powering the Future
           </h1>
@@ -17,9 +63,10 @@ const DesktopInnovationsGrid = () => {
           </p>
         </div>
 
-        {/* Desktop GRID STRUCTURE */}
+        {/* Desktop GRID STRUCTURE (12-Column Layout) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-2.5 sm:gap-3">
-          {/* 1️⃣ Ultralevel Max - Left Side (4 cols on desktop) */}
+          
+          {/* 1️⃣ Ultralevel Max - Left Side (4 cols) */}
           <div className="lg:col-span-4 bg-white h-[520px] border border-gray-200 shadow-sm hover:shadow-md rounded-lg transition-all duration-300 p-1.5 sm:p-5 flex flex-col">
             {/* Image Container */}
             <div className="flex justify-center lg:justify-end mt-[-30] mr-[20]">
@@ -29,9 +76,9 @@ const DesktopInnovationsGrid = () => {
                 width={400}
                 height={400}
                 className="object-contain drop-shadow-sm 
-                           w-40 h-40 
-                           sm:w-52 sm:h-52 
-                           lg:w-[190px] lg:h-[350px]"
+                            w-40 h-40 
+                            sm:w-52 sm:h-52 
+                            lg:w-[190px] lg:h-[350px]"
               />
             </div>
 
@@ -65,10 +112,11 @@ const DesktopInnovationsGrid = () => {
             </div>
           </div>
 
-          {/* Right Side Container (8 cols on desktop) */}
+          {/* Right Side Container (8 cols) */}
           <div className="lg:col-span-8 flex flex-col gap-3 sm:gap-4 lg:gap-3">
-            {/* 2️⃣ Top Row Inside Right - Ultralevel Display + Voyager 4G */}
+            {/* 2️⃣ Top Row Inside Right - Ultralevel Display + Voyager 4G (2 columns) */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 lg:gap-2">
+              
               {/* Ultralevel Display */}
               <div className=" rounded-lg border border-gray-200 h-[194.71392822265625px] shadow-sm hover:shadow-md transition-all duration-300 p-1.5 sm:p-5 flex flex-col sm:flex-row items-center justify-between">
                 {/* Text Content */}
@@ -130,7 +178,7 @@ const DesktopInnovationsGrid = () => {
               </div>
             </div>
 
-            {/* 3️⃣ Bottom Row - Ultralevel Pro Series */}
+            {/* 3️⃣ Bottom Row - Ultralevel Pro Series (Full width) */}
             <div className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md 
               transition-all duration-300 p-1.5 sm:p-4 flex flex-col lg:flex-row items-start 
               justify-between relative h-[315px]">
@@ -211,11 +259,17 @@ const DesktopInnovationsGrid = () => {
   );
 };
 
+
+// --- Mobile Component (Up to lg) ---
+
+/**
+ * Displays the product grid in a simple vertical stack for mobile and tablet screens.
+ */
 const MobileInnovationsGrid = () => {
   return (
     <div className="lg:hidden block"> {/* Shown on mobile up to lg, hidden on lg+ */}
       <div className="max-w-5xl xl:max-w-7xl mx-auto px-4">
-        {/* Mobile Header - Adjusted for smaller screens */}
+        {/* Mobile Header */}
         <div className="mb-6 text-center">
           <h1 className="text-[20px] md:text-[24px] font-light text-[#1A1A1C] mb-3 tracking-[0.02em] leading-[1.15]">
             Top Innovations Powering the Future
@@ -225,9 +279,10 @@ const MobileInnovationsGrid = () => {
           </p>
         </div>
 
-        {/* Mobile: Vertical Stack - All full width, auto heights for responsiveness */}
+        {/* Mobile: Vertical Stack */}
         <div className="space-y-4 sm:space-y-5">
-          {/* 1️⃣ Ultralevel Max - Full width, stacked image top center, text left below, button right below text */}
+          
+          {/* 1️⃣ Ultralevel Max */}
           <div className="bg-white h-auto min-h-[400px] border border-gray-200 shadow-sm hover:shadow-md rounded-lg transition-all duration-300 p-3 sm:p-4 flex flex-col">
             {/* Image Container - Centered on mobile */}
             <div className="flex justify-center mb-3 mt-[0px]">
@@ -265,7 +320,7 @@ const MobileInnovationsGrid = () => {
             </div>
           </div>
 
-          {/* 2️⃣ Ultralevel Display - Full width, image center, text left, button right below */}
+          {/* 2️⃣ Ultralevel Display */}
           <div className="bg-white h-auto min-h-[250px] border border-gray-200 shadow-sm hover:shadow-md rounded-lg transition-all duration-300 p-3 sm:p-4 flex flex-col">
             {/* Image - Centered */}
             <div className="flex justify-center mb-3">
@@ -292,7 +347,7 @@ const MobileInnovationsGrid = () => {
             </div>
           </div>
 
-          {/* 3️⃣ Voyager 4G - Full width, image center, text left, button right below */}
+          {/* 3️⃣ Voyager 4G */}
           <div className="bg-white h-auto min-h-[250px] border border-gray-200 shadow-sm hover:shadow-md rounded-lg transition-all duration-300 p-3 sm:p-4 flex flex-col">
             {/* Image - Centered */}
             <div className="flex justify-center mb-3">
@@ -319,7 +374,7 @@ const MobileInnovationsGrid = () => {
             </div>
           </div>
 
-          {/* 4️⃣ Ultralevel Pro Series - Full width, text left, image center below, button right below image */}
+          {/* 4️⃣ Ultralevel Pro Series */}
           <div className="bg-white h-auto min-h-[350px] border border-gray-200 shadow-sm hover:shadow-md rounded-lg transition-all duration-300 p-3 sm:p-4 flex flex-col relative">
             {/* Content - Left aligned */}
             <div className="flex flex-col w-full mb-4 px-2">
@@ -387,58 +442,20 @@ const MobileInnovationsGrid = () => {
   );
 };
 
-// Shared Button Component to avoid duplication
-const ExploreButton = () => (
-  <button 
-    className="relative px-3 py-2 cursor-pointer rounded-full font-medium overflow-visible group transition-all duration-300"
-    style={{
-      fontFamily: 'Manrope, sans-serif',
-      fontSize: '15.2px',
-      fontWeight: 500,
-      color: 'white',
-      textShadow: '0px 4px 14px rgba(0, 0, 0, 0.33)',
-      background: 'linear-gradient(182.46deg, #55ABEE -59.43%, #55ABEE 8.68%, #55ABEE 21.36%, #55ABEE 76.22%, #E4F1FB 131.66%)',
-      boxShadow: `
-        0px 1.53px 10.41px 0px #00000030,
-        inset 0px -0.77px 9.8px 0px #71BBF6,
-        0px 15.31px 73.7px 0px #00000033
-      `
-    }}
-  >
-    <span 
-      className="absolute left-1/2 bottom-0 -translate-x-1/2 -translate-y-[10%] 
-                 w-[90%] h-[10px] rounded-full opacity-0 
-                 transition-all duration-500 ease-out
-                 group-hover:opacity-90"
-    />
-    <span className="relative z-10 flex justify-center items-center gap-2 text-[12.35px]">
-      Explore Features
-      <img
-        src="/Layer_1.png"
-        alt="arrow"
-        className="w-[20.96px] h-[24.91px] transition-all duration-500 transform 
-                   group-hover:translate-x-7 group-hover:opacity-0"
-      />
-    </span>
-  </button>
-);
 
+// --- Main Component ---
+
+/**
+ * Main component to render the Innovations Grid, conditionally rendering 
+ * the desktop or mobile layout based on screen size (via Tailwind utility classes).
+ */
 const InnovationsGrid = () => {
   return (
     <section className="w-full py-6 md:py-10 lg:py-13 px-4 sm:px-6 mb-12 lg:mb-16">
-      {/* Shared Header - Rendered in both, but to avoid duplication, we can render it once outside */}
-      {/* <div className="max-w-5xl xl:max-w-7xl mx-auto mb-6 md:mb-6 lg:mb-6 text-center lg:text-left hidden lg:block">
-        <h1 className="text-[24px] md:text-[29px] font-light lg:text-[37px] text-[#1A1A1C] mb-4 tracking-[0.02em] leading-[1.15]">
-          Top Innovations Powering the Future
-        </h1>
-        <p className="text-[14px] md:text-[18px] lg:text-[22px] font-light mt-3 text-[#2C2E31] max-w-3xl mx-auto lg:mx-0 tracking-[0.015em] leading-[1.4]">
-          Smart Devices That Drive Precision, Efficiency & Control
-        </p>
-      </div> */}
-      {/* Mobile header is inside MobileInnovationsGrid for full control */}
-
-      {/* Connect the two components */}
+      {/* Renders the complex grid on desktop (lg and up) */}
       <DesktopInnovationsGrid />
+      
+      {/* Renders the simple vertical stack on mobile/tablet (below lg) */}
       <MobileInnovationsGrid />
     </section>
   );

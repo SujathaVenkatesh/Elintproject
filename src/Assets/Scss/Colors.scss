@@ -1,0 +1,34 @@
+$white:#fff;
+$black:#000;
+$red:red;
+$primarys:#EE3131;
+
+
+
+.white{
+    color: $white;
+}
+.black{
+    color: $black;
+}
+.red{
+    color: $red;
+}
+.primarys{
+    color: $primarys;
+}
+
+
+
+.bg-white{
+    background: $white;
+}
+.bg-black{
+    background: $black;
+}
+.bg-red{
+    background: $red;
+}
+.bg-primarys{
+    background: $primarys;
+}

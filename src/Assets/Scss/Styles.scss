@@ -1,0 +1,437 @@
+.layout-cont {
+  position: relative;
+  .popup-cont {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    .form-cont {
+      height: 70vh;
+
+      .input-cont {
+        position: relative;
+
+        .error {
+          position: absolute;
+          right: 0;
+          bottom: -37px;
+        }
+
+        input {
+          height: 40px;
+          box-shadow: 0 0 5px #7d8592;
+          border: 1px solid #7d8592;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .page-wraper {
+        &.creative-wraper-two {
+          // Add specific styles if needed
+        }
+      }
+
+      .site-header {
+        &.header {
+          &.mo-left {
+            // Styles for left-aligned header
+          }
+          &.header-style-1 {
+            // Styles for header style 1
+          }
+        }
+      }
+
+      .top-bar {
+        .container {
+          .row {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      .dlab-topbar-left {
+        // Styles for the left top bar section
+      }
+
+      .dlab-topbar-right {
+        .social-bx {
+          list-style: none;
+          display: flex;
+          float: right;
+
+          li {
+            margin: 0 5px;
+
+            a {
+              text-decoration: none;
+              font-size: 16px;
+              color: inherit;
+              transition: color 0.3s;
+
+              &:hover {
+                color: #007bff; // Change color on hover
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Booking form start
+.forms-cont {
+  position: relative;
+  .btns-cont {
+    button {
+      height: 50px;
+      width: 200px;
+      border-top: 2.5px solid #ef4444;
+      border-right: 2.5px solid #ef4444;
+      border-bottom: 0;
+      background: #fff;
+      transition: 0.3s ease-in;
+      color: #ef4444;
+      &.active {
+        background: #ef4444 !important;
+        color: #ffff !important;
+      }
+      &:nth-child(1) {
+        border-top-left-radius: 20px;
+        border-left: 2.5px solid #ef4444;
+        border-right: 0;
+      }
+      &:nth-child(2) {
+        border-top-right-radius: 20px;
+        border-left: 2.5px solid #ef4444;
+        border-right: 2.5px solid #ef4444;
+      }
+      &:hover {
+        background: #ef4444 !important;
+        color: #ffff !important;
+      }
+    }
+  }
+  .bottom-form {
+    border: 2.5px solid #ef4444;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.2s all linear;
+    .imglayer {
+      height: 150px;
+      width: 150px;
+      //   border: 2.5px solid #EF4444;
+      background: #fff;
+      position: relative;
+      border: 0;
+      transition: 0.2s all linear;
+      &:hover {
+        // border: 2.5px solid #EF4444;
+        background: #ef4444;
+      }
+      &.hoverds {
+        // border: 2.5px solid #EF4444;
+        background: #ef4444;
+        .txt {
+          color: #fff;
+        }
+      }
+      &:hover .txt {
+        color: #fff;
+      }
+      .txt {
+      }
+      img {
+        height: 70%;
+        width: 70%;
+        object-fit: contain;
+      }
+    }
+  }
+  .posi-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ef4444;
+    width: 160px;
+    height: 40px;
+  }
+  .posi-btn2 {
+    // position: absolute;
+    background: #ef4444;
+    width: 200px;
+    height: 40px;
+  }
+  .posi-btn3 {
+    // position: absolute;
+    background: #ef4444;
+    width: 200px;
+    height: 40px;
+  }
+
+  .formlayers {
+    .form-cont1 {
+      display: grid;
+      display: -ms-grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      .form-cont {
+        position: relative;
+      }
+      input {
+        height: 43px;
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+      .inpuss {
+        height: 43px;
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+      select {
+        height: 43px;
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+      .error {
+        position: absolute;
+        right: 10px;
+        bottom: -18px;
+      }
+    }
+  }
+}
+
+// responcive start
+@media (max-width: 768px) {
+  .form-cont1 {
+    display: block !important;
+  }
+  .posi-btn {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .cabcont {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .btns-cont {
+    button {
+      width: 100px !important;
+      height: 40px !important;
+    }
+  }
+  .posi-btn {
+    position: relative !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+  .posi-btn2 {
+    position: relative !important;
+    width: 100% !important;
+  }
+}
+// responcive end
+
+.time-cont {
+  input {
+    width: 100px !important;
+    border: 0px;
+  }
+  select {
+    border: 0px;
+  }
+  .react-time-picker {
+    background: #fff;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+  /* Input Box */
+  .react-time-picker__inputGroup {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Drop-down Buttons */
+  .react-time-picker__wrapper {
+    border: none;
+  }
+
+  /* Clock Icon */
+  .react-time-picker__button {
+    color: #007bff;
+  }
+
+  /* AM/PM Dropdown */
+  .react-time-picker__clock {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.time-picker-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.open-clock-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.open-clock-btn:hover {
+  background-color: #0056b3;
+}
+
+.time-input {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+}
+
+.selected-time {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Time Picker Input Field */
+
+// Booking form end
+
+.bosxont {
+  position: relative;
+  .top-hover {
+    position: absolute;
+    bottom: 100%; /* Position it below the button */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Initially slightly below */
+    background-color: #fff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  &:hover .top-hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0px);
+  }
+
+  .top-hover {
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0px);
+    }
+  }
+}
+
+.poppup-cont {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  .poppup {
+    height: 40vh;
+    background: #fff;
+    .btnss {
+      height: 30px;
+      background: red;
+    }
+    .btnss2 {
+      height: 30px;
+      background: rgb(4, 82, 4);
+    }
+  }
+}
+
+.loading-comp {
+  height: 100vh;
+  .img-conts {
+    height: 150px;
+    width: 150px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.enqiry-cont {
+  position: relative;
+  .poppup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000000;
+  }
+}
+
+.poppupss {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
+}
+.dual-ring-spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.dual-ring-spinner:after {
+  content: " ";
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin: 2px;
+  border-radius: 50%;
+  border: 4px solid red;
+  border-color: red #ff61a00c red #ff61a00c;
+  animation: dual-ring-spin 1.2s linear infinite;
+}
+@keyframes dual-ring-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

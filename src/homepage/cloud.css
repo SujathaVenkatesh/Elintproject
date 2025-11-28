@@ -1,0 +1,199 @@
+.elint-section-container {
+  position: relative;
+  width: 100%;
+  min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: white;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.elint-content-wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 72rem;
+  gap: 20px;
+}
+
+.elint-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.elint-title {
+  width: 100%;
+  text-align: center;
+  color: #3D3D3D;
+  font-size: 33px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  line-height: 47.55px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.elint-subtitle {
+  width: 100%;
+  text-align: center;
+  color: #737373;
+  font-size: 21px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.21px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.elint-app-buttons {
+  box-shadow: -0.5467px 0.5467px 2.46px rgba(255, 255, 255, 0.25);
+  justify-content: center;
+  align-items: flex-end;
+  gap: 7.82px;
+  display: inline-flex;
+  /* margin-bottom: 1rem; */
+}
+
+.elint-app-button {
+  position: relative;
+  width: 109.73px;
+  height: 31.70px;
+  background: black;
+  border: 1px solid #A6A6A6;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.elint-app-button:hover {
+  opacity: 0.9;
+}
+
+.elint-app-icon {
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.elint-button-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.elint-button-label {
+  color: #D1D5DB;
+  font-size: 6px;
+  font-weight: 800;
+  line-height: 1;
+  /* Remove text-transform from here */
+}
+
+/* Apply uppercase only to Google Play button */
+.elint-google-play .elint-button-label {
+  text-transform: uppercase;
+}
+
+/* Ensure App Store button label remains normal case */
+.elint-app-store .elint-button-label {
+  text-transform: none;
+}
+
+.elint-button-name {
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  line-height: 1;
+}
+
+.elint-mobile-container {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.elint-mobile-image {
+  width: 762px;
+  margin-right: 20px;
+  height: 634px;
+  object-fit: cover;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
+}
+
+.elint-blur-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  width: 1440px;
+  height: 600px;
+  background: white;
+  box-shadow: 0 0 150px rgba(0, 0, 0, 0.15);
+  filter: blur(70px);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.elint-description {
+  position: relative;
+  z-index: 20;
+  max-width: 747px;
+  font-size: 18px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  line-height: 29.16px;
+  letter-spacing: 0.36px;
+  color: #484747;
+  text-align: center;
+  margin-top: -50px;
+}
+
+@media (max-width: 768px) {
+  .elint-title {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  .elint-subtitle {
+    font-size: 14px;
+  }
+
+  .elint-mobile-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .elint-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .elint-app-buttons {
+    flex-direction: column;
+    align-items: center;
+      width: 170.73px;
+  height: 31.70px;
+  }
+}

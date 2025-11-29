@@ -2372,7 +2372,6 @@ const Iot = () => {
         },
         {
           title: 'Urban Flood Early Warning System',
-          // description: 'City-scale flood monitoring and prevention',
           detailedContent: 'Multi-parameter environmental sensors monitoring air quality, temperature, humidity, and atmospheric conditions.',
           backgroundImage: '/iot/meto5.png',
           features: [

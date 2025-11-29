@@ -111,7 +111,6 @@ const tabs = [
                     'Ensure compliance through digital reporting'
                 ]
             },
-            // ... other water solutions
         ]
     },
     {

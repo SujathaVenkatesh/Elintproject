@@ -442,20 +442,11 @@ const MobileInnovationsGrid = () => {
   );
 };
 
-
-// --- Main Component ---
-
-/**
- * Main component to render the Innovations Grid, conditionally rendering 
- * the desktop or mobile layout based on screen size (via Tailwind utility classes).
- */
 const InnovationsGrid = () => {
   return (
     <section className="w-full py-6 md:py-10 lg:py-13 px-4 sm:px-6 mb-12 lg:mb-16">
-      {/* Renders the complex grid on desktop (lg and up) */}
       <DesktopInnovationsGrid />
       
-      {/* Renders the simple vertical stack on mobile/tablet (below lg) */}
       <MobileInnovationsGrid />
     </section>
   );

@@ -198,7 +198,6 @@ const PartnerHeroDesktop = () => {
         priority
       />
 
-      {/* Secondary Image */}
       <div className="absolute top-[-17.4px] left-[1102.45px] w-[337.4px] h-[390.9px] opacity-17 overflow-hidden flex items-center justify-center">
         <Image
           className="w-full h-full object-cover absolute left-0 top-[9px] scale-100"
@@ -209,7 +208,6 @@ const PartnerHeroDesktop = () => {
         />
       </div>
 
-      {/* Main Content */}
       <div className="absolute top-[176.10px] left-[860.67px] w-[598.8px] flex flex-col items-start gap-4">
         <div className="self-stretch relative leading-[47.55px] font-light">
           Be Part of Our Partner Ecosystem
@@ -236,14 +234,12 @@ const PartnerHeroDesktop = () => {
         </div>
       </div>
 
-      {/* CTA Button */}
       <div className="absolute top-[411.64px] left-[830.72px] rounded-[56.74px] overflow-hidden">
         <Button gradient="linear-gradient(182.46deg, #33A5FF -59.43%, #1794F6 8.68%, #0684E7 21.36%, #0E90F5 76.22%, #E4F1FB 131.66%)">
           Become a Partner
         </Button>
       </div>
 
-      {/* Decorative Dots (all of them) */}
       {[
         [241.5, 830.72],
         [300.38, 830.72],
@@ -283,9 +279,7 @@ const PartnerHeroDesktop = () => {
   );
 };
 
-// ──────────────────────────────────────────────────────────────
-// 2. Mobile Version – Fully responsive & beautiful on phones
-// ──────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────
 const PartnerHeroMobile = () => {
   return (
     <div className="md:hidden relative w-full bg-white overflow-hidden text-left font-manrope">

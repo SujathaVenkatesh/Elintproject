@@ -4,48 +4,65 @@ const FuelHero = () => {
   const imageUrl = "/fueltank1.png";
 
   return (
-    <section className="w-full bg-white pt-10 md:pt-14">
+    <section className="w-full bg-white pt-8 sm:pt-10 md:pt-14">
       <div
-        className="relative w-full overflow-hidden flex items-center"
+        className="
+          relative w-full overflow-hidden flex items-center
+          min-h-[340px] sm:min-h-[380px] md:min-h-[430px] lg:min-h-[500px]
+        "
         style={{
           backgroundImage: `url('${imageUrl}')`,
           backgroundSize: "cover",
-          backgroundPosition: "right center",
-          minHeight: "420px",
+          backgroundPosition: "center right",
         }}
       >
-        {/* GRADIENT OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/0" />
+        {/* GRADIENT — NOW RESPONSIVE */}
+        <div
+          className="
+            absolute inset-0 
+            bg-gradient-to-r 
+            from-white 
+            via-white/95 
+            to-white/0
+            sm:via-white/90
+            md:via-white/70
+            lg:via-white/40
+          "
+        />
 
-        {/* CONTENT */}
-        <div className="relative w-full px-5 sm:px-8 md:px-12 lg:px-32 py-10 md:py-0">
-          <div className="max-w-full sm:max-w-[480px] md:max-w-[600px] lg:max-w-[650px]">
+        {/* CONTENT AREA */}
+        <div className="relative w-full px-5 sm:px-8 md:px-12 lg:px-28 xl:px-36 py-10 md:py-0">
+          <div className="max-w-full sm:max-w-[440px] md:max-w-[560px] lg:max-w-[650px]">
 
-            {/* RESPONSIVE HEADING */}
-            <h1 className="
-              text-[22px] sm:text-[26px] md:text-[34px] lg:text-[42px] 
-              font-semibold leading-tight text-gray-900 font-[Manrope]
-            ">
-              Day Tank Automation Systems for Smarter Fuel Management
+            {/* HEADING RESPONSIVE */}
+            <h1
+              className="
+              text-[20px] sm:text-[26px] md:text-[32px] lg:text-[40px] xl:text-[46px] 
+              font-semibold leading-snug text-gray-900 font-[Manrope]
+            "
+            >
+              Still Guessing Your Fuel Levels? Optimize Every Drop with Our Fuel
+              Level Monitoring System
             </h1>
 
-            {/* RESPONSIVE DESCRIPTION */}
-            <p className="
-              mt-3 text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px]
+            {/* DESCRIPTION RESPONSIVE */}
+            <p
+              className="
+              mt-3 text-[13px] sm:text-[14px] md:text-[17px] lg:text-[18px] xl:text-[19px]
               text-gray-700 leading-relaxed font-[Manrope]
-            ">
-              Simplify refueling, reduce downtime, and ensure seamless
-              operational reliability every single day with our advanced
-              automation solutions.
+            "
+            >
+              Real-time tracking that turns every tank into a smart asset.
             </p>
 
-            {/* BUTTON */}
+            {/* BUTTON RESPONSIVE */}
             <button
               className="
                 mt-5 inline-flex items-center rounded-full bg-gradient-to-r
                 from-blue-500 to-blue-600 
-                px-5 sm:px-6 py-2 
-                text-[12px] sm:text-[14px] font-medium text-white
+                px-4 sm:px-6 py-2.5 md:py-3
+                text-[12px] sm:text-[14px] md:text-[15px] 
+                font-medium text-white
                 shadow-md hover:scale-[1.03] active:scale-[0.97] transition 
                 font-[Manrope]
               "
@@ -63,7 +80,6 @@ const FuelHero = () => {
                 <path d="M14 5l7 7-7 7M21 12H3" />
               </svg>
             </button>
-
           </div>
         </div>
       </div>

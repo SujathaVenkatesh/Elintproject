@@ -528,8 +528,8 @@ export const IoTSolutionsSection = () => {
 
                 {/* Title */}
                 <div className="flex flex-col items-center px-4">
-                    <h2 className="text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-8 lg:mb-12 max-w-4xl mx-auto">
-                        Explore How **IoT Solutions** Transform Operations
+                    <h2 className="text-2xl lg:text-3xl  text-center text-gray-800 mb-8 lg:mb-12 max-w-4xl mx-auto">
+                        Explore How IoT Solutions Transform Operations
                     </h2>
                 </div>
 
@@ -543,7 +543,7 @@ export const IoTSolutionsSection = () => {
                         <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-xl mx-auto">
 
                             {/* Category Tabs Section */}
-                            <div className="absolute top-[-43px] left-0 right-0 bg-white rounded-lg shadow-xl overflow-hidden">
+                            <div className="absolute top-[-43px] left-0 right-0 bg-white overflow-hidden">
                                 <div
                                     ref={tabContainerRef}
                                     className="flex items-center gap-3 lg:gap-5 overflow-x-auto px-4 py-3 iots-tabs overflow-y-hidden"

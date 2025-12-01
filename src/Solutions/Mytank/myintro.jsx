@@ -1,33 +1,36 @@
 import React from "react";
 
 const MyIntro = () => {
-  const imageUrl = "/mytank2.png";
-
   return (
-    <section className="w-full bg-white">
-      <div
-        className="relative w-full overflow-hidden flex items-center"
-        style={{
-          backgroundImage: `url('${imageUrl}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          minHeight: "260px" // similar height to your reference
-        }}
-      >
-        {/* very soft fade so the hand is faint */}
-        <div className="absolute inset-0 bg-white/88" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/0" />
+    <section className="w-full bg-white py-10 md:py-16">
+      <div className="
+        relative w-full 
+        grid grid-cols-1 
+        md:grid-cols-[3fr_1fr]   /* 75% : 25% */
+        items-center gap-6
+      ">
 
-        {/* text perfectly centered in the band */}
-        <div className="relative mx-auto max-w-5xl px-6 md:px-10">
-          <p className="text-[13px] md:text-[14px] leading-relaxed text-gray-700 max-w-3xl">
-            In mission-critical environments—like data centers, hospitals, and industrial
-            facilities—fuel management isn&apos;t just operational, it&apos;s existential. Manual
-            intervention leads to errors. Delays lead to downtimes. Our advanced fuel day tank
-            automation system brings a new era of precision and autonomy to how your backup power
-            infrastructure is fueled and managed.
+        {/* LEFT CONTENT (75%) */}
+        <div className="px-6 md:px-16">
+          <p className="text-gray-700 text-[14px] md:text-[16px] leading-relaxed font-[Manrope]">
+            Fuel isn’t just an operational cost—it’s a critical asset. Without
+            accurate tracking and real-time visibility, businesses face unnecessary
+            losses, reduced efficiency, and declining trust in their fuel operations.
+            With Elint’s intelligent fuel monitoring system, you gain complete control
+            through real-time data, fuel theft prevention, automated alerts, and
+            seamless fuel management across every site.
           </p>
         </div>
+
+        {/* RIGHT SIDE IMAGE (25%) */}
+        <div className="flex justify-center md:justify-end pr-6 md:pr-16">
+          <img
+            src="/mytank2.png"
+            alt="Fuel Tank Illustration"
+            className="w-[220px] md:w-[300px] object-contain"
+          />
+        </div>
+
       </div>
     </section>
   );

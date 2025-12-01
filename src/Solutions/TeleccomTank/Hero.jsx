@@ -1,7 +1,7 @@
 import React from "react";
 
-const FuelHero = () => {
-  const imageUrl = "/mydaytank.png";
+const TelecomHero = () => {
+  const imageUrl = "/battery1.png";
 
   return (
     <section className="w-full bg-white pt-10 md:pt-14">
@@ -49,4 +49,4 @@ const FuelHero = () => {
   );
 };
 
-export default FuelHero;
+export default TelecomHero;

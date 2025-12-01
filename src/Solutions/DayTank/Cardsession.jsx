@@ -1,6 +1,7 @@
 import React from 'react';
 
 const solutions = [
+<<<<<<< HEAD
     {
         image: 'Fs1.jpeg', // Placeholder for /Fs1.jpeg
         alt: "Ultralevel Max Solar Panel",
@@ -33,6 +34,40 @@ const solutions = [
         description: "Wireless bridge between field sensors and cloud.",
         tagline: "4G LTE | Cloud‑ready | Industrial design",
     },
+=======
+  {
+    image: "/FS1.jpeg",
+    alt: "Ultralevel Max Solar Panel",
+    tag: "Ultralevel Max",
+    title: "Harness the sun’s energy. Effortless uptime",
+    description: "Remote radar monitoring with built‑in solar power.",
+    tagline: "Solar | Remote‑ready | Plug & play",
+  },
+  {
+    image: "/FS4.jpeg",
+    alt: "Ultralevel Max Radar Sensor",
+    tag: "Ultralevel Max",
+    title: "Radar precision for harsh environments",
+    description: "Accurate, non‑contact level sensing for tanks.",
+    tagline: "Long battery | High accuracy",
+  },
+  {
+    image: "/FS2.jpeg",
+    alt: "Ultralevel Max Field Display",
+    tag: "Ultralevel Max",
+    title: "Industrial‑grade field display",
+    description: "On‑site display with LoRaWAN connectivity.",
+    tagline: "LoRaWAN | Clear LCD | Plug & play",
+  },
+  {
+    image: "/FS3.jpeg",
+    alt: "4G Gateway for Smart Tank Monitoring",
+    tag: "Ultralevel Max",
+    title: "4G gateway for smart tank monitoring",
+    description: "Wireless bridge between field sensors and cloud.",
+    tagline: "4G LTE | Cloud‑ready | Industrial design",
+  },
+>>>>>>> 59b49a131673bd626847886eb6c4dc0b64e6b947
 ];
 
 const SolutionCard = ({ solution }) => {

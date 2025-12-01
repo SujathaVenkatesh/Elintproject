@@ -18,7 +18,7 @@ const FuelInfoSection = () => {
           <p className="text-gray-700 text-[14px] md:text-[16px] leading-relaxed max-w-5xl font-[Manrope]">
             Fuel isn’t just an operational cost—it’s a critical asset. Without accurate
             tracking and real-time visibility, businesses face unnecessary losses,
-            reduced efficiency , and declining trust in their fuel operations. With
+            reduced efficiency, and declining trust in their fuel operations. With
             Elint’s intelligent fuel monitoring system, you gain complete control
             through real-time data, fuel theft prevention, automated alerts, and
             seamless fuel management across every site.

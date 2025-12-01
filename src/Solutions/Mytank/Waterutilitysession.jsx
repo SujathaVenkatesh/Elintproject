@@ -55,7 +55,7 @@ const utilityFeatures = [
 
 const WaterUtilitySection = () => {
   // Image: Large water tanks on a platform
-  const tanksImage = "uploaded:image_550737.jpg-8cdbd52e-4a90-41a5-bb28-342757327405"; 
+  const tanksImage = "/hah.png"; 
 
   return (
     <section className="w-full bg-white py-16 md:py-20">

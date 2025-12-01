@@ -28,7 +28,7 @@ const featuresBottom = [
 ];
 
 const TankerLorryManagement = () => {
-  const tankerImage = "/tanker-lorry.png"; // replace with your tanker image
+  const tankerImage = "/haj.png"; // replace with your tanker image
 
   // pick icon components once
   const TopIcon = featuresTop[0].icon;

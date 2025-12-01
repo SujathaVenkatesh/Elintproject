@@ -2,7 +2,7 @@ import React from "react";
 
 const solutions = [
   {
-    image: "/solar-panel.png",
+    image: "/FS1.jpeg",
     alt: "Ultralevel Max Solar Panel",
     tag: "Ultralevel Max",
     title: "Harness the sun’s energy. Effortless uptime",
@@ -10,7 +10,7 @@ const solutions = [
     tagline: "Solar | Remote‑ready | Plug & play",
   },
   {
-    image: "/radar-sensor.png",
+    image: "/FS4.jpeg",
     alt: "Ultralevel Max Radar Sensor",
     tag: "Ultralevel Max",
     title: "Radar precision for harsh environments",
@@ -18,7 +18,7 @@ const solutions = [
     tagline: "Long battery | High accuracy",
   },
   {
-    image: "/field-display.png",
+    image: "/FS2.jpeg",
     alt: "Ultralevel Max Field Display",
     tag: "Ultralevel Max",
     title: "Industrial‑grade field display",
@@ -26,7 +26,7 @@ const solutions = [
     tagline: "LoRaWAN | Clear LCD | Plug & play",
   },
   {
-    image: "/gateway-4g.png",
+    image: "/FS3.jpeg",
     alt: "4G Gateway for Smart Tank Monitoring",
     tag: "Ultralevel Max",
     title: "4G gateway for smart tank monitoring",

@@ -535,7 +535,7 @@
   headerSection: {
     position: 'absolute',
     top: '0px',
-    left: 'px',
+    left: '50px',
     width: '100%',
     maxWidth: '1300.96px',
     display: 'inline-flex',

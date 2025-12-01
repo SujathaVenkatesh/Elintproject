@@ -35,15 +35,17 @@ const LatestNews = () => {
                     sizes="(max-width: 768px) 100vw, 800px" 
                 />
 
-                {/* 3. Title */}
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-extrabold text-[#333] text-center mb-4 md:mb-6 max-w-4xl leading-tight">
-                    Talk to an <span className="text-[#1694f5]">IoT Specialist</span>—Let's Build Smarter Together!
-                </h2>
+ <h2 className="text-[26px] sm:text-[32px] md:text-[40px] lg:text-[46px] font-light text-[#333333] text-center leading-tight tracking-wider mb-6">
+  Talk to an IoT Specialist—Let&apos;s Build Smarter Together!
+</h2>
+
+
+
 
                 {/* 4. Description */}
                 <p className="text-base sm:text-lg text-[#4A4C50] text-center max-w-2xl lg:max-w-3xl mb-8 md:mb-10 leading-relaxed">
                     Ready to take your operations to the next level? Our experts are here to understand your goals 
-                    and show how Elint's smart IoT solutions can **boost performance, cut costs, and keep you ahead** of the curve.
+                    and show how Elint's smart IoT solutions can boost performance, cut costs, and keep you ahead of the curve.
                 </p>
 
                 {/* 5. Action Button (Professional Gradient and Hover Effect) */}

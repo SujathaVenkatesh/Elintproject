@@ -809,8 +809,8 @@ export default function Footer() {
 
             {/* Solutions - Column 1 */}
             <div>
-              <h3 className="text-base font-semibold mb-4 ml-5  ">Solutions</h3>
-              <ul className="space-y-2 text-gray-700 text-[14.5px]">
+              <h3 className="text-base font-semibold mb-4 ">Solutions</h3>
+              <ul className="space-y-2 text-gray-700 text-[14.5px] -ml-5">
                 {[
                   "Telecom",
                   "Fuel Monitoring",
@@ -859,7 +859,7 @@ export default function Footer() {
 
             {/* Solutions - Column 2 */}
             <div>
-              <ul className="space-y-2 gap-5 text-gray-700 text-[14.5px] mt-10">
+              <ul className="space-y-2 gap-5 text-gray-700 text-[14.5px] mt-10 -ml-5">
                 {[
                   "IBC Chemical Tank",
                   "Lifescience IBC Tank",
@@ -1030,7 +1030,7 @@ export default function Footer() {
   </div>
 </div>
 
-        <div className="w-full flex justify-center mt-8">
+        <div className="w-full flex justify-center mt-8 -ml-5">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-[90%] mx-auto">
     {companies.map((c, idx) => (
       <div key={idx} className="flex flex-col gap-3">

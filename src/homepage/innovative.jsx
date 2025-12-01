@@ -17,7 +17,7 @@ const InnovativeLoadingBar = () => {
         {/* Desktop Content */}
         <div className="hidden md:block ml-[350px] mt-6">
           <h2 className="text-[32px] font-light text-[#1A1A1C] leading-snug tracking-wide">
-            Innovating Industries with IoT Solutions
+            vinoth Industries with IoT Solutions
           </h2>
           <p className="mt-3 max-w-[900px] text-[#4A4C50] text-[15px] leading-[24px]">
             As a global leader in IoT innovation and a trusted end-to-end IoT
@@ -34,7 +34,7 @@ const InnovativeLoadingBar = () => {
           <img src="/square.svg" alt="IoT Illustration" className="w-[160px] h-[160px]" />
 
           <h2 className="text-[22px] font-light text-[#1A1A1C] leading-snug tracking-wide">
-            Innovating Industries with IoT Solutions
+            vinoth Industries with IoT Solutions
           </h2>
 
           <p className="text-[14px] text-[#4A4C50] leading-[22px] px-2">

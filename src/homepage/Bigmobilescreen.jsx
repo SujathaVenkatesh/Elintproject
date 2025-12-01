@@ -7,7 +7,7 @@ const Card = React.forwardRef(({ className, ...props }, ref) => (
     ref={ref}
     className={cn(
       "rounded-xl border bg-card text-card-foreground shadow",
-      className,
+      className
     )}
     {...props}
   />
@@ -60,41 +60,45 @@ const servicesData = [
 
 export const ConceptToSolutionSection = () => {
   return (
-    <section className="w-full py-12   ">
+    <section className="w-full py-12">
       <div className="max-w-8xl mx-auto">
         {/* Header */}
-        <div className=" mb-8 px-4">
+        <div className="mb-8 px-4">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium font-['Manrope'] leading-tight text-gray-900">
             End-to-End IoT Excellence – From Concept to Solution Deployment
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-gray-600 font-light font-['Manrope']">
+          <p className="mt-3 text-sm sm:text-base text-gray-600 font-light font-['Manrope'] max-w-4xl">
             At Elint Systems, we design and deliver complete IoT solutions—combining customizable
             hardware and intelligent software—engineered to meet your business needs with security,
             scalability, and reliability at the core.
           </p>
         </div>
-</div>
+      </div>
 
-      <div className="flex flex-col ">
+      {/* Cards */}
+      <div className="flex flex-col">
         {servicesData.map((service, index) => (
           <Card
             key={index}
-            className="relative w-full max-w-[450px] mx-auto  border-0 shadow-none bg-transparent translate-y-[-1rem] animate-fade-in opacity-100"
+            className="relative w-full max-w-[450px] mx-auto border-0 shadow-none bg-transparent -translate-y-4 animate-fade-in opacity-100"
             style={{ "--animation-delay": `${index * 100}ms` }}
           >
             <CardContent className="relative p-0">
-              <div className="relative w-full">
-                <div className="absolute bottom-[46px] left-0 w-[480px] h-[57px]" />
+              <div className="relative w-full flex justify-center">
+                {/* IMAGE */}
                 <img
-                  className="relative left-1 w-[480px] h-[192px]"
+                  className="relative w-full max-w-[480px] h-[192px] object-cover"
                   alt={service.title}
                   src={service.image}
                 />
-                <div className="absolute top-[18px] left-[25px] flex flex-col w-[275px] items-start gap-[5.57px]">
-                  <h3 className="flex items-center justify-start  self-stretch h-[14.65px] mt-[10px] [font-family:'Manrope',Helvetica] font-medium text-black text-[14.9px] tracking-[0.45px] leading-[37.4px] whitespace-nowrap">
+
+                {/* TEXT OVERLAY */}
+                <div className="absolute top-[18px] left-[25px] flex flex-col max-w-[275px] w-[70%] items-start gap-[5.57px]">
+                  <h3 className="font-['Manrope',Helvetica] font-medium text-black text-[14.9px] tracking-[0.45px] leading-[37.4px] whitespace-normal">
                     {service.title}
                   </h3>
-                  <p className="flex items-center justify-center self-stretch w-[220px] [font-family:'Manrope',Helvetica] font-normal text-gray-500 text-[11.1px] tracking-[0.33px] leading-[16.7px]">
+
+                  <p className="font-['Manrope',Helvetica] font-normal text-gray-500 text-[11.1px] tracking-[0.33px] leading-[16.7px] max-w-[220px] w-full">
                     {service.description}
                   </p>
                 </div>

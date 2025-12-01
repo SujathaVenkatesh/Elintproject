@@ -11,47 +11,39 @@ import {
 export default function SmartStarterSection() {
   return (
     <section className="w-full bg-gradient-to-b from-gray-50 via-white to-gray-50 py-20 md:py-24 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-12 md:gap-16 items-center">
-        {/* Left content */}
-        <div>
-          {/* Title */}
-          <div className="mb-12">
-            <h2 className="text-[26px] md:text-[30px] font-semibold text-gray-900">
-              Flameproof 3-Phase Smart Starter
-            </h2>
-            <p className="mt-3 text-[15px] md:text-[16px] text-gray-500">
-              Engineered for Hazard Zones. Smart Control Built-In.
-            </p>
+      <div className="max-w-6xl mx-auto">
+
+        {/* ---------------- DESKTOP VERSION ---------------- */}
+        <div className="hidden md:grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-16 items-center">
+          {/* Left content */}
+          <div>
+            <div className="mb-12">
+              <h2 className="text-[26px] md:text-[30px] font-semibold text-gray-900">
+                Flameproof 3-Phase Smart Starter
+              </h2>
+              <p className="mt-3 text-[15px] md:text-[16px] text-gray-500">
+                Engineered for Hazard Zones. Smart Control Built-In.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 text-[14px] md:text-[15px] text-gray-600">
+              <Feature icon={<ShieldCheck className="w-7 h-7 md:w-8 md:h-8 text-gray-800" />}
+                       title="Flameproof Enclosure"
+                       text="Certified enclosure for explosive and flammable environments." />
+              <Feature icon={<CircuitBoard className="w-7 h-7 md:w-8 md:h-8 text-gray-800" />}
+                       title="Intelligent Protections"
+                       text="Shields motors from Dry Run, Overload, High/Low Voltage risks and Over Pressure Cut-off." />
+              <Feature icon={<Wifi className="w-7 h-7 md:w-8 md:h-8 text-gray-800" />}
+                       title="Wireless Pump Automation"
+                       text="Auto ON/OFF based on tank level—no manual intervention required." />
+              <Feature icon={<Activity className="w-7 h-7 md:w-8 md:h-8 text-gray-800" />}
+                       title="Real-Time Monitoring"
+                       text="Displays voltage, current, kWh, run hours with cyclic/RTC timer." />
+            </div>
           </div>
 
-          {/* 2x2 feature grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 text-[14px] md:text-[15px] text-gray-600">
-            <Feature
-              icon={<ShieldCheck className="w-7 h-7 md:w-8 md:h-8 text-gray-800" />}
-              title="Flameproof Enclosure"
-              text="Certified enclosure for explosive and flammable environments."
-            />
-            <Feature
-              icon={<CircuitBoard className="w-7 h-7 md:w-8 md:h-8 text-gray-800" />}
-              title="Intelligent Protections"
-              text="Shields motors from Dry Run, Overload, High/Low Voltage risks and Over Pressure Cut-off."
-            />
-            <Feature
-              icon={<Wifi className="w-7 h-7 md:w-8 md:h-8 text-gray-800" />}
-              title="Wireless Pump Automation"
-              text="Auto ON/OFF based on tank level—no manual intervention required."
-            />
-            <Feature
-              icon={<Activity className="w-7 h-7 md:w-8 md:h-8 text-gray-800" />}
-              title="Real-Time Monitoring"
-              text="Displays voltage, current, kWh, run hours with cyclic/RTC timer."
-            />
-          </div>
-        </div>
-
-        {/* Right image */}
-        <div className="flex justify-center md:justify-end">
-          <div className="relative">
+          {/* Right image */}
+          <div className="flex justify-end relative">
             <div className="absolute -inset-8 rounded-[2.2rem] bg-black/5 blur-3xl" />
             <div className="relative overflow-hidden">
               <Image
@@ -64,23 +56,69 @@ export default function SmartStarterSection() {
             </div>
           </div>
         </div>
+
+        {/* ---------------- MOBILE VERSION ---------------- */}
+        <div className="block md:hidden flex flex-col items-center gap-10">
+          <div className="text-center">
+            <h2 className="text-[22px] font-semibold text-gray-900">
+              Flameproof 3-Phase Smart Starter
+            </h2>
+            <p className="mt-2 text-[14px] text-gray-500">
+              Engineered for Hazard Zones. Smart Control Built-In.
+            </p>
+          </div>
+
+          <Image
+            src="/daytank6.png"
+            width={360}
+            height={270}
+            alt="Flameproof 3-Phase Smart Starter panel"
+            className="w-full max-w-[320px] object-contain"
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full px-2">
+            <FeatureMobile icon={<ShieldCheck className="w-6 h-6 text-gray-800" />}
+                           title="Flameproof Enclosure"
+                           text="Certified enclosure for explosive and flammable environments." />
+            <FeatureMobile icon={<CircuitBoard className="w-6 h-6 text-gray-800" />}
+                           title="Intelligent Protections"
+                           text="Shields motors from Dry Run, Overload, High/Low Voltage risks and Over Pressure Cut-off." />
+            <FeatureMobile icon={<Wifi className="w-6 h-6 text-gray-800" />}
+                           title="Wireless Pump Automation"
+                           text="Auto ON/OFF based on tank level—no manual intervention required." />
+            <FeatureMobile icon={<Activity className="w-6 h-6 text-gray-800" />}
+                           title="Real-Time Monitoring"
+                           text="Displays voltage, current, kWh, run hours with cyclic/RTC timer." />
+          </div>
+        </div>
+
       </div>
     </section>
   );
 }
 
+/* Desktop Feature */
 function Feature({ icon, title, text }) {
   return (
     <div className="flex flex-col items-start">
       <div className="mb-3 flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-white shadow-md">
         {icon}
       </div>
-      <h3 className="text-[15px] md:text-[16px] font-semibold text-gray-900">
-        {title}
-      </h3>
-      <p className="mt-1 leading-relaxed text-[14px] md:text-[15px]">
-        {text}
-      </p>
+      <h3 className="text-[15px] md:text-[16px] font-semibold text-gray-900">{title}</h3>
+      <p className="mt-1 leading-relaxed text-[14px] md:text-[15px]">{text}</p>
+    </div>
+  );
+}
+
+/* Mobile Feature */
+function FeatureMobile({ icon, title, text }) {
+  return (
+    <div className="flex flex-col items-center text-center gap-2 p-3 border rounded-lg bg-gray-50 shadow-sm">
+      <div className="h-10 w-10 flex items-center justify-center rounded-full bg-white shadow-md">
+        {icon}
+      </div>
+      <h3 className="text-[13px] font-semibold text-gray-900">{title}</h3>
+      <p className="text-[12px] text-gray-600 leading-snug">{text}</p>
     </div>
   );
 }

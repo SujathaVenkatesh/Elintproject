@@ -14,33 +14,45 @@ const FuelHero = () => {
           minHeight: "420px",
         }}
       >
-        {/* Gradient Overlay */}
+        {/* GRADIENT OVERLAY */}
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/0" />
 
-        {/* CONTENT AREA */}
-        <div className="relative w-full px-8 md:px-12 lg:px-32">
-          <div className="max-w-[650px]">
+        {/* CONTENT */}
+        <div className="relative w-full px-5 sm:px-8 md:px-12 lg:px-32 py-10 md:py-0">
+          <div className="max-w-full sm:max-w-[480px] md:max-w-[600px] lg:max-w-[650px]">
 
-            {/* Bigger Heading with Manrope */}
-            <h1 className="text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight text-gray-900 whitespace-nowrap font-[Manrope]">
+            {/* RESPONSIVE HEADING */}
+            <h1 className="
+              text-[22px] sm:text-[26px] md:text-[34px] lg:text-[42px] 
+              font-semibold leading-tight text-gray-900 font-[Manrope]
+            ">
               Day Tank Automation Systems for Smarter Fuel Management
             </h1>
 
-            {/* Bigger Description with Manrope */}
-            <p className="mt-3 text-[16px] md:text-[18px] text-gray-700 leading-relaxed font-[Manrope]">
+            {/* RESPONSIVE DESCRIPTION */}
+            <p className="
+              mt-3 text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px]
+              text-gray-700 leading-relaxed font-[Manrope]
+            ">
               Simplify refueling, reduce downtime, and ensure seamless
               operational reliability every single day with our advanced
               automation solutions.
             </p>
 
+            {/* BUTTON */}
             <button
-              className="mt-5 inline-flex items-center rounded-full bg-gradient-to-r 
-              from-blue-500 to-blue-600 px-6 py-2 text-[14px] font-medium text-white 
-              shadow-md hover:scale-[1.03] active:scale-[0.97] transition font-[Manrope]"
+              className="
+                mt-5 inline-flex items-center rounded-full bg-gradient-to-r
+                from-blue-500 to-blue-600 
+                px-5 sm:px-6 py-2 
+                text-[12px] sm:text-[14px] font-medium text-white
+                shadow-md hover:scale-[1.03] active:scale-[0.97] transition 
+                font-[Manrope]
+              "
             >
               Connect with Us
               <svg
-                className="ml-2 h-4 w-4"
+                className="ml-2 h-3 sm:h-4 w-3 sm:w-4"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"

@@ -78,29 +78,38 @@ export const ConceptToSolutionSection = () => {
       <div className="flex flex-col ">
         {servicesData.map((service, index) => (
           <Card
-            key={index}
-            className="relative w-full max-w-[450px] mx-auto  border-0 shadow-none bg-transparent translate-y-[-1rem] animate-fade-in opacity-100"
-            style={{ "--animation-delay": `${index * 100}ms` }}
-          >
-            <CardContent className="relative p-0">
-              <div className="relative w-full">
-                <div className="absolute bottom-[46px] left-0 w-[480px] h-[57px]" />
-                <img
-                  className="relative left-1 w-[480px] h-[192px]"
-                  alt={service.title}
-                  src={service.image}
-                />
-                <div className="absolute top-[18px] left-[25px] flex flex-col w-[275px] items-start gap-[5.57px]">
-                  <h3 className="flex items-center justify-start  self-stretch h-[14.65px] mt-[10px] [font-family:'Manrope',Helvetica] font-medium text-black text-[14.9px] tracking-[0.45px] leading-[37.4px] whitespace-nowrap">
-                    {service.title}
-                  </h3>
-                  <p className="flex items-center justify-center self-stretch w-[220px] [font-family:'Manrope',Helvetica] font-normal text-gray-500 text-[11.1px] tracking-[0.33px] leading-[16.7px]">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+  key={index}
+  className="relative w-full max-w-[450px] mx-auto border-0 shadow-none bg-transparent translate-y-[-1rem] animate-fade-in opacity-100"
+  style={{ "--animation-delay": `${index * 100}ms` }}
+>
+  <CardContent className="relative p-0">
+    <div className="relative w-full">
+
+      {/* Background shape */}
+      <div className="absolute bottom-[46px] left-0 w-full h-[57px]" />
+
+      {/* Image */}
+      <img
+        className="relative w-full h-auto"
+        alt={service.title}
+        src={service.image}
+      />
+
+      {/* Text content */}
+      <div className="absolute top-[18px] left-[20px] flex flex-col w-[80%] max-w-[275px] items-start gap-[5.57px]">
+
+        <h3 className="flex items-center justify-start self-stretch mt-[10px] font-medium text-black text-[14.9px] tracking-[0.45px] leading-[20px] whitespace-normal">
+          {service.title}
+        </h3>
+
+        <p className="flex items-center justify-start self-stretch text-gray-500 text-[11.1px] tracking-[0.33px] leading-[16px]">
+          {service.description}
+        </p>
+      </div>
+    </div>
+  </CardContent>
+</Card>
+
         ))}
       </div>
     </section>

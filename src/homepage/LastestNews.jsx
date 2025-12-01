@@ -35,7 +35,7 @@ const LatestNews = () => {
                     sizes="(max-width: 768px) 100vw, 800px" 
                 />
 
- <h2 className="text-[26px] sm:text-[32px] md:text-[40px] lg:text-[46px] font-light text-[#333333] text-center leading-tight tracking-wider mb-6">
+ <h2 className="text-[21px] sm:text-[27px] md:text-[35Spx] lg:text-[40px] font-light text-[#333333] text-center leading-tight tracking-wider mb-6">
   Talk to an IoT Specialist—Let&apos;s Build Smarter Together!
 </h2>
 

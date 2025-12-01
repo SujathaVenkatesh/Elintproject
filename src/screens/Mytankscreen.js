@@ -13,6 +13,9 @@ import WaterQualityMonitoringSection from "@/Solutions/Mytank/Waterqualifying";
 import HowItWorksSection from "@/Solutions/Mytank/Howitworks";
 import TankerLorryManagement from "@/Solutions/Mytank/Tankerloy";
 import WaterUtilitySection from "@/Solutions/Mytank/Waterutilitysession";
+import StayConnectedSection from "@/Solutions/Mytank/Stayconnected";
+import FeaturedSolutions from "@/Solutions/Mytank/CardSection";
+import FAQSection from "@/Solutions/Mytank/Faq";
 
 const MyTank = () => {
     return (
@@ -30,6 +33,9 @@ const MyTank = () => {
             <HowItWorksSection/>
             <TankerLorryManagement/>
             <WaterUtilitySection/>
+            <StayConnectedSection/>
+            <FeaturedSolutions/>
+            <FAQSection/>
         </div>
     );
 };

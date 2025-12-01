@@ -28,7 +28,7 @@ const DayTank = () => {
             <AutomationFuelSection />
             <ManualTankChallenges />
             <HeroSections/>
-            <GainByAutomation />
+            {/* <GainByAutomation /> */}
             <SmartStarterSection />
             <HazardZonesSection />
             <RadarSensorSection />

@@ -30,12 +30,10 @@ const steps = [
 ];
 
 const HowItWorksSection = () => {
-  // Using the diagram image uploaded by the user
   const mainImage = "uploaded:Screenshot 2025-11-29 230751.png-067bf3ac-9129-4864-9327-0f0edcb3068e"; 
 
   return (
     <section className="w-full bg-white py-16">
-      {/* Title + subtitle centered */}
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-[20px] md:text-[22px] font-medium text-[#333333]">
           How It Works
@@ -45,11 +43,7 @@ const HowItWorksSection = () => {
         </p>
       </div>
 
-      {/* Main row: left image, right content */}
       <div className="max-w-6xl mx-auto mt-10 px-4 grid grid-cols-1 md:grid-cols-[1.6fr,1.1fr] gap-10 items-start">
-        {/* LEFT IMAGE */}
-        {/* Note: The screenshot uses the diagram itself as the background, which is achieved here 
-            by placing the image inside a container and applying the shadow/border to the container. */}
         <div className="bg-white rounded-[24px] shadow-[0_8px_20px_rgba(0,0,0,0.06)] overflow-hidden">
           <img
             src={mainImage}
@@ -58,7 +52,6 @@ const HowItWorksSection = () => {
           />
         </div>
 
-        {/* RIGHT ICONS + TEXT */}
         <div className="flex flex-col space-y-5 pt-4">
           {steps.map((step, idx) => {
             const Icon = step.icon;

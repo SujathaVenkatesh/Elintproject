@@ -32,7 +32,7 @@ const ChaosSection = () => {
     ),
     airlocks: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h1M3 12H2M18.364 5.636l-.707-.707M6.343 17.657l-.707.707M16.95 18.364l.707.707M5.636 6.343l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h1M3 12H2M18.364 5.636l-.707-.707M6.343 17.657l-.707.707M16.95 18.364l-.707-.707M5.636 6.343l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
       </svg>
     ),
     voltage: (
@@ -58,13 +58,15 @@ const ChaosSection = () => {
     ),
   };
 
+  // Using the local path placeholder provided by the user
+  const waterSplashBg = '/mytank3.png';
+
   return (
     <section className="relative w-full py-16 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
-      {/* Background Water Image */}
-      {/* Assuming 'water-splash.png' is in a public folder or can be replaced by a similar asset */}
+      {/* Background Water Image - FULL WIDTH, NO GAPS (w-full, left-0) */}
       <div 
         className="absolute bottom-0 left-0 w-full h-48 bg-cover bg-bottom opacity-50 z-0"
-        style={{ backgroundImage: 'url("https://res.cloudinary.com/dt3k5v4wz/image/upload/v1718017260/water-splash_d3a3w6.png")' }}
+        style={{ backgroundImage: `url("${waterSplashBg}")` }}
       ></div>
 
       {/* Main Content Card with Shadow and Rounded Corners */}

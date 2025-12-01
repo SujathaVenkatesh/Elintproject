@@ -2,7 +2,7 @@ import React from 'react';
 
 const MobileDispenserHero = () => {
     // Background image of the fuel tank and railroad crossing sign
-    const backgroundImage = 'uploaded:image_4ddf32.png-ddb9305f-cbe5-43e7-99a4-078463362ce1';
+    const backgroundImage = '/mobile1.png';
 
     return (
         <section 

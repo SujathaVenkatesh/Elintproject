@@ -39,8 +39,7 @@ const TelecomHero = () => {
               className="
                 mt-3 text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px]
                 text-gray-700 leading-relaxed font-[Manrope]
-              "
-            >
+              ">
               Ensure Uninterrupted Operations with Real-Time Battery Insights
             </p>
 

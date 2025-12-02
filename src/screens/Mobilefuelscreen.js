@@ -17,7 +17,6 @@ const Mobilefuelscreen = () => {
             <WorkflowSection/>
             <FuelBenefits/>
             <StayConnectedSection />
-
             <FeaturedSolutions />
             <FAQSection />
 

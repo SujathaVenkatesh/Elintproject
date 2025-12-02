@@ -2,7 +2,7 @@ import React from "react";
 
 const AutomatedHero = () => {
   return (
-    <section className="w-full bg-white pt-10 md:pt-14 relative">
+    <section className="w-full bg-white  md:pt-32 relative">
       <div
         className="absolute inset-0 w-full h-full"
         style={{

@@ -1,7 +1,7 @@
 import React from "react";
 
 const OilfieldMontoring = () => {
-  const imageUrl = "/mydaytank.png";
+  const imageUrl = "/oil1.png";
 
   return (
     <section className="w-full bg-white pt-10 md:pt-14">
@@ -28,11 +28,11 @@ const OilfieldMontoring = () => {
             {/* TITLE */}
             <h1
               className="
-              text-[22px] sm:text-[28px] md:text-[36px] lg:text-[42px] 
-              font-semibold leading-snug text-gray-900 font-[Manrope]
+              text-[22px] sm:text-[28px] md:text-[36px] lg:text-[32px] 
+              font-normal leading-snug text-gray-900 font-[Manrope]
             "
             >
-              The Inevitable Diesel Generator Monitoring Solution
+              Digital Oil field Monitoring Solution
             </h1>
 
             {/* DESCRIPTION */}
@@ -42,7 +42,7 @@ const OilfieldMontoring = () => {
               text-gray-700 leading-relaxed font-[Manrope]
             "
             >
-              Monitor,Control & Optimize Your Diesel Generators in Real-time.
+              AI-Powered ESP Monitoring and Artificial Lift Optimization for Reliable Production
             </p>
 
             {/* CTA BUTTON */}

@@ -21,7 +21,7 @@ const sec2oil = () => {
 
           {/* Left Text */}
           <div className="text-left ">
-            <p className="text-[11px] f3 sm:text-sm md:text-base lg:text-lg  text-gray-800 leading-snug max-w-xl ">
+            <p className="text-base sm:text-sm md:text-base lg:text-lg  text-gray-600 leading-snug max-w-xl ">
               Elint Systems’ ESP Downhole Monitoring System provides real-time data on
               electric submersible pump (ESP) Health, Power, Temperature, Pressure,
               Vibration and Motor performance—built for oilfield needs.

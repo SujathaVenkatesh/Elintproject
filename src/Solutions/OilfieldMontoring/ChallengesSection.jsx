@@ -4,11 +4,11 @@ const ChallengesSection = () => {
       
       {/* Main Heading */}
       <div className="max-w-6xl mx-auto  mb-8">
-        <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-gray-800">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-gray-600">
           Unexpected Pump Failures Can Halt <br /> Oilfield Operations
         </h2>
 
-        <p className="mt-3 text-xs sm:text-sm text-gray-500 max-w-2xl  ">
+        <p className="mt-3 text-sm sm:text-sm text-gray-500 max-w-2xl  ">
           ESPs operate deep underground in extreme heat and pressure. Without
           real-time monitoring, failures hit without warning.
         </p>
@@ -19,10 +19,10 @@ const ChallengesSection = () => {
 
         {/* 1 */}
         <div>
-          <h3 className="font-semibold text-sm text-gray-800 mb-1">
+          <h3 className="font-semibold text-base text-gray-700 mb-1">
             Harsh Downhole Environments
           </h3>
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed">
             250°F heat, crushing pressure, and corrosive fluids rapidly degrade
             ESP components.
           </p>
@@ -30,10 +30,10 @@ const ChallengesSection = () => {
 
         {/* 2 */}
         <div>
-          <h3 className="font-semibold text-sm text-gray-800 mb-1">
+          <h3 className="font-semibold text-base text-gray-700 mb-1">
             Hidden Failures
           </h3>
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed">
             Motor overheating, bearing wear, and gas lock cause sudden, costly
             shutdowns.
           </p>
@@ -41,10 +41,10 @@ const ChallengesSection = () => {
 
         {/* 3 */}
         <div>
-          <h3 className="font-semibold text-sm text-gray-800 mb-1">
+          <h3 className="font-semibold text-base text-gray-700 mb-1">
             Emulsion Challenges
           </h3>
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed">
             High gas or water content disrupts lift, reducing pump efficiency
             and stability.
           </p>
@@ -52,20 +52,20 @@ const ChallengesSection = () => {
 
         {/* 4 */}
         <div>
-          <h3 className="font-semibold text-sm text-gray-800 mb-1">
+          <h3 className="font-semibold text-base text-gray-700 mb-1">
             Deep Well Challenges
           </h3>
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed">
             Greater depths demand high-performance, rugged ESP systems.
           </p>
         </div>
 
         {/* 5 */}
         <div>
-          <h3 className="font-semibold text-sm text-gray-800 mb-1">
+          <h3 className="font-semibold text-base text-gray-700 mb-1">
             Power Instability
           </h3>
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed">
             Electrical faults and surges go undetected, risking pump damage and
             unplanned outages.
           </p>
@@ -73,10 +73,10 @@ const ChallengesSection = () => {
 
         {/* 6 */}
         <div>
-          <h3 className="font-semibold text-sm text-gray-800 mb-1">
+          <h3 className="font-semibold text-base text-gray-700 mb-1">
             Monitoring Gaps
           </h3>
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed">
             Lack of monitoring of gas and wastewater affects performance and
             safety.
           </p>

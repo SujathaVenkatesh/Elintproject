@@ -5,7 +5,7 @@ import React from "react";
 const  Solarmontor= () => {
     return (
         <div>
-            {/* <SolarPumpMonitor/> */}
+            <SolarPumpMonitor/>
         </div>
     );
 };

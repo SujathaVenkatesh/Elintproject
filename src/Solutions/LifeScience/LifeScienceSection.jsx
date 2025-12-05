@@ -47,12 +47,12 @@ const LifeScienceSection = () => {
       key={index}
       className="flex flex-col items-center text-center gap-3"
     >
-      {/* ✅ Image Icon */}
-     <div className="w-18 h-18 flex items-center justify-center">
+      {/* Image Icon */}
+     <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 bg-white shadow-sm">
   <img
     src={item.icon}
     alt={item.title}
-    className="w-17 h-17 object-contain"
+    className="w-8 h-8 object-contain"
   />
 </div>
 

@@ -1,5 +1,4 @@
-import React from "react";
-import { Globe2, Repeat, Rocket, Factory, ClipboardList, Clock3 } from "lucide-react";
+import { Globe2, Repeat, Rocket, Factory, ClipboardList } from "lucide-react";
 
 const gains = [
   {
@@ -22,35 +21,56 @@ const gains = [
     Icon: ClipboardList,
     text: "Fewer site visits and less administrative work.",
   },
-  {
-    Icon: Clock3,
-    text: "Real‑time status and event tracking for every IBC.",
-  },
 ];
 
 const WhatYouGain = () => {
   return (
-    <section className="w-full bg-[#f5f5f6] py-10 md:py-14">
+    <section className="w-full bg-[#e8e9eb] py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_minmax(0,1fr)] gap-8 lg:gap-10 items-center min-h-[260px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 lg:gap-12 items-start">
           {/* Left content */}
           <div>
-            <h2 className="text-xl md:text-2xl font-medium text-gray-900">
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
               What You Gain with Us
             </h2>
-            <p className="mt-2 text-sm md:text-base text-gray-600 max-w-md">
+            <p className="mt-3 text-sm md:text-base text-gray-600">
               Automated chemical tank monitoring and reordering for maximum
               efficiency and reliability.
             </p>
 
-            {/* Icons in two rows of three */}
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-8 max-w-xl">
-              {gains.map((item, index) => (
-                <div key={index} className="flex flex-col items-start">
-                  <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center mb-2">
-                    <item.Icon className="w-4 h-4 text-gray-700" strokeWidth={1.6} />
+            <div className="mt-10 flex flex-wrap gap-x-12 gap-y-8 justify-start">
+              {gains.slice(0, 3).map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-start w-[calc(33.333%-2rem)]"
+                >
+                  <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center mb-3 bg-white">
+                    <item.Icon
+                      className="w-5 h-5 text-gray-600"
+                      strokeWidth={1.5}
+                    />
                   </div>
-                  <p className="text-[11px] md:text-xs leading-relaxed text-gray-700 max-w-[160px]">
+                  <p className="text-xs leading-relaxed text-gray-700">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Second row with 2 centered items */}
+            <div className="flex flex-wrap gap-x-12 gap-y-0 justify-center mt-8">
+              {gains.slice(3, 5).map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-start w-[calc(33.333%-2rem)]"
+                >
+                  <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center mb-3 bg-white">
+                    <item.Icon
+                      className="w-5 h-5 text-gray-600"
+                      strokeWidth={1.5}
+                    />
+                  </div>
+                  <p className="text-xs leading-relaxed text-gray-700">
                     {item.text}
                   </p>
                 </div>
@@ -59,11 +79,12 @@ const WhatYouGain = () => {
           </div>
 
           {/* Right image */}
+          {/* Right image */}
           <div className="flex justify-center lg:justify-end">
             <img
-              src="/ibc-stacked.png" // your stacked IBC image
+              src="/ibc12.png"
               alt="Stacked IBC tanks"
-              className="w-[260px] md:w-[320px] lg:w-[360px] object-contain"
+              className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto object-contain"
             />
           </div>
         </div>

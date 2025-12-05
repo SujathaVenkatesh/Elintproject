@@ -5,7 +5,7 @@ const BenefitsSection1 = () => {
     <section
       className="w-full relative min-h-[260px] flex items-center overflow-hidden"
       style={{
-        backgroundImage: 'url(/greenS.png)',
+        backgroundImage: 'url(/herobg.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

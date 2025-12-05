@@ -1,28 +1,27 @@
 const challenges = [
   {
-    text: "Inventory visibility is poor due to the lack of a real-time IBC fill level monitoring system",
+    text: "High initial expenses for the purchase and maintenance of containers",
   },
   {
-    text: "Insufficient inventory planning and demand forecasting",
+    text: "Unused resources placed inactive with lack of oversight or visibility",
   },
   {
-    text: "Limited supply chain information creates delays and compliance at risk",
+    text: "Forecasting and planning are being delayed by manual processes.",
   },
   {
-    text: "Without remote tank level monitoring sensors, critical tank risks go undetected.",
+    text: "Systems that are disconnected and difficult to integrate with SAP or ERP workflows.",
   },
 ];
 
-const CommonChallenges = () => {
+const IbcrentalChallenges = () => {
   return (
     <section className="w-full bg-white py-20">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-2xl md:text-3xl font-medium text-gray-900">
-          Common Challenges Without Smart Monitoring
+          Industry Challenges{" "}
         </h2>
         <p className="mt-2 text-sm md:text-base text-gray-500 max-w-3xl">
-          Here are the real-world issues industries face without intelligent IBC
-          tracking and remote monitoring
+          Here’s what’s slowing down container logistics in today’s industries
         </p>
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {challenges.map((item, index) => (
@@ -43,4 +42,4 @@ const CommonChallenges = () => {
   );
 };
 
-export default CommonChallenges;
+export default IbcrentalChallenges;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const OilfieldMontoring = () => {
+const Coldhero = () => {
   const imageUrl = "/ibc1.png";
 
   return (
@@ -16,7 +16,6 @@ const OilfieldMontoring = () => {
           backgroundPosition: "center right",
         }}
       >
-        {/* MOBILE—STRONGER GRADIENT FOR READABILITY */}
         <div
           className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r 
           from-white via-white/95 to-white/0"
@@ -28,11 +27,11 @@ const OilfieldMontoring = () => {
             {/* TITLE */}
             <h1
               className="
-              text-[22px] sm:text-[28px] md:text-[46px] lg:text-[46px] 
+              text-[22px] sm:text-[28px] md:text-[36px] lg:text-[32px] 
               font-normal leading-snug text-gray-900 font-[Manrope]
             "
             >
-              Elint's Smart IBC Solution -  Real-Time Chemical Tank Insights{" "}
+              Digital Oil field Monitoring Solution
             </h1>
 
             <p
@@ -41,7 +40,7 @@ const OilfieldMontoring = () => {
               text-gray-700 leading-relaxed font-[Manrope]
             "
             >
-               Monitor. Manage. Optimize – All from One Smart Platform
+              AI-Powered ESP Monitoring and Artificial Lift Optimization for Reliable Production
             </p>
             <button
               className="
@@ -73,4 +72,4 @@ const OilfieldMontoring = () => {
   );
 };
 
-export default OilfieldMontoring;
+export default Coldhero;

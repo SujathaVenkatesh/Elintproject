@@ -9,6 +9,7 @@ import UniversalFit from "@/Solutions/IBCMontor/Ibcworks";
 import ElintAutomateSection from "@/Solutions/IBCMontor/Ibmautomation";
 import IBMInterhero from "@/Solutions/IBCMontor/InterHero";
 import IndustriesImageGroup from "@/Solutions/IBCMontor/Singleimage";
+import Dashboard from "@/Solutions/IBCMontor/Smartdevice";
 import SmartTechSolutions from "@/Solutions/IBCMontor/SmartMonitor";
 import CommonChallenges from "@/Solutions/IBCMontor/TaskMonitor";
 import WhatYouGain from "@/Solutions/IBCMontor/Whatgain";
@@ -27,6 +28,7 @@ const Ibmscreen = () => {
             <HowItWorks/>
             <ElintAutomateSection/>
             <FeaturedSolutionsed/>
+            <Dashboard/>
             <FeaturedSolutions/>
             <IndustriesImageGroup/>
             <FAQSection4 />

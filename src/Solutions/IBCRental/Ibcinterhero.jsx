@@ -4,7 +4,7 @@ const IntroSection = () => {
   return (
     <section className="w-full">
       <img
-        src="/intersession.jpeg" 
+        src="/ibcrental-session.png" 
         alt="Intro Banner"
         className="w-full h-auto object-cover"
       />

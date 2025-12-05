@@ -1,6 +1,6 @@
 import React from "react";
 
-const OilfieldMontoring = () => {
+const Ibcrentalhero = () => {
   const imageUrl = "/ibc1.png";
 
   return (
@@ -32,7 +32,7 @@ const OilfieldMontoring = () => {
               font-normal leading-snug text-gray-900 font-[Manrope]
             "
             >
-              Elint's Smart IBC Solution -  Real-Time Chemical Tank Insights{" "}
+              Next-Gen Container Rental—Flexible, Smart, and Connected.{" "}
             </h1>
 
             <p
@@ -41,7 +41,8 @@ const OilfieldMontoring = () => {
               text-gray-700 leading-relaxed font-[Manrope]
             "
             >
-               Monitor. Manage. Optimize – All from One Smart Platform
+              Simplify logistics with smart monitoring and a scalable rental
+              model{" "}
             </p>
             <button
               className="
@@ -73,4 +74,4 @@ const OilfieldMontoring = () => {
   );
 };
 
-export default OilfieldMontoring;
+export default Ibcrentalhero;

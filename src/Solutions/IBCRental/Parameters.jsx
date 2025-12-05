@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Droplets, Building2, Zap, MapPin } from "lucide-react"
 
-export default function ibcParameters() {
+export default function IbcrentalParameters() {
   return (
     <section className="w-full bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">

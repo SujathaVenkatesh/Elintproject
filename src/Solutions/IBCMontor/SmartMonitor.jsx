@@ -1,75 +1,88 @@
-import React from "react";
-import { Wifi, TrendingUp, Layers, Bell, Cloud, Wrench } from "lucide-react";
+import {
+  Wifi,
+  Factory,
+  Eye,
+  Bell,
+  Cloud,
+  Truck,
+  Activity,
+  Layers,
+  Radar,
+} from "lucide-react";
 
 const features = [
   {
     Icon: Wifi,
-    title: "Wireless IoT Connectivity",
-    description: "Seamless wireless communication enabling real-time monitoring of tank levels across multiple locations without complex wiring.",
+    title: "Wireless Remote Tank Sensor",
+    desc: "The CAT-M/NB-IoT wireless tank sensor provides 97–99% accuracy in industrial tank monitoring.",
   },
   {
-    Icon: TrendingUp,
-    title: "Real-Time Data Analytics",
-    description: "Advanced analytics dashboard providing instant insights into consumption patterns, usage trends, and operational efficiency.",
+    Icon: Factory,
+    title: "Industrial-Grade Dependability",
+    desc: "Dependable design for monitoring IBC levels in challenging conditions in real time.",
   },
   {
-    Icon: Layers,
-    title: "Multi-Sensor Integration",
-    description: "Support for multiple sensor types including level, temperature, pressure, and flow sensors for comprehensive monitoring.",
+    Icon: Eye,
+    title: "Instantaneous Visibility",
+    desc: "Through our cloud-based platform, keep an eye on usage patterns and tank levels at any time.",
   },
   {
     Icon: Bell,
     title: "Automated Alerts",
-    description: "Smart notification system that instantly alerts stakeholders about critical events, low levels, or anomalies via SMS and email.",
+    desc: "Instant alerts via WhatsApp, email, or SMS for movement or threshold violations.",
   },
   {
     Icon: Cloud,
-    title: "Cloud-Based Platform",
-    description: "Secure cloud infrastructure ensuring data accessibility from anywhere, with robust backup and recovery capabilities.",
+    title: "Cloud Dashboard",
+    desc: "A safe, central view of all central data for IoT-driven efficiency and real-time insights.",
   },
   {
-    Icon: Wrench,
-    title: "Predictive Maintenance",
-    description: "AI-powered predictive analytics identifying potential issues before they occur, reducing downtime and maintenance costs.",
+    Icon: Truck,
+    title: "Supply Chain Transparency",
+    desc: "Track across tank movements, usage patterns, and replenishment.",
+  },
+  {
+    Icon: Activity,
+    title: "Condition Monitoring",
+    desc: "Detect abnormal operations, pressure levels, and environmental anomalies.",
+  },
+  {
+    Icon: Layers,
+    title: "Scalable Architecture",
+    desc: "Scalable across several locations and designed for remote monitoring.",
+  },
+  {
+    Icon: Radar,
+    title: "Radar Level Sensor Technology",
+    desc: "For greater accuracy under challenging circumstances, we employ radar sensors rather than ultrasonic.",
   },
 ];
 
 const SmartTechSolutions = () => {
   return (
-    <section className="w-full bg-white py-16 px-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl font-normal text-gray-800 leading-snug">
-            Smart Tech Solutions Behind Elite's Industrial IoT Tank
-            <br />
-            Monitoring
-          </h2>
-        </div>
+    <section className="w-full bg-white py-20">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-center text-xl md:text-2xl font-medium text-gray-900 leading-snug">
+          Smart Tech Solutions Behind Elint’s Industrial IoT Tank <br />
+          Monitoring
+        </h2>
 
-        {/* Features Grid - 3 columns */}
-        <div className="grid grid-cols-3 gap-x-6 gap-y-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center px-4 py-6"
-            >
-              {/* Icon Container */}
-              <div className="w-12 h-12 mb-4 flex items-center justify-center">
-                <feature.Icon
-                  className="w-10 h-10 text-gray-600"
-                  strokeWidth={1.2}
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-10 text-center">
+          {features.map((item, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <div className="mb-4">
+                <item.Icon
+                  className="w-7 h-7 text-gray-700"
+                  strokeWidth={1.5}
                 />
               </div>
 
-              {/* Title */}
-              <h3 className="text-sm font-semibold text-gray-800 mb-3 leading-tight">
-                {feature.title}
+              <h3 className="text-sm font-semibold text-gray-900 mb-2">
+                {item.title}
               </h3>
 
-              {/* Description */}
-              <p className="text-xs text-gray-600 leading-relaxed">
-                {feature.description}
+              <p className="text-xs leading-relaxed text-gray-600 max-w-xs">
+                {item.desc}
               </p>
             </div>
           ))}

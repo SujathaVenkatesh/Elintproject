@@ -246,7 +246,7 @@ const SurfaceLevel = () => {
           <img
             src="/oil8.png"
             alt="Surface ESP Valve"
-            className="w-full max-w-lg object-contain"
+            className="w-full max-w-sm object-contain"
           />
         </div>
 

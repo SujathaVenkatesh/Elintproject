@@ -86,7 +86,7 @@ const Transform2Section = () => {
       </div>
 
       {/* ✅ BOTTOM DIAGRAM IMAGE */}
-      <div className="max-w-4xl mx-auto flex justify-center">
+      <div className="max-w-2xl mx-auto flex justify-center">
         <img
           src="/trans2center.png"
           alt="Surface ESP Annotated Diagram"

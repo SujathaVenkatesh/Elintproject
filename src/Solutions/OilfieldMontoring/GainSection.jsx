@@ -55,7 +55,7 @@ const GainSection = () => {
         <img
           src="/oil6.png"   
           alt="Right Pipe"
-          className="w-56 object-contain"
+          className="w-48 object-contain"
         />
       </div>
 

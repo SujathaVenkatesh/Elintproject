@@ -79,14 +79,14 @@ const TransformSection = () => {
           <img
             src="/transright.png"
             alt="Surface ESP Valve"
-            className="w-full max-w-lg object-contain"
+            className="w-full max-w-sm object-contain"
           />
         </div>
 
       </div>
 
       {/* ✅ BOTTOM DIAGRAM IMAGE */}
-      <div className="max-w-4xl mx-auto flex justify-center">
+      <div className="max-w-2xl mx-auto flex justify-center">
         <img
           src="/transcenter.png"
           alt="Surface ESP Annotated Diagram"

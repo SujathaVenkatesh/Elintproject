@@ -1,37 +1,46 @@
 import React from "react";
 
-const HeroSections = () => {
-  return (
-    <section className="w-full bg-white py-10 md:py-16">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-4 sm:px-6 lg:px-0">
-        <div className="w-full md:w-3/4 pr-0 md:pr-10">
-          <h1 className="text-[20px] sm:text-[22px] md:text-[30px] lg:text-[34px] font-semibold text-gray-800 leading-snug">
-            Power Outage? No Panic. Your Fuel Tank Already Knew.
-          </h1>
-          <p className="mt-4 sm:mt-6 text-[13px] sm:text-[14px] md:text-[16px] text-gray-600 leading-relaxed max-w-full md:max-w-2xl">
-            <span className="block font-semibold text-gray-700 mb-1 sm:mb-2">
-              Say hello to stress-free fuel automation.
-            </span>
-            While others are scrambling to refuel, your tank is already
-            ahead—fueled, monitored, and ready for action. No guesswork. No
-            manual checks. Just fuel, flowing whenever and wherever needed.
-          </p>
+/**
+ * Component displaying a large text block overlaid on a background image,
+ * specifically for the Fuel Management Day Tank context.
+ * The text content is fixed, and the background image is aligned right.
+ */
+const BannerBelowSection = () => {
+  const imageUrl = "/fuel-tank-pipe-connections.webp";
 
-          <p className="mt-4 sm:mt-6 text-[14px] sm:text-[15px] md:text-[17px] text-sky-600 font-medium max-w-full md:max-w-2xl">
-            Welcome to the future of fuel management—automated, real-time, and
-            always reliable.
-          </p>
-        </div>
-        <div className="w-full md:w-1/4 flex justify-center md:justify-end mt-6 md:mt-0">
-          <img
-            src="/fuel-tank-pipe-connections.png"
-            alt="Worker Using Tablet"
-            className="w-[180px] sm:w-[200px] md:w-[260px] lg:w-[300px] object-contain"
-          />
+  return (
+    <section className="relative w-full bg-white font-manrope">
+      <div
+        className="relative w-full bg-cover bg-right"
+        style={{
+          // Set the background image via style for the URL provided
+          backgroundImage: `url('${imageUrl}')`,
+          // Fixed height to match the design aesthetics (520px)
+          height: "520px", 
+        }}
+      >
+        {/* White fade overlay covering 70% of the left side for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/96 to-transparent w-[70%]"></div>
+
+        {/* TEXT CONTENT CONTAINER */}
+        <div className="relative w-full max-w-[1620px] mx-auto h-full px-6 lg:px-0 flex items-center">
+          
+          {/* Inner Content Block - Positioned left, max width 1100px */}
+          {/* Note: The original code used pl-[120px] in the outer div, but centering based on max-width and using a left padding on the content wrapper is more responsive. */}
+          <div className="pl-[120px]">
+            <p className="font-manrope font-normal text-[28px] leading-[49px] text-[#2A2A2A] max-w-[1100px]">
+              In mission-critical environments—like data centers, hospitals, and
+              industrial facilities—fuel management isn’t just operational, it’s
+              existential. Manual intervention leads to errors. Delays lead to
+              downtimes. Our advanced fuel day tank automation system brings a new
+              era of precision and autonomy to how your backup power infrastructure
+              is fueled and managed.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default HeroSections;
+export default BannerBelowSection;

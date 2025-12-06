@@ -1,19 +1,20 @@
 import React from "react";
 
 const Coldhero = () => {
-  const imageUrl = "/ibc1.png";
+  const imageUrl = "/cold storage1.png";
 
   return (
     <section className="w-full bg-white pt-10 md:pt-14">
       <div
         className="
           relative w-full overflow-hidden flex items-center
-          min-h-[420px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[600px]
+          min-h-[360px] sm:min-h-[420px] md:min-h-[460px] lg:min-h-[500px]
         "
         style={{
           backgroundImage: `url('${imageUrl}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center right",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "right center",
+          backgroundSize: "45%",   // ✅ reduces image size but keeps layout correct
         }}
       >
         <div
@@ -24,7 +25,7 @@ const Coldhero = () => {
         {/* CONTENT */}
         <div className="relative w-full px-4 sm:px-8 md:px-12 lg:px-28 py-10 md:py-0">
           <div className="max-w-full sm:max-w-[500px] md:max-w-[620px]">
-            {/* TITLE */}
+
             <h1
               className="
               text-[22px] sm:text-[28px] md:text-[36px] lg:text-[32px] 
@@ -42,6 +43,7 @@ const Coldhero = () => {
             >
               AI-Powered ESP Monitoring and Artificial Lift Optimization for Reliable Production
             </p>
+
             <button
               className="
                 mt-5 inline-flex items-center rounded-full bg-gradient-to-r 
@@ -65,6 +67,7 @@ const Coldhero = () => {
                 <path d="M14 5l7 7-7 7M21 12H3" />
               </svg>
             </button>
+
           </div>
         </div>
       </div>

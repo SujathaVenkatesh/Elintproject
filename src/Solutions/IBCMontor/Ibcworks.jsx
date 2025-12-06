@@ -14,10 +14,8 @@ const UniversalFit = () => {
       <div className="max-w-6xl mx-auto px-6 lg:px-10">
         <div className="bg-[#f2f2f2] rounded-lg p-8 md:p-10 lg:p-12 relative overflow-hidden">
 
-          {/* ✅ MAIN GRID */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-10 items-start">
 
-            {/* ✅ LEFT CONTENT */}
             <div>
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
                 Universal Fit. Industrial Ready.

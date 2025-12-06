@@ -28,11 +28,11 @@ const OilfieldMontoring = () => {
             {/* TITLE */}
             <h1
               className="
-              text-[22px] sm:text-[28px] md:text-[36px] lg:text-[32px] 
+              text-[22px] sm:text-[28px] md:text-[46px] lg:text-[46px] 
               font-normal leading-snug text-gray-900 font-[Manrope]
             "
             >
-              Digital Oil field Monitoring Solution
+              Elint's Smart IBC Solution -  Real-Time Chemical Tank Insights{" "}
             </h1>
 
             <p
@@ -41,7 +41,7 @@ const OilfieldMontoring = () => {
               text-gray-700 leading-relaxed font-[Manrope]
             "
             >
-              AI-Powered ESP Monitoring and Artificial Lift Optimization for Reliable Production
+               Monitor. Manage. Optimize – All from One Smart Platform
             </p>
             <button
               className="

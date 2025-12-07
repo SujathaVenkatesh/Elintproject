@@ -1,6 +1,12 @@
 
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-hd: 1520px;
+  --breakpoint-fhd: 1920px;
+}
+
+
 
 body {
   margin: 0;

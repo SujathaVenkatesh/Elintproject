@@ -5,37 +5,37 @@ import React, { useState } from "react";
 // FAQ data
 const faqItems = [
   {
-    question: "What is a smart water tank automation system?",
+    question: "What parameters can the system track in real time?",
     answer:
-      "A smart water tank automation system uses sensors, controllers, and software to automatically manage water levels, pump operation, and fault protection in real-time, eliminating manual intervention.",
+      "As per BIS 10500 standards, water supply and monitoring system continuously measures turbidity, pressure, pH, flow rate, chlorine concentration",
   },
   {
-    question: "How does remote water tank monitoring function?",
+    question: "How does this system align with JJM guidelines?",
     answer:
-      "Remote monitoring uses gateways to send data from tank sensors to a cloud platform, allowing users to view status and receive alerts via a mobile app or web dashboard from anywhere.",
+      "It directly supports JJM mandates by guaranteeing a minimum daily water supply of 55 LPCD, monitoring quality parameters like pH and chlorine, and providing real-time data .",
   },
   {
-    question: "Can multiple tanks be monitored in one system?",
+    question: "Can this system work for both small villages and large urban areas?",
     answer:
-      "Yes, a single gateway can typically handle multiple sensors and tanks, centralizing monitoring and control into one unified interface.",
+      "Yes, its architecture is scalable, supporting everything from complex municipal water networks to single-village schemes.",
   },
   {
-    question: "How reliable is LoRaWAN for water tank systems?",
+    question: "What sectors can benefit from smart water process automation?",
     answer:
-      "LoRaWAN offers long range, low power consumption, and strong signal penetration, making it highly reliable in industrial environments.",
+      "This solution is perfect for municipalities, wastewater treatment facilities, agricultural irrigation, rural water supply, textile industries, and the power sector that needs effective water distribution and monitoring.",
   },
   {
-    question: "How does water pump automation reduce maintenance costs?",
+    question: "How does water automation work?",
     answer:
-      "Automation prevents failures like dry runs, overloads, and overflows, optimizes runtime, and provides diagnostics for predictive maintenance.",
+      "It is a plug-and-play system that requires no manual labor to automatically control pumps and valves based on sensor data, providing real-time monitoring and alerts.",
   },
   {
-    question: "What is the Smart Starter in water tank automation?",
+    question: "What are the benefits of real-time water supply monitoring?",
     answer:
-      "The Smart Starter is an intelligent pump control unit that integrates automation logic, voltage protection, fault memory, and communication.",
+      "With centralized reporting, real-time monitoring guarantees a continuous supply, complies with regulations, enhances quality, lowers losses, and provides immediate alerts.",
   },
   {
-    question: "How does the Smart Starter enable remote control?",
+    question: "How does the automation panel work in a smart water system?",
     answer:
       "The Smart Starter connects to a cloud gateway so authorized users can remotely control the pump and adjust settings from their devices.",
   },

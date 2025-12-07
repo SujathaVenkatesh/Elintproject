@@ -2,6 +2,9 @@ import { Manrope } from 'next/font/google'
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import '../Assets/Scss/Styles.scss'
+import "../Assets/Scss/font.scss";
+import "../Assets/Scss/fontSize.scss";
 
 
 
@@ -43,7 +46,7 @@ export default function RootLayout({ children }) {
       <body className={manrope.className}>
         <Navbar/>
         {children}
-        <Footer/>
+        {/* <Footer/> */}
       </body>
     </html>
   );

@@ -16,24 +16,26 @@ import SensorSection1 from "@/Solutions/DayTank/Session8";
 import SolutionCard from "@/Solutions/DayTank/Cardsession";
 import AccordionItem from "@/Solutions/DayTank/Faq";
 import BannerBelowSection from "@/Solutions/DayTank/Herosession";
+import Poweroutage from "@/Solutions/DayTank/Poweroutage";
 
 const DayTank = () => {
     return (
         <div>
             <Hero />
-            <BannerBelowSection/>
+            <BannerBelowSection />
             <IntelligenceSection />
             <AutomationFuelSection />
             <ManualTankChallenges />
+            <Poweroutage />
             <GainByAutomation />
             <SmartStarterSection />
             <HazardZonesSection />
             <RadarSensorSection />
-            <SensorSection/>
-            <SensorSection1/>
-            <StayConnectedSection/>
-            <SolutionCard/>
-            <AccordionItem/>    
+            <SensorSection />
+            <SensorSection1 />
+            <StayConnectedSection />
+            <SolutionCard />
+            <AccordionItem />
         </div>
     );
 };

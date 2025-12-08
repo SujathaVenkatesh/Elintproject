@@ -4,43 +4,59 @@ const Hero = () => {
   const imageUrl = "/mytank1.png";
 
   return (
-    <section className="w-full bg-white pt-20 md:pt-24">
+    <section className="w-full bg-white">
       <div
-        className="relative w-full overflow-hidden flex items-center"
+        className="
+          relative overflow-hidden flex items-center
+        "
         style={{
+          width: "1905px",
+          height: "731px",
           backgroundImage: `url('${imageUrl}')`,
           backgroundSize: "cover",
           backgroundPosition: "right center",
-          minHeight: "450px"
-        }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/0" />
-        <div className="relative mx-auto max-w-6xl w-full px-4 md:px-8 lg:px-1">
+          margin: "0 auto", // centers the entire banner
+        }}
+      >
+        {/* GRADIENT OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent"></div>
+
+        {/* TEXT CONTENT */}
+        <div
+          className="relative"
+          style={{
+            paddingLeft: "300px", // EXACT LEFT POSITION YOU REQUESTED
+          }}
+        >
           <div className="max-w-xl">
-            <h1 className="text-[22px] md:text-[26px] lg:text-[28px] font-semibold leading-snug text-gray-900">
-              Day Tank Automation Systems for Smarter Fuel Management
+
+            {/* TITLE */}
+            <h1 className="text-[40px] font-semibold text-gray-900 leading-snug">
+              Smart Water Tank Automation for
+              Sustainable Efficiency
             </h1>
-            <p className="mt-3 text-[13px] md:text-[14px] text-gray-700 leading-relaxed max-w-md">
-              Simplify refueling, reduce downtime, and ensure 24/7 operational reliability.
+
+            {/* DESCRIPTION */}
+            <p className="mt-4 text-[18px] text-gray-700 leading-relaxed max-w-lg">
+              Transform traditional water systems with intelligent monitoring,
+              control, and real-time optimization.
             </p>
+
+            {/* BUTTON */}
             <button
-              className="mt-4 inline-flex items-center rounded-full bg-gradient-to-r from-blue-400 to-blue-500
-                         px-5 py-2 text-[12px] md:text-[13px] font-medium text-white shadow-md shadow-blue-400/40
-                         hover:from-blue-500 hover:to-blue-600 transition-transform duration-200
-                         hover:scale-[1.02] active:scale-[0.98]"
+              className="
+                mt-8 px-8 py-4 rounded-full text-white
+                text-[18px] font-medium flex items-center gap-3 shadow-lg
+              "
+              style={{
+                background:
+                  "linear-gradient(98.57deg, #55ABEE 1.02%, #52ACF4 56.68%, #79C0F8)",
+              }}
             >
-              <span>Connect with Us</span>
-              <svg
-                className="ml-2 h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                viewBox="0 0 24 24"
-              >
-                <path d="M14 5l7 7-7 7M21 12H3" />
-              </svg>
+              Connect With Us
+              <img src="/Layer_1.png" className="w-[30px] h-[26px]" />
             </button>
+
           </div>
         </div>
       </div>

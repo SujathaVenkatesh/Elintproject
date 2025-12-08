@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 // Using lucide-react icons for consistency
 import { Zap, Wifi, HardHat, Sun, Gauge, Droplet, Cloud, GitFork, Minimize2 } from "lucide-react"; 
 
@@ -22,6 +22,9 @@ const cloudFeatures = [
 ];
 
 // Reusable component for displaying a feature item (Text | Icon)
+
+
+
 // Modified to use the layout where text is on the left and icon/circle is on the right
 const FeatureItem = ({ icon: Icon, title, desc }) => {
   return (

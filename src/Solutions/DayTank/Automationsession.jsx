@@ -1,76 +1,72 @@
 import React from "react";
-import {
-  FiRefreshCw,
-  FiShield,
-  FiCpu,
-  FiClock,
-  FiCloud,
-  FiTrendingUp,
-} from "react-icons/fi";
 
 const AutomationFuelSection = () => {
-  const features = [
-    {
-      icon: <FiRefreshCw className="w-6 sm:w-8 h-6 sm:h-8 text-gray-700" />,
-      title: "Auto-Refill Logic",
-      desc: "Refueling is fully automated, responding instantly to actual tank demand.",
-    },
-    {
-      icon: <FiShield className="w-6 sm:w-8 h-6 sm:h-8 text-gray-700" />,
-      title: "Sealed System Design",
-      desc: "A closed-loop setup prevents leaks, contamination, and external interference.",
-    },
-    {
-      icon: <FiCpu className="w-6 sm:w-8 h-6 sm:h-8 text-gray-700" />,
-      title: "ATG Integration",
-      desc: "Connects with Automated Tank Gauging systems for accurate fuel level visibility.",
-    },
-    {
-      icon: <FiClock className="w-6 sm:w-8 h-6 sm:h-8 text-gray-700" />,
-      title: "Timed Operation Scheduling",
-      desc: "Schedule fuel transfers to turn on or off at specific times.",
-    },
-    {
-      icon: <FiCloud className="w-6 sm:w-8 h-6 sm:h-8 text-gray-700" />,
-      title: "Cloud Dashboard Access",
-      desc: "Monitor your system remotely with real-time alerts and insights.",
-    },
-    {
-      icon: <FiTrendingUp className="w-6 sm:w-8 h-6 sm:h-8 text-gray-700" />,
-      title: "System Insights",
-      desc: "View usage trends and performance analysis at your fingertips.",
-    },
-  ];
-
   return (
-    <section className="w-full bg-white py-10 sm:py-14 md:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="w-full bg-white py-[90px]">
+      <div className="max-w-[1300px] mx-auto px-[140px] text-center">
 
-        {/* Heading */}
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-snug">
+        <h2 className="text-[33px] font-regular text-[#2A2A2A] leading-[1.4]">
           Say Goodbye to Manual Checks—Automate Your Fuel Management
         </h2>
 
-        {/* Subheading */}
-        <p className="mt-3 sm:mt-4 text-gray-600 text-sm sm:text-base md:text-lg max-w-full sm:max-w-3xl mx-auto leading-relaxed">
+        <p className="mt-[10px] text-[16px] text-[#7A7A7A] max-w-[620px] mx-auto leading-[1.8]">
           Streamlined fuel automation that puts control, transfer, and insights in one place.
         </p>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 md:gap-14 mt-8 sm:mt-12">
-          {features.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center px-2 sm:px-4">
-              {item.icon}
-              <h3 className="mt-3 sm:mt-4 text-gray-900 font-semibold text-sm sm:text-base md:text-lg">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-1 sm:mt-2 leading-relaxed max-w-[220px] sm:max-w-xs">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+        <div className="mt-[70px] grid grid-cols-3 gap-x-[140px] gap-y-[70px]">
 
+          <div className="flex flex-col items-center text-center">
+            <img src="/tank6.png" className="w-[33px] h-[28px] mb-[18px]" alt="" />
+            <h3 className="text-[14px] font-normal text-[#2A2A2A] mb-[6px]">
+              Auto-Refill Logic
+            </h3>
+            <p className="text-[12.5px] text-[#8A8A8A] leading-[1.7] max-w-[320px]">
+              Refueling is fully automated, responding instantly to actual tank demand.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <img src="/tank7.png" className="w-[33px] h-[28px] mb-[18px]" alt="" />
+            <h3 className="text-[14px] font-normal text-[#2A2A2A] mb-[6px]">
+              Sealed System Design
+            </h3>
+            <p className="text-[12.5px] text-[#8A8A8A] leading-[1.7] max-w-[320px]">
+              A closed-loop setup prevents leaks, contamination, and external interference.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <img src="/tank8.png" className="w-[33px] h-[28px] mb-[18px]" alt="" />
+            <h3 className="text-[14px] font-normal text-[#2A2A2A] mb-[6px]">
+              ATG Integration
+            </h3>
+            <p className="text-[12.5px] text-[#8A8A8A] leading-[1.7] max-w-[320px]">
+              Connects with Automated Tank Gauging systems for accurate fuel level visibility.
+            </p>
+          </div>
+
+          {/* ✅ BOTTOM CENTER */}
+          <div className="col-start-1 col-span-3 flex justify-center gap-x-[140px] mt-[10px]">
+
+            <div className="flex flex-col items-center text-center">
+              <img src="/tank9.png" className="w-[33px] h-[28px] mb-[18px]" alt="" />
+              <h3 className="text-[14px] font-normal text-[#2A2A2A] mb-[6px]">
+                Timed Operation Scheduling
+              </h3>
+              <p className="text-[12.5px] text-[#8A8A8A] leading-[1.7] max-w-[320px]">
+ Easily schedule fuel transfers to turn on or off at specific times for precise control               </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <img src="/tank10.png" className="w-[33px] h-[28px] mb-[18px]" alt="" />
+              <h3 className="text-[14px] font-normal text-[#2A2A2A] mb-[6px]">
+                Cloud Dashboard Access
+              </h3>
+              <p className="text-[12.5px] text-[#8A8A8A] leading-[1.7] max-w-[250px]">
+Monitor and manage your entire system remotely, with live data and alerts at your fingertips.            </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

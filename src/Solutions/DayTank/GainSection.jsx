@@ -1,157 +1,66 @@
-import React from "react";
-import { Zap, DollarSign, BatteryCharging, Shield, Clock } from "lucide-react";
+import { FiMonitor, FiShield, FiClock, FiFileText, FiSettings } from "react-icons/fi";
 
-const solutionPoints = [
-  {
-    icon: Zap,
-    title: "Operational Efficiency",
-    description: "Real-time insights streamline fuel usage and refills.",
-    top: "26%",
-    left: "50%",
-    align: "center",
-  },
-  {
-    icon: BatteryCharging,
-    title: "Labor Cost Savings",
-    description: "Eliminate the need for manual monitoring and intervention.",
-    top: "38%",
-    left: "28%",
-    align: "right",
-  },
-  {
-    icon: Shield,
-    title: "Reduced Downtime Risk",
-    description: "Fuel delivery is never interrupted, ensuring generator uptime.",
-    top: "55%",
-    left: "25%",
-    align: "right",
-  },
-  {
-    icon: DollarSign,
-    title: "Asset Protection",
-    description: "Prevent fuel theft, leakage, or overflow with intelligent safeguards.",
-    top: "38%",
-    left: "72%",
-    align: "left",
-  },
-  {
-    icon: Clock,
-    title: "Regulatory Compliance",
-    description: "Maintain audit trails and meet industry standards effortlessly.",
-    top: "55%",
-    left: "75%",
-    align: "left",
-  },
-];
-
-const FeaturePoint = ({ icon: Icon, title, description, top, left, align }) => {
-  const textAlign =
-    align === "right"
-      ? "items-end text-right"
-      : align === "left"
-      ? "items-start text-left"
-      : "items-center text-center";
-
-  return (
-    <div
-      className={`absolute flex flex-col ${textAlign}`}
-      style={{ top, left, transform: "translate(-50%, -50%)", width: 260 }}
-    >
-      <div className="w-16 h-16 rounded-full border border-[#E5E7EB] bg-white flex items-center justify-center shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
-        <Icon className="w-7 h-7 text-slate-600" />
+export default function FuelAutomationBenefits() {
+  const BenefitItem = ({ icon: Icon, title, description, className }) => (
+    <div className={`absolute flex flex-col items-center text-center ${className}`}>
+      <div className="bg-white w-16 h-16 rounded-full border border-gray-200 shadow-sm flex items-center justify-center z-10">
+        <Icon className="text-gray-600 text-[28px]" />
       </div>
-
-      <div className="mt-3">
-        <h4 className="text-sm font-semibold text-[#111827] leading-snug">
-          {title}
-        </h4>
-        <p className="mt-1 text-xs text-[#9CA3AF] leading-snug">
-          {description}
-        </p>
-      </div>
+      <h4 className="font-semibold text-gray-800 text-[14px] z-10 mt-3">{title}</h4>
+      <p className="text-gray-500 text-[13px] max-w-[200px] mt-1.5 z-10 px-2 leading-relaxed">{description}</p>
     </div>
   );
-};
 
-const DottedArrow = () => (
-  <svg
-    viewBox="0 0 80 80"
-    className="absolute left-1/2 bottom-10 -translate-x-1/2 w-14 h-14"
-  >
-    {[0, 1, 2, 3].map((row) =>
-      Array.from({ length: row * 2 + 1 }).map((_, idx) => {
-        const x = 40 + (idx - row) * 4;
-        const y = 60 - row * 4;
-        const opacity = 1 - row * 0.18;
-        return (
-          <circle
-            key={`${row}-${idx}`}
-            cx={x}
-            cy={y}
-            r="1.4"
-            fill="#9CA3AF"
-            opacity={opacity}
-          />
-        );
-      })
-    )}
-  </svg>
-);
-
-const FuelHandlingSection = () => {
   return (
-    <section className="w-full bg-white py-20">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-[22px] md:text-[24px] font-medium text-[#111827] mb-2">
+    <section className="w-full bg-white py-20 flex flex-col items-center">
+      <div className="flex flex-col items-center max-w-4xl px-6">
+        <h2 className="text-5xl font-semibold text-gray-900 text-center text-balance">
           What You Really Gain by Automating Fuel Handling
         </h2>
-        <p className="text-[12px] md:text-[13px] text-[#6B7280] mb-14 max-w-2xl mx-auto">
-          With intelligent automation, your day tank runs smoother, safer, and more predictably.
+        <p className="mt-4 text-gray-600 text-center text-[15px] max-w-2xl leading-relaxed">
+          With intelligent automation, your day tank runs smoother, safer, and more predictably
         </p>
-
-        {/* main diagram */}
-        <div className="relative w-full max-w-[1200px] h-[480px] mx-auto flex justify-center items-end overflow-visible">
-          {/* rainbow arcs */}
-          <svg
-            viewBox="0 0 1200 600"
-            className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[1200px] h-[380px]"
-          >
-            {/* outer */}
-            <path
-              d="M60 520 C 600 260 600 260 1140 520"
-              stroke="#F3F4F6"
-              strokeWidth="90"
-              fill="none"
-            />
-            {/* mid */}
-            <path
-              d="M160 520 C 600 310 600 310 1040 520"
-              stroke="#F7F7F8"
-              strokeWidth="80"
-              fill="none"
-            />
-            {/* inner */}
-            <path
-              d="M260 520 C 600 360 600 360 940 520"
-              stroke="#F3F4F6"
-              strokeWidth="70"
-              fill="none"
-            />
-          </svg>
-
-          {/* dotted arrow */}
-          <DottedArrow />
-
-          {/* feature points around top of arcs */}
-          <div className="absolute inset-x-0 top-0 h-full pointer-events-none">
-            {solutionPoints.map((p, i) => (
-              <FeaturePoint key={i} {...p} />
-            ))}
-          </div>
-        </div>
+      </div>
+      <div
+        className="relative w-full max-w-6xl h-[450px] mt-16"
+        style={{
+          backgroundImage: "url('/background-design.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <BenefitItem
+          icon={FiSettings}
+          title="Labor Cost Savings"
+          description="Eliminate the need for manual monitoring and intervention."
+          className="top-0 left-1/2 -translate-x-1/2"
+        />
+        <BenefitItem
+          icon={FiMonitor}
+          title="Operational Efficiency"
+          description="Real-time insights streamline fuel usage and refills."
+          className="top-[160px] left-[12%] -translate-x-1/2"
+        />
+        <BenefitItem
+          icon={FiShield}
+          title="Asset Protection"
+          description="Prevent fuel theft, leakage, or overflow with intelligent safeguards."
+          className="top-[160px] right-[12%] translate-x-1/2"
+        />
+        <BenefitItem
+          icon={FiClock}
+          title="Reduced Downtime Risk"
+          description="Fuel delivery is never interrupted, ensuring generator uptime."
+          className="top-[340px] left-[8%] -translate-x-1/2"
+        />
+        <BenefitItem
+          icon={FiFileText}
+          title="Regulatory Compliance"
+          description="Maintain audit trails and meet industry standards effortlessly."
+          className="top-[340px] right-[8%] translate-x-1/2"
+        />
       </div>
     </section>
   );
-};
-
-export default FuelHandlingSection;
+}

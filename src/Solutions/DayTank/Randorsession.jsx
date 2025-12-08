@@ -76,7 +76,6 @@ export default function RadarSensorSection() {
           </div>
         </div>
 
-        {/* ---------------- MOBILE VERSION ---------------- */}
         <div className="block md:hidden flex flex-col items-center gap-8">
           <h2 className="text-[20px] font-semibold text-gray-900 text-center">
             UltraLevel Pro — The Smarter Radar Level Sensor

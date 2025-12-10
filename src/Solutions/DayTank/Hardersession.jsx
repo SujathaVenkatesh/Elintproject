@@ -55,7 +55,7 @@ export default function HazardZonesSection() {
             />
             <FeatureItem
               title="Auto Pressure Cut-Off"
-              text="Automatically cuts off pumping on pressure spikes, preventing pipeline bursts and overpressure faults."
+              text=" System auto-shuts during pressure spikes, preventing pipeline bursts and overpressure risks."
             />
             <FeatureItem
               title="Flameproof Wireless Sensors"

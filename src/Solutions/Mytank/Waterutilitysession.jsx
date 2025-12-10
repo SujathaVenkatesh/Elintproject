@@ -1,100 +1,152 @@
 import React from "react";
-import { Zap, Wifi, HardHat, Sun, Gauge, Droplet, Clock, ListChecks, Battery, Cloud, MonitorSmartphone, DollarSign, Target, Activity, CheckCircle } from "lucide-react";
 
-// Reusable component for displaying a feature item in the utility section
-const UtilityFeature = ({ icon: Icon, title, desc, className = '' }) => (
-  <div className={`flex items-start gap-4 ${className}`}>
-    {/* Icon circle (similar to previous designs but styled for this section) */}
-    <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 text-gray-700 mt-1">
-      <Icon className="w-4 h-4 text-blue-600" />
-    </div>
+// Single Feature Box
+const UtilityFeature = ({ img, title, desc }) => (
+  <div className="flex items-start gap-4 w-full max-w-[500px] font-['Manrope']">
 
-    {/* text */}
-    <div className="flex-1 text-left">
-      <h3 className="text-[14px] font-semibold text-[#444444]">{title}</h3>
-      <p className="mt-1 text-[12px] leading-snug text-[#666666] max-w-md">
+    {/* Icon 48px like screenshot */}
+    <img src={img} alt={title} className="w-12 h-12 object-contain mt-1" />
+
+    <div className="text-left">
+      {/* Title Responsive */}
+      <h3
+        className="
+          text-[#333]
+          leading-[1.4]
+          font-normal
+          text-[15px]
+          sm:text-[16px]
+          md:text-[17px]
+          lg:text-[18px]
+          xl:text-[20px]
+          2xl:max-[1920px]:text-[22px]
+          min-[1920px]:!text-[28px]
+        "
+      >
+        {title}
+      </h3>
+
+      {/* Description Responsive */}
+      <p
+        className="
+          text-[#666] mt-1 leading-[1.65] text-justify
+          text-[13px]
+          sm:text-[14px]
+          md:text-[15px]
+          lg:text-[16px]
+          xl:text-[17px]
+          2xl:max-[1920px]:text-[18px]
+          min-[1920px]:!text-[22px]
+        "
+      >
         {desc}
       </p>
     </div>
   </div>
 );
 
-// Features data for the Utility Section
 const utilityFeatures = [
   {
-    icon: CheckCircle, // Replaced original icon with CheckCircle for clarity
+    img: "/t1icon.png",
     title: "Error Reduction",
     desc: "Automation eliminates human mistakes, ensuring reliable operation.",
   },
   {
-    icon: DollarSign, // Replaced original icon with DollarSign for clarity
+    img: "/t2icon.png",
     title: "Energy Savings",
     desc: "Optimized scheduling reduces power consumption, lowering costs.",
   },
   {
-    icon: Activity, // Replaced original icon with Activity for clarity
+    img: "/t3icon.png",
     title: "Actionable Insights",
-    desc: "Real-time dashboard displays critical metrics like current, power, and water levels for informed decisions.",
+    desc: "Real-time dashboard displays critical metrics for informed decisions.",
   },
   {
-    icon: Clock, // Replaced original icon with Clock for clarity
+    img: "/t4icon.png",
     title: "Cost Efficiency",
     desc: "Minimizes water wastage and maintenance expenses through proactive monitoring.",
   },
   {
-    icon: Wifi, 
+    img: "/t5icon.png",
     title: "True Wireless Communication",
-    desc: "LoRaWAN (Up to 2 km LOS) connectivity enables seamless, cable-free data transfer and control.",
+    desc: "LoRaWAN (up to 2 km LoS) connectivity enables seamless, cable-free data transfer and control.",
   },
   {
-    icon: Target, // Replaced original icon with Target for clarity
+    img: "/t6icon.png",
     title: "Increased Motor Lifespan",
     desc: "Protection mechanisms like overload and dry run prevention extend pump and motor durability.",
   },
 ];
 
-const WaterUtilitySection = () => {
-  // Image: Large water tanks on a platform
-  const tanksImage = "/hah.png"; 
+export default function WaterUtilitySection() {
+  const imgUrl = "/hah.png";
 
   return (
-    <section className="w-full bg-white py-16 md:py-20">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        
-        {/* Title and Subtitle */}
-        <h2 className="text-3xl md:text-4xl font-normal text-gray-800 leading-tight">
+    <section className="w-full bg-white py-16 md:py-20 font-['Manrope']">
+      <div className="max-w-[1600px] mx-auto px-6 text-center">
+
+        {/* Title — match hero font sizes */}
+        <h2
+          className="
+            text-[#3D3D3D] leading-[1.4] font-normal
+            text-[19px]
+            sm:text-[22px]
+            md:text-[25px]
+            lg:text-[28px]
+            xl:text-[32px]
+            2xl:max-[1920px]:text-[38px]
+            min-[1920px]:!text-[46px]
+          "
+        >
           Transforming Daily Water Operations into an Intelligent Utility
         </h2>
-        <p className="mt-2 text-base md:text-lg text-gray-600 mb-12">
+
+        {/* Subtitle — match hero paragraph sizing */}
+        <p
+          className="
+            text-[#737373] mt-3 leading-[1.65]
+            text-[14px]
+            sm:text-[16px]
+            md:text-[17px]
+            lg:text-[18px]
+            xl:text-[20px]
+            2xl:max-[1920px]:text-[22px]
+            min-[1920px]:!text-[28px]
+          "
+        >
           Built to solve what manual systems miss
         </p>
 
-        {/* Central Image */}
+        {/* Image */}
         <div className="flex justify-center mb-16">
-          <div className="w-full max-w-4xl rounded-xl shadow-lg overflow-hidden">
+          <div className="w-full max-w-[900px] rounded-xl overflow-hidden shadow-md">
             <img
-              src={tanksImage}
-              alt="Industrial water tanks managed by the system"
-              className="w-full h-full object-cover"
+              src={imgUrl}
+              alt="Water utility tank"
+              className="w-full object-cover"
             />
           </div>
         </div>
 
-        {/* Features Grid (3 Columns on desktop, wrapping underneath the image) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12 text-left">
-          {utilityFeatures.map((item, index) => (
-            <div key={index} className="flex justify-center">
-              <UtilityFeature
-                icon={item.icon}
-                title={item.title}
-                desc={item.desc}
-              />
-            </div>
-          ))}
+        {/* Features Grid */}
+        <div className="flex justify-center">
+          <div
+            className="
+              grid 
+              grid-cols-1
+              md:grid-cols-2
+              gap-y-14 
+              gap-x-32
+              justify-items-start
+            "
+          >
+            {utilityFeatures.map((item, i) => (
+              <UtilityFeature key={i} {...item} />
+            ))}
+          </div>
         </div>
+
       </div>
     </section>
   );
-};
-
-export default WaterUtilitySection;
+}

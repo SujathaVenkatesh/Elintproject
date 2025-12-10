@@ -1,46 +1,128 @@
 import React from "react";
 
-const Hero = () => {
-  const imageUrl = "/mytank1.png";
+const MytankHero = () => {
+  const imageUrl = "/iot-water-tank-automation.webp";
 
   return (
-    <section className="w-full bg-white pt-20 md:pt-24">
+    <section className="w-full bg-white font-['Manrope']">
       <div
-        className="relative w-full overflow-hidden flex items-center"
-        style={{
-          backgroundImage: `url('${imageUrl}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "right center",
-          minHeight: "450px"
-        }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/0" />
-        <div className="relative mx-auto max-w-6xl w-full px-4 md:px-8 lg:px-1">
-          <div className="max-w-xl">
-            <h1 className="text-[22px] md:text-[26px] lg:text-[28px] font-semibold leading-snug text-gray-900">
-              Day Tank Automation Systems for Smarter Fuel Management
-            </h1>
-            <p className="mt-3 text-[13px] md:text-[14px] text-gray-700 leading-relaxed max-w-md">
-              Simplify refueling, reduce downtime, and ensure 24/7 operational reliability.
-            </p>
-            <button
-              className="mt-4 inline-flex items-center rounded-full bg-gradient-to-r from-blue-400 to-blue-500
-                         px-5 py-2 text-[12px] md:text-[13px] font-medium text-white shadow-md shadow-blue-400/40
-                         hover:from-blue-500 hover:to-blue-600 transition-transform duration-200
-                         hover:scale-[1.02] active:scale-[0.98]"
+        className="
+          relative flex items-center overflow-hidden 
+           hero-section"
+        style={{ backgroundImage: `url('${imageUrl}')`, height: "100vh" }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-white/80 to-transparent"></div>
+        <div
+          className="
+            relative w-full mx-auto max-w-[1620px]
+            px-5 
+            sm:px-10 
+            md:px-16 
+            lg:px-24 
+            xl:px-28 
+            2xl:px-[120px]
+            min-[1920px]:!px-[0px] 
+            font-['Manrope']
+            font-normal">
+          <div
+            className="
+              max-w-[1000px]
+              /* Padding top responsive */
+              pt-10 
+              sm:pt-12 
+              md:pt-16 
+              lg:pt-20 
+              xl:pt-24 
+              2xl:pt-[140px]
+              min-[1920px]:!pt-[160px]
+            "
+          >
+            <h1
+              className="
+                font-['Manrope'] text-[#3D3D3D] leading-[1.4]
+                text-[19px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[33px]
+                min-[1920px]:!text-[46px]
+              "
             >
-              <span>Connect with Us</span>
-              <svg
-                className="ml-2 h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                viewBox="0 0 24 24"
+              Smart Water Tank Automation for <br></br>Sustainable Efficiency
+            </h1>
+            <p
+              className="
+                font-['Manrope'] text-[#737373] mt-3 leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[20px]
+                min-[1920px]:!text-[28px]
+              "
+            >
+              Transform traditional water systems with intelligent <br></br>{" "}
+              monitoring, control, and real-time optimization.
+            </p>
+            <div
+              className="
+                mt-6 
+                sm:mt-7 
+                md:mt-8 
+                lg:mt-10 
+                xl:mt-12 
+                2xl:mt-14
+                min-[1920px]:!mt-7
+              "
+            >
+              <button
+                className="
+                  btn-primary
+                  w-fit flex items-center justify-center gap-3
+                  rounded-[81px]
+                  transition-all duration-300
+                  /* Button padding responsive */
+                  px-6 py-3
+                  sm:px-7 sm:py-3.5
+                  md:px-8 md:py-4
+                  xl:px-6 xl:py-3
+                  2xl:px-[34px] 2xl:py-[15px]
+                  min-[1920px]:!px-[34px] min-[1920px]:!py-[15px]
+                "
               >
-                <path d="M14 5l7 7-7 7M21 12H3" />
-              </svg>
-            </button>
+                <span
+                  className="
+                    leading-none
+                    text-[14px]
+                    sm:text-[16px]
+                    md:text-[18px]
+                    lg:text-[18px]
+                    xl:text-[20px]
+                    2xl:max-[1920px]:text-[20px]
+                    min-[1920px]:!text-[22px]
+                    font-['Manrope']
+                    font-medium
+                  "
+                >
+                  Connect With Us
+                </span>
+                <img
+                  src="/Layer_1.png"
+                  alt="arrow"
+                  className="
+                    object-contain
+                    w-[18px] h-[16px]
+                    sm:w-[22px] sm:h-[20px]
+                    md:w-[40px] md:h-[32px]
+                    xl:w-[28px] xl:h-[26px]
+                    2xl:w-[33px] 2xl:h-[40px]
+                    min-[1920px]:!w-[33px] 
+                    min-[1920px]:!h-[40px]
+                  "
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -48,4 +130,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default MytankHero;

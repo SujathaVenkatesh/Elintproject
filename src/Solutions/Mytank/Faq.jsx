@@ -2,42 +2,42 @@
 
 import React, { useState } from "react";
 
-// FAQ data
+// FAQ data (Smart Water Tank Automation System)
 const faqItems = [
   {
     question: "What is a smart water tank automation system?",
     answer:
-      "A smart water tank automation system uses sensors, controllers, and software to automatically manage water levels, pump operation, and fault protection in real-time, eliminating manual intervention.",
+      "A smart water tank automation system uses IoT technology, sensors, and cloud connectivity to monitor water levels, control pumps, and provide real-time data via a mobile or web interface.",
   },
   {
     question: "How does remote water tank monitoring function?",
     answer:
-      "Remote monitoring uses gateways to send data from tank sensors to a cloud platform, allowing users to view status and receive alerts via a mobile app or web dashboard from anywhere.",
+      "Sensors transmit water level and pump data to a cloud-based water management platform, accessible via mobile or web for remote monitoring and control.",
   },
   {
     question: "Can multiple tanks be monitored in one system?",
     answer:
-      "Yes, a single gateway can typically handle multiple sensors and tanks, centralizing monitoring and control into one unified interface.",
+      "Yes, a cloud-based water management platform allows monitoring and control of multiple tank locations from a single dashboard.",
   },
   {
     question: "How reliable is LoRaWAN for water tank systems?",
     answer:
-      "LoRaWAN offers long range, low power consumption, and strong signal penetration, making it highly reliable in industrial environments.",
+      "LoRaWAN provides stable wireless data transmission up to 2 km, ensuring consistent connectivity for remote or large-scale water tank systems.",
   },
   {
     question: "How does water pump automation reduce maintenance costs?",
     answer:
-      "Automation prevents failures like dry runs, overloads, and overflows, optimizes runtime, and provides diagnostics for predictive maintenance.",
+      "Water pump automation uses dry run protection and overload protection to prevent motor damage, reducing repair frequency and extending equipment lifespan.",
   },
   {
     question: "What is the Smart Starter in water tank automation?",
     answer:
-      "The Smart Starter is an intelligent pump control unit that integrates automation logic, voltage protection, fault memory, and communication.",
+      "The Smart Starter is a control unit that automates water pump operations using embedded scheduling, real-time monitoring, and wireless connectivity for efficient water tank management.",
   },
   {
     question: "How does the Smart Starter enable remote control?",
     answer:
-      "The Smart Starter connects to a cloud gateway so authorized users can remotely control the pump and adjust settings from their devices.",
+      "It uses Wi-Fi, BLE, or 4G connectivity for remote ON/OFF control via a mobile app or cloud-based water management platform.",
   },
 ];
 
@@ -48,11 +48,10 @@ const AccordionItem = ({ question, answer }) => {
     <div className="mb-3">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between rounded-xl border border-gray-200 bg-white px-5 py-3 text-left text-[14px] text-gray-900 shadow-sm transition-all duration-200"
+        className="w-full flex items-center justify-between rounded-xl border border-gray-200 bg-white px-5 py-3 text-left text-[14px] text-gray-900 shadow-sm transition-all duration-200 font-semibold"
       >
         <span>{question}</span>
 
-        {/* arrow circle – only this reacts on hover */}
         <span className="group flex h-7 w-7 items-center justify-center rounded-lg border border-gray-300 text-gray-500 text-sm cursor-pointer">
           <svg
             className={`w-3.5 h-3.5 transform transition-transform duration-200 ${

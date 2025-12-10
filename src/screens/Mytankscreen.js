@@ -26,11 +26,11 @@ const MyTank = () => {
             <ChaosSection1 />
             <SmartStarterSection/>
             <SmartStarterSlide/>
-            {/* <UltralevelMaxSection/> */}
-            {/* <CloudConnectedIntelligenceSection/> */}
+            <UltralevelMaxSection/>
+             <CloudConnectedIntelligenceSection/> 
             <BuildingTankHero/>
             <WaterQualityMonitoringSection/>
-            {/* <HowItWorksSection/> */}
+            <HowItWorksSection/>
             <TankerLorryManagement/>
             <WaterUtilitySection/>
             <StayConnectedSection/>

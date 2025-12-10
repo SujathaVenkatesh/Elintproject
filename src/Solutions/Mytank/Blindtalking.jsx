@@ -1,52 +1,81 @@
-import React from "react";
-
-const BuildingTankHero = () => {
-  // Image: Water tank on a building rooftop
-  const buildingImage = "/mytank8.png";
-
+function BuildingTankHero() {
   return (
-    <section className="w-full bg-white py-16 md:py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        
-        {/* Responsive Grid: Left Image, Right Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+    <section className="w-full bg-white">
+      <div
+        className="
+          w-full flex flex-col // Mobile: Stack content vertically
+          md:flex-row // Desktop: Revert to horizontal row
+          items-center min-h-[520px]
+        "
+      >
+        <div
+          className="
+            relative w-full h-[250px] // Mobile: Full width, fixed height
+            flex items-center justify-center // MOBILE CHANGE: Center the content (the image) within this container
+            md:w-1/2 md:h-full md:min-h-[520px] md:block // Desktop: Original 1/2 width and height logic, revert to block
+            "
+        >
+          <img
+            src="/namepsd.png"
+            alt="Building with water tank"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* RIGHT CONTENT - MODIFIED FOR MOBILE SPACING BELOW IMAGE */}
+        <div
+          className="
+            w-full flex flex-col justify-center // Mobile: Full width and column layout
+            p-6 // Mobile: Use generic padding on all sides
+            mt-6 md:mt-0 // MOBILE CHANGE: Added top margin for spacing below the image. Removed on MD and up.
+            md:w-1/2 md:pl-10 md:pr-28 // Desktop: Original 1/2 width and specific padding
+          "
+        >
+          {/* TITLE */}
+          <h1
+            className=" font-['Manrope'] text-[#3D3D3D] leading-[1.4]
+              text-[19px]
+              sm:text-[20px]
+              md:text-[21px]
+              lg:text-[22px]
+              xl:text-[25px]
+              2xl:max-[1920px]:text-[33px]
+              min-[1920px]:!text-[46px]
+            "
+          >
+            Imagine this... your water tank
+            <br />
+            <span className="relative inline-block mt-2 pb-4">
+              that takes care of itself
+            </span>
+          </h1>
           
-          {/* Left Column: Image with Fade Effect */}
-          <div className="relative w-full h-[300px] md:h-[450px] order-2 md:order-1">
-            {/* The actual image, anchored to the left and center-aligned vertically */}
-            <img
-              src={buildingImage}
-              alt="Water tank on top of an apartment building"
-              className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
-              style={{ objectPosition: 'left center' }} 
-            />
-            {/* White Fade Overlay on the right edge of the image, blending it into the background */}
-            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-r from-transparent to-white/90"></div>
-          </div>
+          {/* DIVIDERS (Width adjusted for mobile) */}
+          <div className="w-[80%] h-[2px] bg-gradient-to-r from-[#FFFFFF] to-[#7DB3EF]" />
+          <div className=" h-[2px] bg-gradient-to-r from-[#FCFCFC] to-[#949494] mt-2" />
 
-          {/* Right Column: Title and Description */}
-          <div className="flex flex-col justify-center py-8 px-4 order-1 md:order-2">
-            
-            {/* Title */}
-            <h2 className="text-3xl md:text-4xl font-light text-gray-800 leading-tight">
-              Imagine this... your water tank that takes care of itself
-            </h2>
-
-            {/* Blue Separator Line */}
-            <div className="w-full h-px bg-gray-300 my-6 relative">
-              <div className="absolute top-0 left-0 h-full w-1/3 bg-blue-500"></div>
-            </div>
-
-            {/* Description */}
-            <p className="text-sm text-gray-600 leading-relaxed max-w-sm">
-              While your city sleeps, UltraLevel Max stays alert—silently tracking every drop and filling just in time, so your tank is always ready for tomorrow.
-            </p>
-          </div>
+          {/* CONTENT */}
+          <p
+            className="   font-['Manrope'] text-[#737373] mt-4 leading-[1.65] // Increased mt for mobile separation
+              text-[14px]
+              sm:text-[16px]
+              md:text-[17px]
+              lg:text-[18px]
+              xl:text-[20px]
+              2xl:max-[1920px]:text-[20px]
+              min-[1920px]:!text-[28px]
+            "
+          >
+            While your city sleeps, UltraLevel Max stays alert—silently tracking
+            every drop and filling just in time, so your tank is always ready
+            for tomorrow.
+          </p>
+          
+          <div className="mt-8 mb-4 h-[1px] w-full bg-gray-200 md:hidden" />
         </div>
       </div>
     </section>
   );
-};
-
+}
 
 export default BuildingTankHero;

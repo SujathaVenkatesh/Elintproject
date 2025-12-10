@@ -1,19 +1,19 @@
 import React from "react";
-import { Zap, Wifi, HardHat, Sun, Gauge, Droplet } from "lucide-react";
 
+// ⭐ ICONS DATA
 const leftFeatures = [
   {
-    icon: Gauge,
+    icon: "/icon-11.png",
     title: "Radar Accuracy",
     desc: "60 GHz non-contact sensing with 1% FSR accuracy for tank heights from 20 cm up to 10 meters.",
   },
   {
-    icon: Sun,
+    icon: "/icon-12.png",
     title: "Solar Powered",
     desc: "Operates on a small solar panel with an onboard Smart battery (10,000+ charge cycles).",
   },
   {
-    icon: Droplet,
+    icon: "/icon-13.png",
     title: "Water Savings",
     desc: "Prevents overflows and wastage with precision monitoring, enabling up to 30% reduction in water usage.",
   },
@@ -21,53 +21,60 @@ const leftFeatures = [
 
 const rightFeatures = [
   {
-    icon: HardHat,
+    icon: "/icon-14.png",
     title: "Plug-and-Play Design",
     desc: "Easily mounts on plastic, concrete, or steel tanks – no drilling or structural changes needed.",
   },
   {
-    icon: Wifi,
+    icon: "/icon-15.png",
     title: "Wireless Data Transmission",
     desc: "Communicates with the starter/control panel over LoRaWAN (up to 2 km range).",
   },
   {
-    icon: Zap,
+    icon: "/icon-11.png",
     title: "IP68 Waterproof & UV Resistant",
     desc: "Engineered for harsh outdoor use – built to survive rain, heat, and sun exposure.",
   },
 ];
 
-const FeatureItem = ({ icon: Icon, title, desc, align = "left" }) => {
+// ⭐ FEATURE ITEM (NO BOX, BIGGER ICON)
+const FeatureItem = ({ icon, title, desc, align = "left" }) => {
   const isLeft = align === "left";
 
   return (
     <div
-      className={`flex items-center gap-3 mb-5 max-w-[30vw]  
+      className={`flex items-center gap-5 mb-5 max-w-[30vw]  
         ${isLeft ? "flex-row-reverse" : " text-right"}
       `}
     >
-      <div className={`w-100 ${isLeft ? "mr-3 text-left" : "ml-3 text-right"}`}>
+      <div className={`w-100 ${isLeft ? "mr-5 text-left" : "ml-5 text-right"}`}>
         <h3
-          className="font-['Manrope'] text-[#737373] mt-3 leading-[1.65]
-                text-[16px]
-                sm:text-[17px]
-                md:text-[18px]
-                lg:text-[19px]
-                xl:text-[20px]
-                2xl:max-[1920px]:text-[23px]
-                min-[1920px]:!text-[46px]"
+          className="font-['Manrope'] text-[#737373] mt-3 leading-[1.5]
+                text-[14px]
+                sm:text-[15px]
+                md:text-[16px]
+                lg:text-[17px]
+                xl:text-[18px]
+                2xl:max-[1920px]:text-[20px]
+                min-[1920px]:!text-[30px]"
         >
           {title}
         </h3>
 
-        <p className="mt-1 text-[#83847F] text-[11px] sm:text-[12px] md:text-[13px] xl:text-[15px] font-normal font-['Manrope']">
+        <p className="mt-1 text-[#83847F] font-normal font-['Manrope']
+                text-[10px]
+                sm:text-[11px]
+                md:text-[12px]
+                lg:text-[13px]
+                xl:text-[14px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[24px]">
           {desc}
         </p>
       </div>
 
-      <div className="flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 bg-white text-gray-700">
-        <Icon className="w-4 h-4" />
-      </div>
+      {/* ⭐ ICON ONLY, BIGGER SIZE */}
+      <img src={icon} alt={title} className="w-12 h-12 object-contain" />
     </div>
   );
 };
@@ -80,19 +87,17 @@ const UltralevelMaxSection = () => {
       className="hero-section3 font-['Manrope'] w-full bg-white py-14 md:py-18"
       style={{ backgroundImage: `url('${bgImg}')`, height: "100vh" }}
     >
-      {/* ------------------------------------ */}
-      {/* ⭐⭐ DESKTOP VIEW (UNCHANGED) ⭐⭐ */}
-      {/* ------------------------------------ */}
+      {/* ---------- DESKTOP VIEW ---------- */}
       <div className="hidden md:block">
         <h2
-          className="font-['Manrope'] text-[#737373] text-center mt-3 leading-[1.65]
-                text-[17px]
-                sm:text-[19px]
-                md:text-[18px]
-                lg:text-[20px]
-                xl:text-[21px]
-                2xl:max-[1920px]:text-[28px]
-                min-[1920px]:!text-[46px]"
+          className="font-['Manrope'] text-[#737373] text-center mt-3 leading-[1.5]
+                text-[14px]
+                sm:text-[15px]
+                md:text-[16px]
+                lg:text-[17px]
+                xl:text-[18px]
+                2xl:max-[1920px]:text-[20px]
+                min-[1920px]:!text-[30px]"
         >
           Ultralevel Max—The Tank-Level Expert
         </h2>
@@ -114,6 +119,7 @@ const UltralevelMaxSection = () => {
         </div>
       </div>
 
+      {/* ---------- MOBILE VIEW (NOW SAME AS DESKTOP ICON STYLE) ---------- */}
       <div className="md:hidden flex flex-col items-center justify-center w-full px-6 py-10 bg-white/80 backdrop-blur-sm">
         <h2 className="text-[20px] font-semibold text-[#3D3D3D] mb-8 text-center">
           Ultralevel Max—The Tank-Level Expert
@@ -122,32 +128,30 @@ const UltralevelMaxSection = () => {
         {/* RIGHT FEATURES FIRST */}
         <div className="w-full flex flex-col gap-6 mb-10">
           {rightFeatures.map((item, i) => (
-            <div key={i} className="flex items-start gap-4 w-full">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full border bg-white text-gray-800">
-                <item.icon className="w-5 h-5" />
-              </div>
+            <div key={i} className="flex items-center gap-5 w-full">
+              <img src={item.icon} alt={item.title} className="w-20 h-20 object-contain" />
               <div>
                 <h3
-                  className="font-['Manrope'] text-[#737373] mt-3 leading-[1.65]
+                  className="font-['Manrope'] text-[#494949] mt-3 leading-[1.65]
                 text-[16px]
                 sm:text-[17px]
                 md:text-[18px]
                 lg:text-[19px]
                 xl:text-[20px]
                 2xl:max-[1920px]:text-[22px]
-                min-[1920px]:!text-[46px] text-[#494949]"
+                min-[1920px]:!text-[46px]"
                 >
                   {item.title}
                 </h3>
                 <p
-                  className="font-['Manrope'] text-[#737373] mt-3 leading-[1.65]
+                  className="font-['Manrope'] text-[#6B6B6B] mt-3 leading-[1.65]
                 text-[13px]
                 sm:text-[14px]
                 md:text-[15px]
                 lg:text-[16px]
                 xl:text-[17px]
                 2xl:max-[1920px]:text-[22px]
-                min-[1920px]:!text-[46px] text-[#6B6B6B]"
+                min-[1920px]:!text-[46px]"
                 >
                   {item.desc}
                 </p>
@@ -159,32 +163,30 @@ const UltralevelMaxSection = () => {
         {/* LEFT FEATURES */}
         <div className="w-full flex flex-col gap-6">
           {leftFeatures.map((item, i) => (
-            <div key={i} className="flex items-start gap-4 w-full">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full border bg-white text-gray-800">
-                <item.icon className="w-5 h-5" />
-              </div>
+            <div key={i} className="flex items-center gap-5 w-full">
+              <img src={item.icon} alt={item.title} className="w-10 h-10 object-contain" />
               <div>
                 <h3
-                  className="font-['Manrope'] text-[#737373] mt-3 leading-[1.65]
+                  className="font-['Manrope'] text-[#494949] mt-3 leading-[1.65]
                 text-[16px]
                 sm:text-[17px]
                 md:text-[18px]
                 lg:text-[19px]
                 xl:text-[20px]
                 2xl:max-[1920px]:text-[22px]
-                min-[1920px]:!text-[46px]  text-[#494949]"
+                min-[1920px]:!text-[46px]"
                 >
                   {item.title}
                 </h3>
                 <p
-                  className="font-['Manrope'] text-[#737373] mt-3 leading-[1.65]
+                  className="font-['Manrope'] text-[#6B6B6B] mt-3 leading-[1.65]
               text-[13px]
                 sm:text-[14px]
                 md:text-[15px]
                 lg:text-[16px]
                 xl:text-[17px]
                 2xl:max-[1920px]:text-[22px]
-                min-[1920px]:!text-[46px] text-[#6B6B6B]"
+                min-[1920px]:!text-[46px]"
                 >
                   {item.desc}
                 </p>

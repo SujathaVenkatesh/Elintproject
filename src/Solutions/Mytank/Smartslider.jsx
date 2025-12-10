@@ -193,7 +193,6 @@ export default function ProductSlider() {
                 min-[1920px]:!text-[46px] text-gray-900"
                   >
                     {" "}
-                    {/* Reduced title size */}
                     {f.title}
                   </h3>
 

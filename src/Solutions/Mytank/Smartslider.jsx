@@ -8,7 +8,7 @@ const slides = [
     id: 1,
     title: "Three Phase Smart Starter",
     subtitle: "Advanced motor protection meets automation.",
-    image: "/single-phase-smart-starter-tank-automation.webp",
+    image: "/bgleft.png", 
     imagePosition: "left",
     features: [
       {
@@ -95,30 +95,33 @@ export default function ProductSlider() {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative w-full py-16 bg-gray-50">
+    <section
+      className="relative w-full py-16 bg-gray-50 bg-cover bg-center"
+      style={{ backgroundImage: "url('/bgimage-slider.png')" }}
+    >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-16 relative">
-        {/* Arrows */}
+        {/* Arrows - Removed hover:scale-110 transition */}
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 left-2 lg:left-[-20px] -translate-y-1/2 bg-white shadow-lg rounded-full p-2 sm:p-3 hover:scale-110 transition z-20"
+          className="absolute top-1/2 left-2 lg:left-[-20px] -translate-y-1/2 bg-white shadow-lg rounded-full p-2 sm:p-3 z-20"
         >
           <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 right-2 lg:right-[-20px] -translate-y-1/2 bg-white shadow-lg rounded-full p-2 sm:p-3 hover:scale-110 transition z-20"
+          className="absolute top-1/2 right-2 lg:right-[-20px] -translate-y-1/2 bg-white shadow-lg rounded-full p-2 sm:p-3 z-20"
         >
           <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
         </button>
 
         {/* Slide Content */}
         <div
-          className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${
+          className={`flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 ${ // Added justify-center here
             slide.imagePosition === "right" ? "lg:flex-row-reverse" : ""
           }`}
         >
           {/* Image */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+          <div className="w-full lg:w-1/2 flex justify-center">
             <img
               src={slide.image}
               alt={slide.title}
@@ -127,7 +130,8 @@ export default function ProductSlider() {
           </div>
 
           {/* Text & Features */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6 lg:space-y-10">
+          <div className="w-full lg:w-1/2 text-center space-y-6 lg:space-y-10"> {/* Removed lg:text-left */}
+            {/* Text colors are dark (gray-900) */}
             <h2 className="text-gray-900 font-semibold text-2xl sm:text-3xl lg:text-4xl">
               {slide.title}
             </h2>
@@ -137,9 +141,10 @@ export default function ProductSlider() {
               {slide.features.map((f, i) => (
                 <div
                   key={i}
-                  className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-2"
+                  className="flex flex-col items-center text-center space-y-2" // Removed lg:items-start and lg:text-left
                 >
                   <img src={f.icon} alt={f.title} className="w-10 h-10" />
+                  {/* Feature text colors are dark */}
                   <h3 className="font-medium text-gray-800 text-sm sm:text-base">
                     {f.title}
                   </h3>
@@ -150,7 +155,7 @@ export default function ProductSlider() {
           </div>
         </div>
 
-        {/* Dots */}
+        {/* Dots - Dot colors are dark */}
         <div className="flex justify-center mt-10 gap-3">
           {slides.map((_, i) => (
             <button

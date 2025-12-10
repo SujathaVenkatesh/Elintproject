@@ -3,49 +3,48 @@ import React from "react";
 // ⭐ ICONS DATA
 const leftFeatures = [
   {
-    icon: "/icon-11.png",
-    title: "Radar Accuracy",
-    desc: "60 GHz non-contact sensing with 1% FSR accuracy for tank heights from 20 cm up to 10 meters.",
-  },
-  {
-    icon: "/icon-12.png",
-    title: "Solar Powered",
-    desc: "Operates on a small solar panel with an onboard Smart battery (10,000+ charge cycles).",
-  },
-  {
     icon: "/icon-13.png",
-    title: "Water Savings",
-    desc: "Prevents overflows and wastage with precision monitoring, enabling up to 30% reduction in water usage.",
-  },
-];
-
-const rightFeatures = [
-  {
-    icon: "/icon-14.png",
     title: "Plug-and-Play Design",
     desc: "Easily mounts on plastic, concrete, or steel tanks – no drilling or structural changes needed.",
   },
   {
-    icon: "/icon-15.png",
+    icon: "/icon-14.png",
     title: "Wireless Data Transmission",
     desc: "Communicates with the starter/control panel over LoRaWAN (up to 2 km range).",
   },
   {
-    icon: "/icon-11.png",
+    icon: "/icon-15.png",
     title: "IP68 Waterproof & UV Resistant",
     desc: "Engineered for harsh outdoor use – built to survive rain, heat, and sun exposure.",
   },
 ];
 
-// ⭐ FEATURE ITEM (NO BOX, BIGGER ICON)
+const rightFeatures = [
+  {
+    icon: "/icon-11.png",
+    title: "Radar Accuracy",
+    desc: "60 GHz non-contact sensing with 1% FSR accuracy for tank heights from 20 cm up to 10 meters.",
+  },
+  {
+    icon: "/icon-16.png",
+    title: "Solar Powered",
+    desc: "Operates on a small solar panel with an onboard Smart battery (10,000+ charge cycles).",
+  },
+  {
+    icon: "/icon-15.png",
+    title: "Water Savings",
+    desc: "Prevents overflows and wastage with precision monitoring, enabling up to 30% reduction in water usage.",
+  },
+];
+
+// ⭐ FEATURE ITEM (DESKTOP)
 const FeatureItem = ({ icon, title, desc, align = "left" }) => {
   const isLeft = align === "left";
 
   return (
     <div
       className={`flex items-center gap-5 mb-5 max-w-[30vw]  
-        ${isLeft ? "flex-row-reverse" : " text-right"}
-      `}
+        ${isLeft ? "flex-row-reverse" : " text-right"}`}
     >
       <div className={`w-100 ${isLeft ? "mr-5 text-left" : "ml-5 text-right"}`}>
         <h3
@@ -61,20 +60,22 @@ const FeatureItem = ({ icon, title, desc, align = "left" }) => {
           {title}
         </h3>
 
-        <p className="mt-1 text-[#83847F] font-normal font-['Manrope']
+        <p
+          className="mt-1 text-[#83847F] font-normal font-['Manrope']
                 text-[10px]
                 sm:text-[11px]
                 md:text-[12px]
                 lg:text-[13px]
                 xl:text-[14px]
-                2xl:max-[1920px]:text-[16px]
-                min-[1920px]:!text-[24px]">
+                2xl:max-[1920px]:text-[15px]
+                min-[1920px]:!text-[24px]"
+        >
           {desc}
         </p>
       </div>
 
-      {/* ⭐ ICON ONLY, BIGGER SIZE */}
-      <img src={icon} alt={title} className="w-12 h-12 object-contain" />
+      {/* ICON ONLY, BIGGER SIZE */}
+      <img src={icon} alt={title} className="w-16 h-16 object-contain" />
     </div>
   );
 };
@@ -119,7 +120,7 @@ const UltralevelMaxSection = () => {
         </div>
       </div>
 
-      {/* ---------- MOBILE VIEW (NOW SAME AS DESKTOP ICON STYLE) ---------- */}
+      {/* ---------- MOBILE VIEW ---------- */}
       <div className="md:hidden flex flex-col items-center justify-center w-full px-6 py-10 bg-white/80 backdrop-blur-sm">
         <h2 className="text-[20px] font-semibold text-[#3D3D3D] mb-8 text-center">
           Ultralevel Max—The Tank-Level Expert
@@ -128,31 +129,17 @@ const UltralevelMaxSection = () => {
         {/* RIGHT FEATURES FIRST */}
         <div className="w-full flex flex-col gap-6 mb-10">
           {rightFeatures.map((item, i) => (
-            <div key={i} className="flex items-center gap-5 w-full">
-              <img src={item.icon} alt={item.title} className="w-20 h-20 object-contain" />
-              <div>
-                <h3
-                  className="font-['Manrope'] text-[#494949] mt-3 leading-[1.65]
-                text-[16px]
-                sm:text-[17px]
-                md:text-[18px]
-                lg:text-[19px]
-                xl:text-[20px]
-                2xl:max-[1920px]:text-[22px]
-                min-[1920px]:!text-[46px]"
-                >
+            <div key={i} className="flex items-start gap-4 w-full">
+              <img
+                src={item.icon}
+                alt={item.title}
+                className="w-16 h-16 object-contain flex-shrink-0"
+              />
+              <div className="flex-1">
+                <h3 className="font-['Manrope'] text-[#494949] text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:max-[1920px]:text-[22px] min-[1920px]:!text-[46px] mt-1">
                   {item.title}
                 </h3>
-                <p
-                  className="font-['Manrope'] text-[#6B6B6B] mt-3 leading-[1.65]
-                text-[13px]
-                sm:text-[14px]
-                md:text-[15px]
-                lg:text-[16px]
-                xl:text-[17px]
-                2xl:max-[1920px]:text-[22px]
-                min-[1920px]:!text-[46px]"
-                >
+                <p className="font-['Manrope'] text-[#6B6B6B] text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:max-[1920px]:text-[22px] min-[1920px]:!text-[46px] mt-1 leading-[1.5]">
                   {item.desc}
                 </p>
               </div>
@@ -163,31 +150,17 @@ const UltralevelMaxSection = () => {
         {/* LEFT FEATURES */}
         <div className="w-full flex flex-col gap-6">
           {leftFeatures.map((item, i) => (
-            <div key={i} className="flex items-center gap-5 w-full">
-              <img src={item.icon} alt={item.title} className="w-10 h-10 object-contain" />
-              <div>
-                <h3
-                  className="font-['Manrope'] text-[#494949] mt-3 leading-[1.65]
-                text-[16px]
-                sm:text-[17px]
-                md:text-[18px]
-                lg:text-[19px]
-                xl:text-[20px]
-                2xl:max-[1920px]:text-[22px]
-                min-[1920px]:!text-[46px]"
-                >
+            <div key={i} className="flex items-start gap-4 w-full">
+              <img
+                src={item.icon}
+                alt={item.title}
+                className="w-16 h-16 object-contain flex-shrink-0"
+              />
+              <div className="flex-1">
+                <h3 className="font-['Manrope'] text-[#494949] text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:max-[1920px]:text-[22px] min-[1920px]:!text-[46px] mt-1">
                   {item.title}
                 </h3>
-                <p
-                  className="font-['Manrope'] text-[#6B6B6B] mt-3 leading-[1.65]
-              text-[13px]
-                sm:text-[14px]
-                md:text-[15px]
-                lg:text-[16px]
-                xl:text-[17px]
-                2xl:max-[1920px]:text-[22px]
-                min-[1920px]:!text-[46px]"
-                >
+                <p className="font-['Manrope'] text-[#6B6B6B] text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:max-[1920px]:text-[22px] min-[1920px]:!text-[46px] mt-1 leading-[1.5]">
                   {item.desc}
                 </p>
               </div>

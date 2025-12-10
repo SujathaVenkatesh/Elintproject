@@ -207,7 +207,6 @@ export default function ProductSlider() {
                 min-[1920px]:!text-[46px] leading-snug"
                   >
                     {" "}
-                    {/* Reduced description size */}
                     {f.description}
                   </p>
                 </div>

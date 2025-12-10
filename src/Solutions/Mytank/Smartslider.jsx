@@ -85,7 +85,6 @@ const slides = [
   },
 ];
 
-// ⭐ MAIN SLIDER COMPONENT
 export default function ProductSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -95,130 +94,64 @@ export default function ProductSlider() {
 
   const slide = slides[currentSlide];
 
-  // ✅ SINGLE BACKGROUND IMAGE
-  const backgroundImage = "/bgimage-slider.png"; // common for all slides
-
   return (
-    <section
-      className="relative w-full bg-cover bg-center bg-no-repeat py-16"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      {/* Container ensures horizontal padding for mobile content and sets up arrow positioning */}
+    <section className="relative w-full py-16 bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-16 relative">
-        {/* LEFT ARROW - Adjusted position for mobile */}
+        {/* Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-2 sm:p-3 hover:scale-110 transition"
-          // Mobile: Push inside the px-6 padding. Desktop: Use original style={{ left: "-30px" }}
-          style={{ left: "10px" }}
-          // Preserve desktop positioning with lg:
-          // The style prop overrides the tailwind, so we must rely on explicit styles for desktop positioning.
-          // Since the original was hardcoded in style, we'll keep the mobile adjustment here.
+          className="absolute top-1/2 left-2 lg:left-[-20px] -translate-y-1/2 bg-white shadow-lg rounded-full p-2 sm:p-3 hover:scale-110 transition z-20"
         >
-          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />{" "}
-          {/* Slightly smaller icon on mobile */}
+          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
         </button>
-
-        {/* RIGHT ARROW - Adjusted position for mobile */}
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-2 sm:p-3 hover:scale-110 transition"
-          // Mobile: Push inside the px-6 padding. Desktop: Use original style={{ right: "-30px" }}
-          style={{ right: "10px" }}
+          className="absolute top-1/2 right-2 lg:right-[-20px] -translate-y-1/2 bg-white shadow-lg rounded-full p-2 sm:p-3 hover:scale-110 transition z-20"
         >
-          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />{" "}
-          {/* Slightly smaller icon on mobile */}
+          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
         </button>
 
-        {/* SLIDE CONTENT */}
+        {/* Slide Content */}
         <div
-          // Added 'text-center' for mobile features, adjusted gap for mobile
-          className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 
-          ${slide.imagePosition === "right" ? "lg:flex-row-reverse" : ""}`}
+          className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${
+            slide.imagePosition === "right" ? "lg:flex-row-reverse" : ""
+          }`}
         >
-          {/* IMAGE */}
-          <div className="w-full lg:w-1/2 flex justify-center mt-4">
-            {" "}
-            {/* Added mt-4 for small screen separation from title */}
+          {/* Image */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
             <img
               src={slide.image}
               alt={slide.title}
-              // The sizes here already handle responsiveness across breakpoints (sm, lg)
-              className="w-[250px] h-[250px] sm:w-[280px] sm:h-[280px] lg:w-[320px] lg:h-[320px] object-contain"
+              className="w-[250px] h-[250px] sm:w-[280px] sm:h-[280px] lg:w-[350px] lg:h-[350px] object-contain"
             />
           </div>
 
-          {/* TEXT CONTENT */}
-          <div className="w-full lg:w-1/2 text-center space-y-8 lg:space-y-10">
-            {" "}
-            {/* Adjusted spacing */}
-            <h2
-              className="font-['Manrope'] text-[#737373] text-center mt-3 leading-[1.65]
-                text-[17px]
-                sm:text-[19px]
-                md:text-[18px]
-                lg:text-[20px]
-                xl:text-[21px]
-                2xl:max-[1920px]:text-[32px]
-                min-[1920px]:!text-[46px] text-gray-900"
-            >
-              {" "}
-              {/* Adjusted H2 size for smaller screens */}
+          {/* Text & Features */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6 lg:space-y-10">
+            <h2 className="text-gray-900 font-semibold text-2xl sm:text-3xl lg:text-4xl">
               {slide.title}
             </h2>
-            <p className="text-lg sm:text-xl text-gray-700">{slide.subtitle}</p>{" "}
-            {/* Adjusted P size for smaller screens */}
-            {/* FEATURES GRID */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-              {/* Changed grid-cols-1 to grid-cols-2 for a tighter mobile layout, preserving md:grid-cols-3 */}
+            <p className="text-gray-700 text-lg sm:text-xl">{slide.subtitle}</p>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-4">
               {slide.features.map((f, i) => (
                 <div
                   key={i}
-                  className="space-y-2 sm:space-y-3 flex flex-col items-center min-h-[150px] justify-start" // Reduced space-y for mobile
+                  className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-2"
                 >
-                  <img
-                    src={f.icon}
-                    alt={f.title}
-                    className="w-10 h-10 sm:w-7 sm:h-7 object-contain" // Slightly smaller icon size for mobile
-                  />
-
-                  <h3
-                    className="font-['Manrope'] text-[#737373] text-center mt-3 leading-[1.65]
-                text-[12px]
-                sm:text-[13px]
-                md:text-[14px]
-                lg:text-[15px]
-                xl:text-[16px]
-                2xl:max-[1920px]:text-[17px]
-                min-[1920px]:!text-[46px] text-gray-900"
-                  >
-                    {" "}
+                  <img src={f.icon} alt={f.title} className="w-10 h-10" />
+                  <h3 className="font-medium text-gray-800 text-sm sm:text-base">
                     {f.title}
                   </h3>
-
-                  <p
-                    className="font-['Manrope'] text-[#737373] text-center mt-3 leading-[1.65]
-                text-[12px]
-                sm:text-[13px]
-                md:text-[14px]
-                lg:text-[15px]
-                xl:text-[16px]
-                2xl:max-[1920px]:text-[17px]
-                min-[1920px]:!text-[46px] leading-snug"
-                  >
-                    {" "}
-                    {f.description}
-                  </p>
+                  <p className="text-gray-600 text-xs sm:text-sm">{f.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* DOTS */}
-        <div className="flex justify-center mt-8 lg:mt-10 gap-3">
-          {" "}
-          {/* Adjusted margin for mobile */}
+        {/* Dots */}
+        <div className="flex justify-center mt-10 gap-3">
           {slides.map((_, i) => (
             <button
               key={i}

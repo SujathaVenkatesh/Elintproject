@@ -56,14 +56,18 @@ export default function ProductSlider() {
   const slide = slides[currentSlide];
 
   return (
-    <section className="w-full bg-white py-20">
-      <div className="max-w-[1400px] mx-auto px-8 relative">
+    <section className="w-full py-20 relative bg-[url('/bgimage-slider.png')] bg-center bg-no-repeat bg-cover">
+      
+      {/* Overlay (reduce/remove if needed) */}
+      <div className="absolute inset-0 bg-white/40"></div>
+
+      <div className="relative max-w-[1400px] mx-auto px-8">
 
         {/* Arrows */}
-        <button className="absolute left-[-20px] top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-3">
+        <button className="absolute left-[-20px] top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-3 z-10">
           <ChevronLeft className="w-6 h-6 text-gray-700" />
         </button>
-        <button className="absolute right-[-20px] top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-3">
+        <button className="absolute right-[-20px] top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-3 z-10">
           <ChevronRight className="w-6 h-6 text-gray-700" />
         </button>
 
@@ -82,19 +86,15 @@ export default function ProductSlider() {
           {/* CONTENT */}
           <div className="flex-1 flex flex-col items-center text-center">
 
-            {/* TITLE */}
             <h2 className="text-[34px] font-semibold text-gray-900">
               {slide.title}
             </h2>
 
-            {/* SUBTITLE */}
             <p className="text-gray-600 text-lg mt-3 max-w-[520px]">
               {slide.subtitle}
             </p>
 
-            {/* FEATURES */}
             <div className="grid grid-cols-3 gap-x-16 gap-y-14 mt-12">
-
               {slide.features.map((f, i) => (
                 <div
                   key={i}
@@ -115,7 +115,6 @@ export default function ProductSlider() {
                   </p>
                 </div>
               ))}
-
             </div>
           </div>
         </div>

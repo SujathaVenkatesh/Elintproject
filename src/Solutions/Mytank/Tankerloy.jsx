@@ -1,112 +1,138 @@
 import React from "react";
-import { GaugeCircle, ClipboardList, RefreshCcw, UserX } from "lucide-react";
 
-const featuresTop = [
+const features = [
   {
-    title: "Live Water Level Check",
-    desc: "Continuously monitors sump tank levels using precise sensors.",
-    icon: GaugeCircle,
+    left: {
+      title: "Live Water Level Check",
+      desc: "Continuously monitors sump tank levels using precise sensors.",
+    },
+    right: {
+      title: "Vendor & Delivery Log",
+      desc: "Tracks daily loads, unloaded quantity, and vendor response with cloud logs.",
+    },
+    icons: ["/Wticon-1.png", "/Tss.png"],
   },
   {
-    title: "Vendor & Delivery Log",
-    desc: "Tracks daily loads, unloaded quantity, and vendor response with cloud logs and exportable reports.",
-    icon: ClipboardList,
-  },
-];
-
-const featuresBottom = [
-  {
-    title: "Auto Refill Requests",
-    desc: "Triggers automatic tanker requests to registered vendors once the threshold is breached.",
-    icon: RefreshCcw,
-  },
-  {
-    title: "Zero Manual Intervention",
-    desc: "Fully automated process with alerts and mobile dashboard access for complete visibility.",
-    icon: UserX,
+    left: {
+      title: "Auto Refill Requests",
+      desc: "Triggers automatic tanker requests when the threshold is breached.",
+    },
+    right: {
+      title: "Zero Manual Intervention",
+      desc: "Fully automated with alerts and mobile dashboard visibility.",
+    },
+    icons: ["/Wticon-2.png", "/Wticon-4.png"],
   },
 ];
 
-const TankerLorryManagement = () => {
-  const tankerImage = "/haj.png"; // replace with your tanker image
-
-  // pick icon components once
-  const TopIcon = featuresTop[0].icon;
-  const BottomIcon = featuresBottom[0].icon;
+export default function TankerLorryManagement() {
+  const tankerImage = "/haj.png";
 
   return (
-    <section className="w-full bg-white py-16">
-      <div className="max-w-5xl mx-auto px-4 flex flex-col items-center text-center">
-        <h2 className="text-[20px] md:text-[22px] font-medium text-[#333333]">
-          Tanker Lorry Management
-        </h2>
-      </div>
+    <section className="w-full py-20 bg-white font-manrope">
+      {/* Title */}
+      <h2
+        className="text-center font-['Manrope'] text-[#3D3D3D] leading-[1.4]
+                   text-[19px] sm:text-[20px] md:text-[21px] lg:text-[22px]
+                   xl:text-[25px] 2xl:max-[1920px]:text-[33px]
+                   min-[1920px]:!text-[46px] tracking-tight"
+      >
+        Tanker Lorry Management
+      </h2>
 
-      {/* Center tanker image */}
-      <div className="mt-8 flex justify-center">
+      {/* Tanker Image */}
+      <div className="-mt-20 flex justify-center">
         <img
           src={tankerImage}
-          alt="Tanker lorry"
-          className="w-[280px] md:w-[340px] object-contain"
+          alt="Tanker Lorry"
+          className="w-[300px] md:w-[380px] object-contain"
         />
       </div>
 
-      {/* Features rows */}
-      <div className="mt-10 max-w-5xl mx-auto px-4 space-y-7 text-[12px] leading-snug text-[#777777]">
-        {/* Row 1 */}
-        <div className="grid grid-cols-[1fr_auto_1fr] items-start gap-x-16">
-          {/* left item */}
-          <div className="text-right">
-            <h3 className="mb-2 text-[13px] font-semibold text-[#444444]">
-              {featuresTop[0].title}
-            </h3>
-            <p>{featuresTop[0].desc}</p>
-          </div>
+      {/* DESKTOP GRID - hidden on mobile */}
+      <div className="-mt-20 max-w-6xl mx-auto flex flex-col gap-16 hidden sm:flex lg:flex">
+        {features.map((row, i) => (
+          <div
+            key={i}
+            className="grid grid-cols-[1fr_auto_auto_1fr] items-center gap-x-10"
+          >
+            {/* LEFT CONTENT */}
+            <div className="text-right max-w-xs ml-auto">
+              <h3 className="text-[18px] font-medium text-[#333]">
+                {row.left.title}
+              </h3>
+              <p className="text-[#666] text-[15px] mt-1">
+                {row.left.desc}
+              </p>
+            </div>
 
-          {/* center icon (top pair) */}
-          <div className="flex flex-col items-center gap-8">
-            <div className="w-11 h-11 rounded-full border border-[#D9E6FF] bg-[#F4F8FF] flex items-center justify-center">
-              <TopIcon className="w-5 h-5 text-[#1E90FF]" />
+            {/* ICON 1 */}
+            <div className="flex justify-center">
+              <img
+                src={row.icons[0]}
+                alt="icon"
+                className="w-[60px] h-[60px] object-contain"
+              />
+            </div>
+
+            {/* ICON 2 */}
+            <div className="flex justify-center">
+              <img
+                src={row.icons[1]}
+                alt="icon"
+                className="w-[60px] h-[60px] object-contain"
+              />
+            </div>
+
+            {/* RIGHT CONTENT */}
+            <div className="text-left max-w-xs mr-auto">
+              <h3 className="text-[18px] font-medium text-[#333]">
+                {row.right.title}
+              </h3>
+              <p className="text-[#666] text-[15px] mt-1">
+                {row.right.desc}
+              </p>
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* right item */}
-          <div className="text-left">
-            <h3 className="mb-2 text-[13px] font-semibold text-[#444444]">
-              {featuresTop[1].title}
-            </h3>
-            <p>{featuresTop[1].desc}</p>
-          </div>
-        </div>
+      {/* MOBILE GRID - hidden on desktop */}
+      <div className="-mt-20 max-w-6xl mx-auto flex flex-col gap-12 sm:hidden">
+        {features.map((row, i) => (
+          <div key={i} className="flex flex-col items-center gap-4 text-center">
+            {/* Left item */}
+            <div>
+              <img
+                src={row.icons[0]}
+                alt="icon"
+                className="w-[50px] h-[50px] mx-auto mb-2"
+              />
+              <h3 className="text-[16px] font-medium text-[#333]">
+                {row.left.title}
+              </h3>
+              <p className="text-[#666] text-[14px] mt-1">
+                {row.left.desc}
+              </p>
+            </div>
 
-        {/* Row 2 */}
-        <div className="grid grid-cols-[1fr_auto_1fr] items-start gap-x-16">
-          {/* left item */}
-          <div className="text-right">
-            <h3 className="mb-2 text-[13px] font-semibold text-[#444444]">
-              {featuresBottom[0].title}
-            </h3>
-            <p>{featuresBottom[0].desc}</p>
-          </div>
-
-          {/* center icon (bottom pair) */}
-          <div className="flex flex-col items-center gap-8">
-            <div className="w-11 h-11 rounded-full border border-[#D9E6FF] bg-[#F4F8FF] flex items-center justify-center">
-              <BottomIcon className="w-5 h-5 text-[#1E90FF]" />
+            {/* Right item */}
+            <div>
+              <img
+                src={row.icons[1]}
+                alt="icon"
+                className="w-[50px] h-[50px] mx-auto mb-2"
+              />
+              <h3 className="text-[16px] font-medium text-[#333]">
+                {row.right.title}
+              </h3>
+              <p className="text-[#666] text-[14px] mt-1">
+                {row.right.desc}
+              </p>
             </div>
           </div>
-
-          {/* right item */}
-          <div className="text-left">
-            <h3 className="mb-2 text-[13px] font-semibold text-[#444444]">
-              {featuresBottom[1].title}
-            </h3>
-            <p>{featuresBottom[1].desc}</p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
-};
-
-export default TankerLorryManagement;
+}

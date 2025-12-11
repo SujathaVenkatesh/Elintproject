@@ -2,7 +2,7 @@ import React from "react";
 
 const solutions = [
   {
-    image: "/Fs1.jpeg",
+    image: "/oil19.png",
     alt: "Ultralevel Max Solar Panel",
     tag: "Ultralevel Max",
     title: "Harness the sun’s energy. Effortless uptime",
@@ -10,7 +10,7 @@ const solutions = [
     tagline: "Solar | Remote‑ready | Plug & play",
   },
   {
-    image: "/fs2.jpeg",
+    image: "/oil20.png",
     alt: "Ultralevel Max Radar Sensor",
     tag: "Ultralevel Max",
     title: "Radar precision for harsh environments",
@@ -18,7 +18,7 @@ const solutions = [
     tagline: "Long battery | High accuracy",
   },
   {
-    image: "/fs3.jpeg",
+    image: "/oil21.png",
     alt: "Ultralevel Max Field Display",
     tag: "Ultralevel Max",
     title: "Industrial‑grade field display",
@@ -26,7 +26,7 @@ const solutions = [
     tagline: "LoRaWAN | Clear LCD | Plug & play",
   },
   {
-    image: "/fs4.jpeg",
+    image: "/oil22.png",
     alt: "4G Gateway for Smart Tank Monitoring",
     tag: "Ultralevel Max",
     title: "4G gateway for smart tank monitoring",
@@ -39,30 +39,30 @@ const SolutionCard = ({ solution }) => {
   const { image, alt, tag, title, description, tagline } = solution;
 
   return (
-    <div className="group flex flex-col h-full">
+    <div className="group flex flex-col h-full ">
       {/* image card */}
       <div
-        className="rounded-3xl bg-white shadow-sm border border-gray-100
-                   flex items-center justify-center h-64 mb-5
-                   transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1"
+        className="rounded-xl bg-gray-100 shadow-sm border border-gray-100
+                   flex items-center justify-center h-70 mb-5
+                   transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 hover:bg-white"
       >
         <img
           src={image}
           alt={alt}
-          className="h-40 object-contain transition-transform duration-300 group-hover:scale-105"
+          className="h-50 object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 
       {/* pill tag + arrow */}
       <button
         type="button"
-        className="inline-flex items-center justify-between rounded-full bg-gray-100/80 px-5 py-2 mb-3
+        className="inline-flex items-center justify-between rounded-full bg-white px-5 py-2 mb-3
                    text-[12px] font-medium text-gray-700 w-full max-w-[230px] mx-auto
-                   transition-all duration-300 group-hover:bg-gray-900 group-hover:text-white"
+                   transition-all duration-300"
       >
         <span className="truncate">{tag}</span>
         <span
-          className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-gray-700
+          className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-500 text-white
                      shadow-sm transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white
                      group-hover:translate-x-0.5"
         >
@@ -76,7 +76,7 @@ const SolutionCard = ({ solution }) => {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              d="M14 5l7 7-7 7M21 12H3"
+              d="M7 17L17 7M17 7H9M17 7V15"
             />
           </svg>
         </span>
@@ -84,13 +84,34 @@ const SolutionCard = ({ solution }) => {
 
       {/* text block */}
       <div className="text-left mt-1 space-y-2">
-        <h3 className="text-[15px] font-semibold text-gray-900 leading-snug">
+        <h3 className="text-[#484747] mt-3 leading-[1.65] font-medium
+                text-[16px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[24px]">
           {title}
         </h3>
-        <p className="text-[12px] text-gray-600 leading-relaxed">
+        <p className="text-[#83847F]  leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[14px]
+                min-[1920px]:!text-[18px]">
           {description}
         </p>
-        <p className="text-[12px] text-gray-500 font-medium">
+        <p className="text-[#484747]  leading-[1.65]
+                text-[16px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[15px]
+                min-[1920px]:!text-[20px]">
           {tagline}
         </p>
       </div>
@@ -100,12 +121,26 @@ const SolutionCard = ({ solution }) => {
 
 const FeaturedSolutions = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-20">
+    <section className="w-full py-16 md:py-20 bg-gradient-to-b from-[#FFFFFF] to-[#F4F4F4] ">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 text-center font-manrope">
-        <h2 className="text-[24px] md:text-[28px] font-semibold text-gray-900">
+        <h2 className="text-[#3D3D3D] leading-[1.4] 
+                text-[18px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[46px]">
           Featured Solutions
         </h2>
-        <p className="mt-3 mb-14 text-[14px] md:text-[15px] text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p className="mt-3 mb-14 max-w-3xl mx-auto text-[#737373] mt-3 leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[28px]">
           Innovative, reliable, and ready to deploy. Our solutions are designed to meet your needs.
         </p>
 

@@ -1,84 +1,103 @@
 import React from "react";
-import { Rss, Wifi, SlidersHorizontal, Cloud, MonitorSmartphone } from "lucide-react";
 
-const steps = [
-  {
-    icon: Rss,
-    title: "Smart Tank Sensor",
-    desc: "Continuously tracks water levels with radar-based precision.",
-  },
-  {
-    icon: Wifi,
-    title: "Wireless Transmission",
-    desc: "Data sent via 4G / Wi‑Fi, no cabling needed.",
-  },
-  {
-    icon: SlidersHorizontal,
-    title: "Automated Control Panel",
-    desc: "Automatically manages operations based on level & voltage logic.",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Connectivity",
-    desc: "All insights and alerts are synced securely to the cloud.",
-  },
-  {
-    icon: MonitorSmartphone,
-    title: "Access Anywhere",
-    desc: "Monitor, control, and get alerts via mobile or web dashboard.",
-  },
-];
-
-const HowItWorksSection = () => {
-  const mainImage = "uploaded:Screenshot 2025-11-29 230751.png-067bf3ac-9129-4864-9327-0f0edcb3068e"; 
-
+export default function HowItWorks() {
   return (
-    <section className="w-full bg-white py-16">
-      <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-[20px] md:text-[22px] font-medium text-[#333333]">
-          How It Works
-        </h2>
-        <p className="mt-2 text-[12px] md:text-[13px] text-[#888888]">
-          A fully connected system that senses, decides, and updates—without manual effort.
-        </p>
-      </div>
+    <section className="w-full bg-white py-20 font-['Manrope']">
+      {/* TITLE */}
+      <h2
+        className="text-center font-light text-[#3D3D3D] leading-[1.4]
+        text-[19px] sm:text-[20px] md:text-[21px] lg:text-[22px] xl:text-[25px]
+        2xl:max-[1920px]:text-[33px] min-[1920px]:!text-[46px] mb-6 tracking-tight"
+      >
+        How It Works
+      </h2>
 
-      <div className="max-w-6xl mx-auto mt-10 px-4 grid grid-cols-1 md:grid-cols-[1.6fr,1.1fr] gap-10 items-start">
-        <div className="bg-white rounded-[24px] shadow-[0_8px_20px_rgba(0,0,0,0.06)] overflow-hidden">
+      <p
+        className="text-center text-[#737373] mb-16 leading-[1.65]
+        text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px]
+        2xl:max-[1920px]:text-[20px] min-[1920px]:!text-[28px]"
+      >
+        A fully connected system that senses, decides, and updates—without
+        manual effort
+      </p>
+
+      {/* MAIN GRID */}
+      <div className="w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 items-center">
+        {/* LEFT SIDE IMAGE */}
+        <div className="w-full h-full flex justify-center lg:justify-start">
           <img
-            src={mainImage}
-            alt="How it works diagram"
-            className="w-full h-full object-cover"
+            src="/iot-cloud-water-tank-automation-process.webp"
+            alt="system diagram"
+            className="w-full max-w-md lg:max-w-full h-auto object-cover"
           />
         </div>
 
-        <div className="flex flex-col space-y-5 pt-4">
-          {steps.map((step, idx) => {
-            const Icon = step.icon;
-            return (
-              <div key={idx} className="flex items-start gap-4">
-                {/* icon circle */}
-                <div className="mt-1 w-9 h-9 rounded-full border border-[#E0E0E0] flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-4 h-4 text-[#6B7280]" />
-                </div>
-
-                {/* text */}
-                <div className="flex-1 text-left">
-                  <h3 className="text-[13px] font-semibold text-[#444444]">
-                    {step.title}
+        <div className="flex flex-col justify-center px-6 sm:px-10 lg:px-20">
+          <div className="space-y-8 sm:space-y-10">
+            {[
+              {
+                icon: "/1H.png",
+                title: "Smart Tank Sensor",
+                desc: "Continuously tracks water levels with radar-based precision.",
+              },
+              {
+                icon: "/2H.png",
+                title: "Wireless Transmission",
+                desc: "Data sent via 4G / Wi-Fi with no cabling needed.",
+              },
+              {
+                icon: "/3H.png",
+                title: "Automated Control Panel",
+                desc: "Automatically manages operations based on level & voltage logic.",
+              },
+              {
+                icon: "/4H.png",
+                title: "Cloud Connectivity",
+                desc: "All insights and alerts are synced securely to the cloud.",
+              },
+              {
+                icon: "/5H.png",
+                title: "Access Anywhere",
+                desc: "Monitor, control, and get alerts via mobile or web dashboard.",
+              },
+            ].map((item, idx) => (
+              <div key={idx} className="flex gap-4 items-start sm:items-center">
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-12 h-12 object-contain flex-shrink-0"
+                />
+                <div className="text-left">
+                  <h3
+                    className="text-lg  font-['Manrope'] text-[#737373] mt-3 leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[20px]
+                min-[1920px]:!text-[28px]"
+                  >
+                    {item.title}
                   </h3>
-                  <p className="mt-1 text-[11px] leading-snug text-[#888888] max-w-md">
-                    {step.desc}
+                  <p
+                    className=" font-['Manrope'] text-[#737373] mt-3 leading-[1.65]
+               text-[14px]
+                sm:text-[12px]
+                md:text-[13px]
+                lg:text-[14px]
+                xl:text-[14px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[24px] sm:text-base"
+                  >
+                    {item.desc}
                   </p>
                 </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-
-export default HowItWorksSection;
+}

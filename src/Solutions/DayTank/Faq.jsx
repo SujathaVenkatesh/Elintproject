@@ -2,45 +2,46 @@
 
 import React, { useState } from "react";
 
-// FAQ data
+// UPDATED FAQ DATA
 const faqItems = [
   {
-    question: "What parameters can the system track in real time?",
+    question: "What is a day tank control system?",
     answer:
-      "As per BIS 10500 standards, water supply and monitoring system continuously measures turbidity, pressure, pH, flow rate, chlorine concentration",
+      "A day tank control system automates fuel level monitoring and refueling for backup generators using sensors and PLCs, ensuring precise fuel management with real-time alerts.",
   },
   {
-    question: "How does this system align with JJM guidelines?",
+    question: "Why use an automated day tank for data centers?",
     answer:
-      "It directly supports JJM mandates by guaranteeing a minimum daily water supply of 55 LPCD, monitoring quality parameters like pH and chlorine, and providing real-time data .",
+      "Automated day tanks ensure uninterrupted generator fuel supply for data centers, reducing downtime risks through real-time monitoring and automatic refilling.",
   },
   {
-    question: "Can this system work for both small villages and large urban areas?",
+    question: "How does a fuel tank automation system help?",
     answer:
-      "Yes, its architecture is scalable, supporting everything from complex municipal water networks to single-village schemes.",
+      "A fuel tank automation system streamlines fuel management, cuts costs, and enhances safety by automating level control, preventing overfills, and detecting leaks instantly.",
   },
   {
-    question: "What sectors can benefit from smart water process automation?",
+    question: "Why is our fuel tank automation system a game-changer?",
     answer:
-      "This solution is perfect for municipalities, wastewater treatment facilities, agricultural irrigation, rural water supply, textile industries, and the power sector that needs effective water distribution and monitoring.",
+      "Our system reduces operational costs through precise fuel tracking, automated transfers, real-time monitoring, and built-in overfill protection—ideal for large facilities.",
   },
   {
-    question: "How does water automation work?",
+    question: "How does our diesel day tank automation save costs?",
     answer:
-      "It is a plug-and-play system that requires no manual labor to automatically control pumps and valves based on sensor data, providing real-time monitoring and alerts.",
+      "It reduces maintenance and labor expenses by automating refueling and fuel polishing, ensuring top-quality diesel for generator performance and longevity.",
   },
   {
-    question: "What are the benefits of real-time water supply monitoring?",
+    question: "What’s unique about our day tank monitoring system?",
     answer:
-      "With centralized reporting, real-time monitoring guarantees a continuous supply, complies with regulations, enhances quality, lowers losses, and provides immediate alerts.",
+      "It features intuitive HMI displays, alarm logs, and advanced analytics that help operators quickly diagnose issues and maintain fuel system efficiency.",
   },
   {
-    question: "How does the automation panel work in a smart water system?",
+    question: "How does our day tank level control prevent risks?",
     answer:
-      "The Smart Starter connects to a cloud gateway so authorized users can remotely control the pump and adjust settings from their devices.",
+      "Using high-accuracy sensors and instant alerts, the system detects low levels, transfer issues, or abnormal conditions to protect generators from outages.",
   },
 ];
 
+// Individual Accordion Item Component
 const AccordionItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -52,12 +53,11 @@ const AccordionItem = ({ question, answer }) => {
       >
         <span>{question}</span>
 
-        {/* arrow circle – only this reacts on hover */}
         <span className="group flex h-7 w-7 items-center justify-center rounded-lg border border-gray-300 text-gray-500 text-sm cursor-pointer">
           <svg
             className={`w-3.5 h-3.5 transform transition-transform duration-200 ${
               isOpen ? "rotate-45" : "rotate-0"
-            } group-hover:translate-x-0.5`}
+            }`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -83,36 +83,35 @@ const AccordionItem = ({ question, answer }) => {
   );
 };
 
+// Main FAQ Section
 const FAQSection = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-20">
+    <section className="w-full bg-white py-10 md:py-16">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-        {/* heading */}
-        <div className="mb-10">
+
+        {/* Heading */}
+        <div className="mb-8 md:mb-10">
           <h2 className="text-[26px] md:text-[30px] font-semibold text-gray-900">
             Got any Questions?
           </h2>
-          <p className="mt-1 text-[24px] md:text-[26px] font-semibold text-gray-400">
+          <p className="mt-1 text-[22px] md:text-[26px] font-semibold text-gray-400">
             We&apos;ve got answers.
           </p>
         </div>
 
-        {/* layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,2fr)_minmax(260px,1fr)] gap-10">
-          {/* left: accordions */}
-          <div>
+        {/* Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_320px] gap-12">
+
+          {/* FAQ List */}
+          <div className="max-w-[700px]">
             {faqItems.map((item, idx) => (
-              <AccordionItem
-                key={idx}
-                question={item.question}
-                answer={item.answer}
-              />
+              <AccordionItem key={idx} question={item.question} answer={item.answer} />
             ))}
           </div>
 
-          {/* right: CTA card */}
-          <div className="flex">
-            <div className="w-full rounded-2xl border border-gray-100 bg-white shadow-md px-6 py-8 flex flex-col justify-between">
+          {/* Side Card */}
+          <div className="w-full flex justify-center lg:justify-end">
+            <div className="w-full max-w-[320px] rounded-2xl border border-gray-100 bg-white shadow-md px-6 py-8 flex flex-col justify-between">
               <div>
                 <h3 className="text-[16px] font-semibold text-gray-900 mb-2">
                   Do you have more questions?
@@ -123,11 +122,12 @@ const FAQSection = () => {
                 </p>
               </div>
 
-              <button className="mt-6 inline-flex items-center justify-center rounded-full bg-gray-900 px-8 py-3 text-[13px] font-semibold text-white shadow-lg shadow-gray-900/40 hover:bg-gray-700 transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99]">
+              <button className="mt-6 inline-flex items-center justify-center rounded-full bg-gray-900 px-8 py-3 text-[13px] font-semibold text-white shadow-lg hover:bg-gray-700 transition">
                 Reach Out Now
               </button>
             </div>
           </div>
+
         </div>
       </div>
     </section>

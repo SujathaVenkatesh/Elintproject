@@ -1,39 +1,71 @@
 import React from "react";
 
+<<<<<<< HEAD
+const topRow = [
+  {
+    img: "/mytankicon01.png",
+=======
 // The six features (combined into one list for easier mobile mapping)
 const allFeatures = [
   {
     icon: "/grp1.png",
+>>>>>>> 0ac8d745d117ae57d4c90d2563832505263f34b1
     title: "Embedded Scheduling",
     desc: "Cyclic and real-time timers allow automated ON/OFF without user intervention.",
   },
   {
+<<<<<<< HEAD
+    img: "/mytankicon02.png",
+=======
     icon: "/grp3.png",
+>>>>>>> 0ac8d745d117ae57d4c90d2563832505263f34b1
     title: "Real-Time Display",
     desc: "Shows voltage, current, power, energy (kWh), tank level, run hours & faults.",
   },
   {
+<<<<<<< HEAD
+    img: "/mytankicon03.png",
+    title: "Battery Backup",
+    desc: "Maintains sensor logic & transmits data even during power interruptions.",
+  },
+];
+
+const bottomRow = [
+  {
+    img: "/mytankicon04.png",
+=======
     icon: "/gpr5.png",
     title: "Battery Backup",
     desc: "Maintains sensor logic & transmits data even during power interruptions.",
   },
   {
     icon: "/grp4.png",
+>>>>>>> 0ac8d745d117ae57d4c90d2563832505263f34b1
     title: "Multi-Input Compatibility",
     desc: "Works with analog (0–5V / 4–20mA) & digital float switches or pressure sensors.",
   },
   {
+<<<<<<< HEAD
+    img: "/mytankicon05.png",
+=======
     icon: "/grp2.png",
+>>>>>>> 0ac8d745d117ae57d4c90d2563832505263f34b1
     title: "Inbuilt Wireless Modules",
     desc: "Supports Wi-Fi, BLE 5.0 & LoRaWAN (2 km LOS) for seamless connectivity.",
   },
   {
+<<<<<<< HEAD
+    img: "/mytankicon06.png",
+=======
     icon: "/grp6.png",
+>>>>>>> 0ac8d745d117ae57d4c90d2563832505263f34b1
     title: "Remote ON/OFF",
     desc: "Full app control of motor operations via internet or wireless interface.",
   },
 ];
 
+<<<<<<< HEAD
+=======
 // ICON COMPONENT
 const FeatureIcon = ({ src }) => (
   <div className="flex items-center justify-center">
@@ -41,11 +73,21 @@ const FeatureIcon = ({ src }) => (
   </div>
 );
 
+>>>>>>> 0ac8d745d117ae57d4c90d2563832505263f34b1
 const SmartStarter = () => {
   const topFeatures = allFeatures.slice(0, 3);
   const bottomFeatures = allFeatures.slice(3);
 
   return (
+<<<<<<< HEAD
+    <section className="w-full bg-white py-20">
+
+      {/* HEADING */}
+      <div className="text-center mb-16">
+        <h2 className="text-[32px] font-semibold text-gray-900">
+          Smart Starter—The Automation Brain
+        </h2>
+=======
     <section className="w-full bg-white py-10 md:py-20">
       <div className="max-w-[1400px] mx-auto px-6 flex flex-col items-center">
 
@@ -127,7 +169,41 @@ const SmartStarter = () => {
             ))}
           </div>
         </div>
+>>>>>>> 0ac8d745d117ae57d4c90d2563832505263f34b1
       </div>
+
+      {/* ----------------- TOP TEXT ROW (3 ITEMS) ----------------- */}
+      <div className="flex justify-center gap-20 mb-10">
+        {topRow.map((item, index) => (
+          <div key={index} className="w-[260px] text-center">
+            <h3 className="text-[16px] font-semibold text-gray-800 mb-2">{item.title}</h3>
+            <p className="text-gray-500 text-[13px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* ----------------- ICON ROW (6 ICONS IN ONE LINE) ----------------- */}
+      <div className="flex justify-center gap-16 my-12">
+        {[...topRow, ...bottomRow].map((item, index) => (
+          <img
+            key={index}
+            src={item.img}
+            className="w-[110px] object-contain"
+            alt={item.title}
+          />
+        ))}
+      </div>
+
+      {/* ----------------- BOTTOM TEXT ROW (3 ITEMS) ----------------- */}
+      <div className="flex justify-center gap-20 mt-10">
+        {bottomRow.map((item, index) => (
+          <div key={index} className="w-[260px] text-center">
+            <h3 className="text-[16px] font-semibold text-gray-800 mb-2">{item.title}</h3>
+            <p className="text-gray-500 text-[13px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
     </section>
   );
 };

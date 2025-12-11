@@ -2,46 +2,35 @@ import React from "react";
 
 const Hero2session = () => {
   return (
-    <section className="w-full bg-white py-8 sm:py-10 md:py-16">
-      <div
-        className="
-          relative w-full flex items-center overflow-hidden
-          min-h-[260px] sm:min-h-[300px] md:min-h-[360px] lg:min-h-[400px]
-        "
-      >
-        {/* Background Image */}
-        <div
-          className="
-            absolute inset-0
-            bg-cover bg-[right_top] 
-            sm:bg-right md:bg-right lg:bg-right
-          "
-          style={{
-            backgroundImage: "url('/battery2.png')",
-          }}
-        />
-
-        {/* White Fade Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/0" />
-
-        {/* Content */}
-        <div className="relative w-full px-5 sm:px-8 md:px-20 py-6">
+    <section className="w-full bg-white py-10">
+      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between px-5 md:px-10">
+        
+        {/* LEFT TEXT CONTENT - Make wider */}
+        <div className="md:w-[60%] flex justify-center">
           <p
             className="
-              text-gray-700 font-[Manrope]
+              text-gray-700 font-[Manrope] text-[16px]
               leading-relaxed
-              
-              text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px]
-              
-              max-w-[95%] sm:max-w-[480px] md:max-w-[650px] lg:max-w-[760px]
+              max-w-[700px]    /* final perfect width */
+              text-left
             "
           >
-            Say goodbye to fuel theft and inaccurate deliveries at your telecom
-            sites. Our Mobile Fuel Dispenser delivers diesel with high accuracy,
-            cloud-connected automation, and real-time monitoring. Power your
-            cell towers reliably, securely, and cost-effectively.
+            Say goodbye to fuel theft and inaccurate deliveries at your telecom sites.
+            Our Mobile Fuel Dispenser delivers diesel with high accuracy,
+            cloud-connected automation, and real-time monitoring. Power your cell
+            towers reliably, securely, and cost-effectively.
           </p>
         </div>
+
+        {/* RIGHT SIDE IMAGE - Make smaller area */}
+        <div className="md:w-[40%] flex justify-center md:justify-end mt-6 md:mt-0">
+          <img
+            src="/divce.png"
+            alt="Fuel Dispenser"
+            className="w-[260px] md:w-[300px] lg:w-[330px] object-contain"
+          />
+        </div>
+
       </div>
     </section>
   );

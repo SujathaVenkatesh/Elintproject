@@ -2,23 +2,31 @@ import React from 'react';
 
 // Reusable component for displaying a sensor specification
 const SpecItem = ({ icon, title, description }) => (
-  <div className="flex items-center space-x-4 mb-6">
+  <div className="flex items-center  flex md:flex-row md:w-[50vh]
+  flex-col w-fulll  space-x-4 mb-6 flex md:w-[50vw]  w-[100vw]   ">
     {/* Icon Container: Larger, rounded, bordered circle on the left */}
-    <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full border border-gray-300 text-gray-700">
+    <div className="flex-shrink-0 flex items-center whater_shadow justify-center w-18 h-18 rounded-full border border-gray-300 text-gray-700 ">
       {icon}
     </div>
-    
     <div className="flex flex-col justify-center">
-      <h3 className="text-sm font-semibold text-gray-700">{title}</h3>
-      <p className="mt-0.5 text-base font-medium text-gray-900">{description}</p>
+      <p className="font-normal
+font-['Manrope']
+ text-[#484747] leading-[1.4]
+                text-[13px]
+                sm:text-[14px]
+                md:text-[15px]
+                lg:text-[15px]
+                xl:text-[16px]
+                2xl:max-[1920px]:text-[17px]
+                min-[1920px]:!text-[24px] font-normal">{title} : {description}</p>
     </div>
   </div>
 );
 
 const SensorSection = () => {
   const sensorImage = '/daytank9.png';
-  
-  const backgroundImage = '/bannersensor.png';
+
+  const backgroundImage = '/section7_bg.png';
 
   const icons = {
     range: (
@@ -39,92 +47,204 @@ const SensorSection = () => {
   };
 
   return (
-    <section className="w-full bg-white pt-12">
+    <section className="w-full bg-white">
       {/* Top Half: Image and Specs Block - Now using backgroundImage with overlay */}
-      <div 
-        className="w-full relative pt-16 pb-12 overflow-hidden"
+      <div
+        className="w-full relative pt-16 pb-12 overflow-hidden hero-section"
         style={{
           backgroundImage: `url('${backgroundImage}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        {/* Semi-transparent white overlay to ensure text/icons are visible on the image background */}
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
-
-        <div className="relative max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-          
-          <div className="relative grid grid-cols-1 md:grid-cols-2 items-center">
-            
-            {/* Left Column: Specifications */}
-            {/* Added max-w-sm to condense the spec items slightly to mirror the image spacing */}
-            <div className="flex flex-col space-y-4 mb-8 md:mb-0 max-w-sm">
-              <SpecItem
-                icon={icons.range}
-                title="Range"
-                description="100mm to 5m"
-              />
-              <SpecItem
-                icon={icons.accuracy}
-                title="Accuracy"
-                description="0.05% FS"
-              />
-              <SpecItem
-                icon={icons.output}
-                title="Output"
-                description="RS485 (MODBUS RTU)"
-              />
+        {/* LEFT — specs (desktop/tablet overlay) */}
+        <div className="hidden md:block absolute left-[6%] top-1/2 -translate-y-1/2 space-y-8">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-full whater_shadow flex items-center justify-center">
+              <img src='/ultra1.png' alt="Range" className="w-6 h-6 object-contain" />
             </div>
-            
-            {/* Right Column: Sensor Image (Image in the file is wide, so use object-contain and justify-end) */}
-            <div className="flex justify-center md:justify-end">
-              <img 
-                src={sensorImage} 
-                alt="Hydrostatic Level Sensor" 
-                className="max-w-full h-auto object-contain"
-                style={{ maxWidth: '600px', filter: 'drop-shadow(0 15px 30px rgba(0, 0, 0, 0.1))' }} 
-              />
+            <div>
+              <p className="font-normal
+font-['Manrope']
+ text-[#484747] leading-[1.4]
+                text-[13px]
+                sm:text-[14px]
+                md:text-[15px]
+                lg:text-[15px]
+                xl:text-[16px]
+                2xl:max-[1920px]:text-[17px]
+                min-[1920px]:!text-[24px] font-normal">Range : 100mm to 5m</p>
             </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-full whater_shadow flex items-center justify-center">
+              <img src='/ultra2.png' alt="Accuracy" className="w-6 h-6 object-contain" />
+            </div>
+            <div>
+              <p className="font-normal
+font-['Manrope']
+ text-[#484747] leading-[1.4]
+                text-[13px]
+                sm:text-[14px]
+                md:text-[15px]
+                lg:text-[15px]
+                xl:text-[16px]
+                2xl:max-[1920px]:text-[17px]
+                min-[1920px]:!text-[24px] font-normal">Accuracy : 0.05% FS</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-full whater_shadow flex items-center justify-center">
+              <img src='/ultra3.png' alt="Output" className="w-6 h-6 object-contain" />
+            </div>
+            <div>
+              <p className="font-normal
+font-['Manrope']
+ text-[#484747] leading-[1.4]
+                text-[13px]
+                sm:text-[14px]
+                md:text-[15px]
+                lg:text-[15px]
+                xl:text-[16px]
+                2xl:max-[1920px]:text-[17px]
+                min-[1920px]:!text-[24px] font-normal">Output : RS485 (MODBUS RTU)</p>
+            </div>
+          </div>
+        </div>
 
+        {/* CENTER — sensor image */}
+        <div className="w-full flex justify-center md:justify-center">
+          <img
+            src={sensorImage}
+            alt="Hydrostatic Level Sensor"
+            className="max-w-[70%] sm:max-w-[60%] md:max-w-[45%] lg:max-w-[40%] h-auto object-contain"
+            style={{ filter: 'drop-shadow(0 15px 30px rgba(0, 0, 0, 0.1))' }}
+          />
+        </div>
+
+        {/* MOBILE/TABLET — specs grid below hero */}
+        <div className="md:hidden w-full px-4 mt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="flex items-center gap-3 p-3 rounded-xl bg-white/80 backdrop-blur-sm shadow">
+              <div className="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center">
+                <img src='/ultra1.png' alt="Range" className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="font-normal
+font-['Manrope']
+ text-[#484747] leading-[1.4]
+                text-[13px]
+                sm:text-[14px]
+                md:text-[15px]
+                lg:text-[15px]
+                xl:text-[16px]
+                2xl:max-[1920px]:text-[17px]
+                min-[1920px]:!text-[24px] font-normal">Range : 100mm to 5m</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 p-3 rounded-xl bg-white/80 backdrop-blur-sm shadow">
+              <div className="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center">
+                <img src='/ultra2.png' alt="Accuracy" className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="font-normal
+font-['Manrope']
+ text-[#484747] leading-[1.4]
+                text-[13px]
+                sm:text-[14px]
+                md:text-[15px]
+                lg:text-[15px]
+                xl:text-[16px]
+                2xl:max-[1920px]:text-[17px]
+                min-[1920px]:!text-[24px] font-normal">Accuracy : 0.05% FS</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 p-3 rounded-xl bg-white/80 backdrop-blur-sm shadow sm:col-span-2">
+              <div className="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center">
+                <img src='/ultra3.png' alt="Output" className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="font-normal
+font-['Manrope']
+ text-[#484747] leading-[1.4]
+                text-[13px]
+                sm:text-[14px]
+                md:text-[15px]
+                lg:text-[15px]
+                xl:text-[16px]
+                2xl:max-[1920px]:text-[17px]
+                min-[1920px]:!text-[24px] font-normal">Output : RS485 (MODBUS RTU)</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Half: Description and CTA */}
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10 md:py-12">
+      <div className="relative w-full mx-auto max-w-[1620px]
+            px-5 
+            sm:px-10 
+            md:px-16 
+            lg:px-24 
+            xl:px-28 
+            2xl:px-[120px]
+            min-[1920px]:!px-[0px]  py-5 
+            sm:py-10 
+            md:py-16 
+            lg:py-24 
+            xl:py-28 
+            2xl:py-[50px]
+            min-[1920px]:!px-[0px]">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          
+
           {/* Description Text */}
           <div className="max-w-3xl">
-            <h2 className="text-xl md:text-2xl font-semibold text-gray-900">
+            <h2 className="leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[20px]
+                min-[1920px]:!text-[28px]
+                font-normal
+font-['Manrope']
+ text-normal text-[#3D3D3D]">
               Hydrostatic Level Sensor—Pressure-Based Level Monitoring
             </h2>
-            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-              Engineered with SS316L for precision and durability, this sensor ensures real-time, 
+            <p className="mt-3 font-manrope font-normal text-[#83847F]
+text-[11px]
+                sm:text-[12px]
+                md:text-[13px]
+                lg:text-[14px]
+                xl:text-[15px]
+                2xl:max-[1920px]:text-[15px]
+                min-[1920px]:!text-[18px] leading-relaxed">
+              Engineered with SS316L for precision and durability, this sensor ensures real-time,
               stable level readings—perfect for mission-critical liquid storage and process applications.
             </p>
           </div>
 
-          {/* Enquire Now Button */}
+          {/* CTA */}
           <button
-            className="flex items-center space-x-2 py-3 px-8 w-full md:w-auto rounded-xl text-white font-semibold transition duration-300 ease-in-out
+            className="flex items-center justify-between space-x-2 py-3 px-8 w-full md:w-auto rounded-xl text-white font-semibold transition duration-300 ease-in-out
                        bg-gradient-to-r from-blue-600 to-blue-500 
                        shadow-xl shadow-blue-500/50 
-                       hover:from-blue-700 hover:to-blue-600 transform hover:scale-[1.02] active:scale-[0.98] flex-shrink-0"
+                       hover:from-blue-700 hover:to-blue-600 transform hover:scale-[1.02] active:scale-[0.98] flex-shrink-0 explore_btn
+                       
+                       "
           >
-            <span>Enquire Now</span>
+            <span className='text-[15px]
+                sm:text-[17px]
+                md:text-[18px]
+                font-medium font-Manrope
+                lg:text-[19px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[31px]   '>Explore Now</span>
             {/* Arrow Icon */}
-            <svg 
-              className="w-5 h-5 ml-1 transition-transform duration-300" 
-              fill="none" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth="2" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
+            <img src='/explore_icon.png' alt="Explore" className="w-12 h-12" />
           </button>
         </div>
       </div>

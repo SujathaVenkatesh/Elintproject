@@ -1,98 +1,64 @@
-// import React from "react";
-
-// const SmartDashboard = () => {
-//   return (
-//     <section className="w-full bg-white py-16">
-      
-//       {/* CONTENT WRAPPER */}
-//       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6 items-center">
-
-//         {/* LEFT TEXT */}
-//         <div>
-//           <h2 className="text-[26px] font-semibold text-gray-800">
-//             Smart Dashboard. Smarter Decisions
-//           </h2>
-
-//           <p className="mt-3 text-gray-500 text-[15px] leading-relaxed max-w-md">
-//             With a simple, mobile-friendly dashboard, you can monitor fuel level, 
-//             temperature, location, and alerts in real-time from anywhere at any time.
-//           </p>
-//         </div>
-
-//         {/* RIGHT IMAGES */}
-//         <div className="flex justify-center md:justify-end items-center gap-6">
-//           {/* BIG DASHBOARD IMAGE */}
-//           <img
-//             src="/oil17.png"
-//             alt="Dashboard Main"
-//             className="w-[30%] md:w-[30%] object-contain"
-//           />
-
-//           {/* PHONE IMAGE */}
-//           <img
-//             src="/oil18.png"
-//             alt="Dashboard Mobile"
-//             className="w-[30%] md:w-[30%] object-contain"
-//           />
-//         </div>
-
-//       </div>
-
-//     </section>
-//   );
-// };
-
-// export default SmartDashboard;
-
-
 const SmartDashboard = () => {
   return (
-    <div className="w-full bg-white py-16 px-4 sm:px-6 lg:px-12">
+    <div className="w-full bg-white py-16 px-4 sm:px-6 lg:px-12 font-['Manrope']">
       <div className="max-w-7xl mx-auto">
 
-        {/* ✅ TEXT SECTION */}
+        {/* TEXT SECTION */}
         <div className="max-w-2xl mb-12">
-          <h2 className="text-left text-lg sm:text-xl md:text-2xl font-medium text-gray-600 mb-8">
+          <h2 className="text-left text-center 
+      text-[#3D3D3D]  leading-[1.4]
+                text-[18px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[46px] mb-8">
             Visualize ESP Performance in Real Time
           </h2>
 
-          <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
+          <p className="text-[#737373] leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[28px]">
             Get full visibility into your ESP system with live data and smart
             alerts—accessible via web and mobile app.
           </p>
         </div>
 
-        {/* ✅ DEVICE PREVIEW SECTION */}
-        <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+        {/* DEVICE PREVIEW SECTION */}
+        <div className="relative flex flex-col sm:flex-row items-center sm:justify-center">
 
-          {/* ✅ MOBILE DEVICE */}
-          <div className="relative z-10">
+          {/* MOBILE DEVICE */}
+          <div className="relative z-10 h-auto sm:h-[500px] md:h-[560px] flex items-center">
+
             <img
               src="/oil17.png"
               alt="Mobile ESP Dashboard"
               className="
-                w-[160px]
-                sm:w-[180px]
-                md:w-[210px]
-                object-contain
-                drop-shadow-xl
-              "
+      h-full
+      w-auto
+      object-contain
+      drop-shadow-xl
+    "
             />
           </div>
 
-          {/* ✅ TABLET DEVICE */}
-          <div className="relative">
+          <div className="relative h-auto sm:h-[500px] md:h-[520px] flex items-center">
+
             <img
               src="/oil18.png"
               alt="Tablet ESP Dashboard"
               className="
-                w-[320px]
-                sm:w-[460px]
-                md:w-[600px]
-                lg:w-[720px]
-                object-contain
-                drop-shadow-2xl
-              "
+      h-full
+      w-auto
+      object-contain
+      drop-shadow-2xl
+    "
             />
           </div>
 

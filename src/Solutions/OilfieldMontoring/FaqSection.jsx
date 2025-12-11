@@ -5,39 +5,39 @@ import React, { useState } from "react";
 // FAQ data
 const faqItems = [
   {
-    question: "What is a smart water tank automation system?",
+    question: "What types of oilfield pumps does Elint monitor?",
     answer:
-      "A smart water tank automation system uses sensors, controllers, and software to automatically manage water levels, pump operation, and fault protection in real-time, eliminating manual intervention.",
+      "Elint Systems supports real-time production monitoring in oil and gas for a wide range of artificial lift systems, including Electric Submersible Pumps (ESP), Sucker Rod Pumps (SRP), and more. Our ESP monitoring system and artificial lift optimization software ensure continuous uptime, improved ESP performance optimization, and reliable oilfield operations",
   },
   {
-    question: "How does remote water tank monitoring function?",
+    question: "How does the system detect gas lock in ESPs?",
     answer:
-      "Remote monitoring uses gateways to send data from tank sensors to a cloud platform, allowing users to view status and receive alerts via a mobile app or web dashboard from anywhere.",
+      "Our AI-driven ESP optimization platform uses advanced analytics to detect anomalies such as sudden motor current drops and irregular pressure readings—clear indicators of gas lock. This allows for real-time well optimization and early alerts, enabling operators to take corrective actions and prevent costly shutdowns",
   },
   {
-    question: "Can multiple tanks be monitored in one system?",
+    question: "What communication options are supported for remote sites?",
     answer:
-      "Yes, a single gateway can typically handle multiple sensors and tanks, centralizing monitoring and control into one unified interface.",
+      "The solution supports multiple protocols including GSM, LoRaWAN, and Ethernet, ensuring seamless connectivity in even the most remote oilfield sites. This flexibility makes it a true digital oilfield solution for ESP monitoring systems and gas lift control systems.",
   },
   {
-    question: "How reliable is LoRaWAN for water tank systems?",
+    question: "Is there data logging and reporting available?",
     answer:
-      "LoRaWAN offers long range, low power consumption, and strong signal penetration, making it highly reliable in industrial environments.",
+      "Yes. Critical events such as power failures, vibration spikes, or temperature anomalies are automatically time-stamped and logged for audits, diagnostics, and compliance. Our digital oilfield solution provides advanced reporting features, making it easier to evaluate ESP performance optimization and long-term artificial lift efficiency.",
   },
   {
-    question: "How does water pump automation reduce maintenance costs?",
+    question: "Does the system support VSD-driven pump motors?",
     answer:
-      "Automation prevents failures like dry runs, overloads, and overflows, optimizes runtime, and provides diagnostics for predictive maintenance.",
+      "Absolutely. Our ESP monitoring solution is fully compatible with Variable Speed Drives (VSD), tracking RPM, torque, and motor behavior. This ensures artificial lift optimization and ESP performance optimization under varying well conditions.",
   },
   {
-    question: "What is the Smart Starter in water tank automation?",
+    question: "Can Elint monitor multiple wells centrally?",
     answer:
-      "The Smart Starter is an intelligent pump control unit that integrates automation logic, voltage protection, fault memory, and communication.",
+      "Yes. With our cloud-based ESP monitoring system, operators can monitor multiple wells in real time from a single dashboard. This enables intelligent well optimization and enhances decision-making across large oilfields.",
   },
   {
-    question: "How does the Smart Starter enable remote control?",
+    question: "What's the ROI timeline for ESP monitoring systems?",
     answer:
-      "The Smart Starter connects to a cloud gateway so authorized users can remotely control the pump and adjust settings from their devices.",
+      "Most ESP monitoring systems and gas lift optimization systems deliver ROI within 6–18 months. By preventing costly failures and boosting production by 5–15%, our artificial lift optimization solutions can save operators over $500K by avoiding a single failure or workover event.",
   },
 ];
 
@@ -48,12 +48,18 @@ const AccordionItem = ({ question, answer }) => {
     <div className="mb-3">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between rounded-xl border border-gray-200 bg-white px-5 py-3 text-left text-[14px] text-gray-900 shadow-sm transition-all duration-200"
+        className="w-full flex items-center justify-between rounded-xl border border-gray-200 bg-white px-5 py-3 text-left text-[16px] text-gray-900 shadow-sm transition-all duration-200 font-semibold
+        sm:text-[20px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[22px] text-black"
       >
         <span>{question}</span>
 
         {/* arrow circle – only this reacts on hover */}
-        <span className="group flex h-7 w-7 items-center justify-center rounded-lg border border-gray-300 text-gray-500 text-sm cursor-pointer">
+        <span className="group flex h-7 w-7 items-center justify-center  text-gray-500 text-sm cursor-pointer">
           <svg
             className={`w-3.5 h-3.5 transform transition-transform duration-200 ${
               isOpen ? "rotate-45" : "rotate-0"
@@ -77,34 +83,50 @@ const AccordionItem = ({ question, answer }) => {
           isOpen ? "max-h-40 mt-2" : "max-h-0"
         }`}
       >
-        <p className="text-[13px] text-gray-600 px-1">{answer}</p>
+        <p className=" text-[14px] text-gray-600 leading-relaxed
+                sm:text-[20px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[14px]
+                min-[1920px]:!text-[20px] px-1">{answer}</p>
       </div>
     </div>
   );
 };
 
-const FaqSection = () => {
+const FAQSection = () => {
   return (
     <section className="w-full bg-white py-16 md:py-20">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         {/* heading */}
         <div className="mb-10">
-          <h2 className="text-[26px] md:text-[30px] font-semibold text-gray-900">
+          <h2 className="font-semibold  text-[20px] sm:text-[20px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[45px]">
             Got any Questions?
           </h2>
-          <p className="mt-1 text-[24px] md:text-[26px] font-semibold text-gray-400">
+          <p className="mt-1 font-semibold  text-[20px] sm:text-[20px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[45px] text-[#ABABAB]">
             We've got answers.
           </p>
         </div>
 
         {/* layout */}
-        <div className="grid grid-cols-1  lg:grid-cols-[minmax(0,2fr)_minmax(260px,1fr)] gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,2fr)_minmax(260px,1fr)] gap-10">
           {/* left: accordions */}
           <div>
             {faqItems.map((item, idx) => (
               <AccordionItem
                 key={idx}
-                question={<span className="font-semibold">{item.question}</span>}
+                question={item.question}
                 answer={item.answer}
               />
             ))}
@@ -114,10 +136,21 @@ const FaqSection = () => {
           <div className="flex">
             <div className="w-full rounded-2xl border border-gray-100 bg-white shadow-md px-6 py-8 flex flex-col justify-between">
               <div>
-                <h3 className="text-[16px] font-semibold text-gray-900 mb-2">
+                <h3 className=" text-[16px] sm:text-[20px] font-semibold
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[22px] text-black mt-[240px] min-[1920px]:mt-[400px]
+ ">
                   Do you have more questions?
                 </h3>
-                <p className="text-[13px] text-gray-600 leading-relaxed">
+                <p className="text-[14px] sm:text-[20px] font-medium
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[15px]
+                min-[1920px]:!text-[20px] leading-relaxed text-[#8C8D8E]">
                   Feel free to reach out. Our team is happy to assist with
                   product details, setup guidance, or custom monitoring needs.
                 </p>
@@ -134,4 +167,4 @@ const FaqSection = () => {
   );
 };
 
-export default FaqSection;
+export default FAQSection;

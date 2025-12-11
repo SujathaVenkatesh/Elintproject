@@ -1,87 +1,140 @@
 const DigitalSection = () => {
-  const icons = [
-    { label: "Tank Level", icon: "/digital3.png", pos: "top-[4%] left-[28%] sm:top-[6%] sm:left-[16%]" },
-    { label: "Flow Meter", icon: "/digital4.png", pos: "top-[1%] left-[45%]" },
-    { label: "Flowline Pressure", icon: "/digital5.png", pos: "top-[6%] left-[62%] sm:left-[70%]" },
-
-    { label: "Tubing Head Pressure", icon: "/digital6.png", pos: "top-[32%] right-[2%] sm:right-[8%]" },
-
-    { label: "VSD", icon: "/digital7.png", pos: "bottom-[26%] right-[6%] sm:right-[14%]" },
-
-    { label: "ESP", icon: "/digital8.png", pos: "bottom-[4%] right-[20%] sm:right-[30%]" },
-
-    { label: "Grid", icon: "/digital.png", pos: "bottom-[2%] left-[36%] sm:left-[25%]" },
-
-    { label: "Utilities", icon: "/digital1.png", pos: "bottom-[26%] left-[6%] sm:left-[14%]" },
-
-    { label: "BESS", icon: "/digital2.png", pos: "top-[32%] left-[2%] sm:left-[10%]" },
-  ];
-
   return (
-    <div className="w-full bg-white py-14 px-4 sm:px-6 lg:px-12 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-start gap-10">
+    <div className="w-full overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-12 font-['Manrope']">
 
-        {/* ✅ LEFT TEXT */}
-        <div className="z-10 text-center lg:text-left">
-          <h2 className="text-left text-lg sm:text-xl md:text-2xl font-medium text-gray-600 mb-8">
-            Digital Oil Field Sensor for Real-Time Parameter Monitoring
-          </h2>
+      {/* FULL-WIDTH BACKGROUND */}
+      <div className="w-screen py-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+
+        <h2
+          className="text-left ms-10 text-center 
+          text-[#3D3D3D] leading-[1.4]
+          text-[18px]
+          sm:text-[20px]
+          md:text-[21px]
+          lg:text-[22px]
+          xl:text-[25px]
+          2xl:max-[1920px]:text-[25px]
+          min-[1920px]:!text-[46px] mb-12 ms-18 md:ms-10"
+        >
+          Digital Oil Field Sensor for Real- <br />Time Parameter Monitoring
+        </h2>
+
+        {/* CENTER IMAGE */}
+        <div className="w-full mx-auto flex justify-center items-center">
+          <img src="/digitals.png" alt="Multi Protocol Device" className="w-full object-contain" />
         </div>
 
-        {/* ✅ RIGHT SENSOR + ORBIT */}
-        <div className="relative flex justify-center items-center min-h-[380px] sm:min-h-[460px] md:min-h-[520px]">
 
-          {/* ✅ RESPONSIVE DOTTED RADIAL BACKGROUND */}
-          <div className="
-            absolute 
-            w-[300px] h-[300px] 
-            sm:w-[380px] sm:h-[380px] 
-            md:w-[480px] md:h-[480px] 
-            lg:w-[560px] lg:h-[560px]
-            rounded-full
-            bg-[radial-gradient(circle,_#93c5fd_1px,_transparent_1px)]
-            bg-[size:10px_10px]
-            opacity-60
-          " />
+        {/* MOBILE LIST VIEW ONLY */}
 
-          {/* ✅ RESPONSIVE MAIN DEVICE IMAGE */}
-          <img
-            src="/oil16.png"
-            alt="Digital Oil Field Sensor"
-            className="
-              relative z-10 
-              w-auto
-              max-w-[170px]
-              sm:max-w-[220px]
-              md:max-w-[280px]
-              lg:max-w-[330px]
-              object-contain
-            "
-          />
+        <div className="md:hidden mt-8 grid grid-cols-2 gap-4 px-4">
 
-          {/* ✅ RESPONSIVE FLOATING ICONS */}
-          {icons.map((item, index) => (
+          {[
+            { icon: "/digital4.png", text: "Flow Meter" },
+            { icon: "/digital5.png", text: "Flowline Pressure" },
+            { icon: "/digital6.png", text: "Tubing Head Pressure" },
+            { icon: "/digital7.png", text: "VSD" },
+            { icon: "/digital8.png", text: "ESP" },
+            { icon: "/digital.png", text: "Grid" },
+            { icon: "/digital1.png", text: "Utilities" },
+            { icon: "/digital2.png", text: "BESS" },
+            { icon: "/digital3.png", text: "Tank Level" },
+          ].map((item, i) => (
             <div
-              key={index}
-              className={`absolute ${item.pos}
-                bg-white shadow-md rounded-full
-                w-16 h-16
-                sm:w-20 sm:h-20
-                md:w-24 md:h-24
-                flex flex-col items-center justify-center text-center
-              `}
+              key={i}
+              className="flex items-center gap-4 bg-white rounded-xl shadow-md p-4"
             >
-              <img src={item.icon} alt={item.label} className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mb-1" />
-              <p className="text-[9px] sm:text-[10px] md:text-[11px] text-gray-700 leading-tight px-1">
-                {item.label}
+              <div className="w-10 h-10  flex items-center justify-center">
+                <img src={item.icon} className="w-6" />
+              </div>
+
+              <p className="text-sm text-gray-800 ">
+                {item.text}
               </p>
             </div>
           ))}
+
         </div>
+
+
+
+        {/* DESKTOP ABSOLUTE ICONS */}
+
+        <div className="hidden md:block">
+
+          {/* TOP */}
+          <div className="absolute top-[25%] left-[50%] -translate-x-1/2 w-20 h-20 min-[1920px]:w-28 min-[1920px]:h-28 rounded-full bg-white flex flex-col items-center justify-center text-center shadow-[inset_0_0_12px_rgba(0,0,0,0.18)]">
+            <img src="/digital4.png" className="w-6 mb-1 min-[1920px]:w-10" />
+            <p className="text-[10px] min-[1920px]:text-[14px] text-gray-600">Flow Meter</p>
+          </div>
+
+          {/* TOP RIGHT */}
+          <div className="absolute top-[35%] right-[30%] w-20 h-20 min-[1920px]:w-28 min-[1920px]:h-28 rounded-full bg-white flex flex-col items-center justify-center text-center shadow-[inset_0_0_12px_rgba(0,0,0,0.18)]">
+            <img src="/digital5.png" className="w-6 mb-1 min-[1920px]:w-10" />
+            <p className="text-[10px] min-[1920px]:text-[14px] text-gray-600">Flowline Pressure</p>
+          </div>
+
+          {/* RIGHT */}
+          <div className="absolute top-[55%] right-[24%] -translate-y-1/2 w-20 h-20 min-[1920px]:w-28 min-[1920px]:h-28 rounded-full bg-white flex flex-col items-center justify-center text-center shadow-[inset_0_0_12px_rgba(0,0,0,0.18)]">
+            <img src="/digital6.png" className="w-6 mb-1 min-[1920px]:w-10" />
+            <p className="text-[10px] min-[1920px]:text-[14px] text-gray-600">Tubing Head Pressure</p>
+          </div>
+
+          {/* BOTTOM RIGHT */}
+          <div className="absolute bottom-[22%] right-[22%] w-20 h-20 min-[1920px]:w-28 min-[1920px]:h-28 rounded-full bg-white flex flex-col items-center justify-center text-center shadow-[inset_0_0_12px_rgba(0,0,0,0.18)]">
+            <img src="/digital7.png" className="w-6 mb-1 min-[1920px]:w-10" />
+            <p className="text-[10px] min-[1920px]:text-[14px] text-gray-600">VSD</p>
+          </div>
+
+          {/* BOTTOM */}
+          <div className="absolute bottom-[6%] left-[70%] -translate-x-1/2 w-20 h-20 min-[1920px]:w-28 min-[1920px]:h-28 rounded-full bg-white flex flex-col items-center justify-center text-center shadow-[inset_0_0_12px_rgba(0,0,0,0.18)]">
+            <img src="/digital8.png" className="w-6 mb-1 min-[1920px]:w-10" />
+            <p className="text-[10px] min-[1920px]:text-[14px] text-gray-600">ESP</p>
+          </div>
+
+          {/* BOTTOM LEFT */}
+          <div className="absolute bottom-[6%] left-[30%] w-20 h-20 min-[1920px]:w-28 min-[1920px]:h-28 rounded-full bg-white flex flex-col items-center justify-center text-center shadow-[inset_0_0_12px_rgba(0,0,0,0.18)]">
+            <img src="/digital.png" className="w-6 mb-1 min-[1920px]:w-10" />
+            <p className="text-[10px] min-[1920px]:text-[14px] text-gray-600">Grid</p>
+          </div>
+
+          {/* UTILITIES */}
+          <div className="absolute bottom-[22%] left-[25%] w-20 h-20 min-[1920px]:w-28 min-[1920px]:h-28 rounded-full bg-white flex flex-col items-center justify-center text-center shadow-[inset_0_0_12px_rgba(0,0,0,0.18)]">
+            <img src="/digital1.png" className="w-6 mb-1 min-[1920px]:w-10" />
+            <p className="text-[10px] min-[1920px]:text-[14px] text-gray-600">Utilities</p>
+          </div>
+
+          {/* LEFT */}
+          <div className="absolute top-[55%] left-[26%] -translate-y-1/2 w-20 h-20 min-[1920px]:w-28 min-[1920px]:h-28 rounded-full bg-white flex flex-col items-center justify-center text-center shadow-[inset_0_0_12px_rgba(0,0,0,0.18)]">
+            <img src="/digital2.png" className="w-6 mb-1 min-[1920px]:w-10" />
+            <p className="text-[10px] min-[1920px]:text-[14px] text-gray-600">BESS</p>
+          </div>
+
+          {/* TOP LEFT */}
+          <div className="absolute top-[34%] left-[32%] w-20 h-20 min-[1920px]:w-28 min-[1920px]:h-28 rounded-full bg-white flex flex-col items-center justify-center text-center shadow-[inset_0_0_12px_rgba(0,0,0,0.18)]">
+            <img src="/digital3.png" className="w-6 mb-1 min-[1920px]:w-10" />
+            <p className="text-[10px] min-[1920px]:text-[14px] text-gray-600">Tank Level</p>
+          </div>
+
+        </div>
+
       </div>
     </div>
   );
 };
 
 export default DigitalSection;
+
+
+
+
+
+
+
+
+
+
+
+
+
 

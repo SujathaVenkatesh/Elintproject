@@ -1,42 +1,69 @@
 import React from "react";
 
-/**
- * Component displaying a large text block overlaid on a background image,
- * specifically for the Fuel Management Day Tank context.
- * The text content is fixed, and the background image is aligned right.
- */
 const BannerBelowSection = () => {
-  const imageUrl = "/fuel-tank-pipe-connections.webp";
+  const imageUrl = "/secondsec_bg.png";
 
   return (
     <section className="relative w-full bg-white font-manrope">
       <div
-        className="relative w-full bg-cover bg-right"
+        className="
+          relative w-full overflow-hidden 
+          bg-right bg-cover
+        "
         style={{
-          // Set the background image via style for the URL provided
           backgroundImage: `url('${imageUrl}')`,
-          // Fixed height to match the design aesthetics (520px)
-          height: "520px", 
         }}
       >
-        {/* White fade overlay covering 70% of the left side for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/96 to-transparent w-[70%]"></div>
+        {/* ======== GRADIENT EXACT FROM FIGMA (FIXED) ======== */}
+        <div
+          className="
+            absolute inset-0 
+            bg-gradient-to-r
+            from-white 
+            via-white/95 
+            to-transparent
+            
+          "
+          style={{
+            background:
+              "linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 37.38%, #FFFFFF 63.45%, rgba(255,255,255,0.93) 82.75%, rgba(255,255,255,0) 105.96%)",
+          }}
+        />
 
-        {/* TEXT CONTENT CONTAINER */}
-        <div className="relative w-full max-w-[1620px] mx-auto h-full px-6 lg:px-0 flex items-center">
-          
-          {/* Inner Content Block - Positioned left, max width 1100px */}
-          {/* Note: The original code used pl-[120px] in the outer div, but centering based on max-width and using a left padding on the content wrapper is more responsive. */}
-          <div className="pl-[120px]">
-            <p className="font-manrope font-normal text-[28px] leading-[49px] text-[#2A2A2A] max-w-[1100px]">
-              In mission-critical environments—like data centers, hospitals, and
-              industrial facilities—fuel management isn’t just operational, it’s
-              existential. Manual intervention leads to errors. Delays lead to
-              downtimes. Our advanced fuel day tank automation system brings a new
-              era of precision and autonomy to how your backup power infrastructure
-              is fueled and managed.
-            </p>
-          </div>
+        {/* ======== MAIN CONTENT WRAPPER ======== */}
+        <div
+          className="
+            relative  relative w-full mx-auto max-w-[1620px]
+           vertical-center min-h-[50vh] flex items-center 
+            min-h-[50vh]
+           mx-auto 
+            max-w-[1620px]
+             px-5 
+            sm:px-10 
+            md:px-16 
+            lg:px-24 
+            xl:px-28 
+            xxl:px-32 
+            2xl:px-[120px]
+            cust_pad
+          "
+        >
+          {/* ======== TEXT BLOCK ======== */}
+          <p
+            className="
+              text-[#1A1A1C] font-['Manrope'] mt-3 leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[18px]
+                lg:text-[20px]
+                xl:text-[22px]
+                2xl:max-[1920px]:text-[24px]
+                min-[1920px]:!text-[28px]
+              mt-10 mb-10 font-normal
+            "
+          >
+            In mission-critical environments—like data centers, hospitals, and industrial facilities—fuel management isn’t <br /> just operational, it’s existential. Manual intervention leads to errors. Delays lead to downtimes. Our advanced <br /> fuel day tank automation system brings a new era of precision and autonomy to how your backup power <br />infrastructure is fueled and managed.
+          </p>
         </div>
       </div>
     </section>

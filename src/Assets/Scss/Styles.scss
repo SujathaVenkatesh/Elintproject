@@ -1,437 +1,234 @@
-.layout-cont {
-  position: relative;
-  .popup-cont {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    .form-cont {
-      height: 70vh;
+.hero-section {
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
 
-      .input-cont {
-        position: relative;
-
-        .error {
-          position: absolute;
-          right: 0;
-          bottom: -37px;
-        }
-
-        input {
-          height: 40px;
-          box-shadow: 0 0 5px #7d8592;
-          border: 1px solid #7d8592;
-
-          &:focus {
-            outline: none;
-          }
-        }
-      }
-      .page-wraper {
-        &.creative-wraper-two {
-          // Add specific styles if needed
-        }
-      }
-
-      .site-header {
-        &.header {
-          &.mo-left {
-            // Styles for left-aligned header
-          }
-          &.header-style-1 {
-            // Styles for header style 1
-          }
-        }
-      }
-
-      .top-bar {
-        .container {
-          .row {
-            display: flex;
-            justify-content: space-between;
-          }
-        }
-      }
-
-      .dlab-topbar-left {
-        // Styles for the left top bar section
-      }
-
-      .dlab-topbar-right {
-        .social-bx {
-          list-style: none;
-          display: flex;
-          float: right;
-
-          li {
-            margin: 0 5px;
-
-            a {
-              text-decoration: none;
-              font-size: 16px;
-              color: inherit;
-              transition: color 0.3s;
-
-              &:hover {
-                color: #007bff; // Change color on hover
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// Booking form start
-.forms-cont {
-  position: relative;
-  .btns-cont {
-    button {
-      height: 50px;
-      width: 200px;
-      border-top: 2.5px solid #ef4444;
-      border-right: 2.5px solid #ef4444;
-      border-bottom: 0;
-      background: #fff;
-      transition: 0.3s ease-in;
-      color: #ef4444;
-      &.active {
-        background: #ef4444 !important;
-        color: #ffff !important;
-      }
-      &:nth-child(1) {
-        border-top-left-radius: 20px;
-        border-left: 2.5px solid #ef4444;
-        border-right: 0;
-      }
-      &:nth-child(2) {
-        border-top-right-radius: 20px;
-        border-left: 2.5px solid #ef4444;
-        border-right: 2.5px solid #ef4444;
-      }
-      &:hover {
-        background: #ef4444 !important;
-        color: #ffff !important;
-      }
-    }
-  }
-  .bottom-form {
-    border: 2.5px solid #ef4444;
-    background: #fff;
-    border-radius: 10px;
-    transition: 0.2s all linear;
-    .imglayer {
-      height: 150px;
-      width: 150px;
-      //   border: 2.5px solid #EF4444;
-      background: #fff;
-      position: relative;
-      border: 0;
-      transition: 0.2s all linear;
-      &:hover {
-        // border: 2.5px solid #EF4444;
-        background: #ef4444;
-      }
-      &.hoverds {
-        // border: 2.5px solid #EF4444;
-        background: #ef4444;
-        .txt {
-          color: #fff;
-        }
-      }
-      &:hover .txt {
-        color: #fff;
-      }
-      .txt {
-      }
-      img {
-        height: 70%;
-        width: 70%;
-        object-fit: contain;
-      }
-    }
-  }
-  .posi-btn {
+  &::before {
+    content: "";
     position: absolute;
-    right: 20px;
-    bottom: 20px;
-    background: #ef4444;
-    width: 160px;
-    height: 40px;
-  }
-  .posi-btn2 {
-    // position: absolute;
-    background: #ef4444;
-    width: 200px;
-    height: 40px;
-  }
-  .posi-btn3 {
-    // position: absolute;
-    background: #ef4444;
-    width: 200px;
-    height: 40px;
-  }
-
-  .formlayers {
-    .form-cont1 {
-      display: grid;
-      display: -ms-grid;
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-      .form-cont {
-        position: relative;
-      }
-      input {
-        height: 43px;
-        &:focus {
-          border: none;
-          outline: none;
-        }
-      }
-      .inpuss {
-        height: 43px;
-        &:focus {
-          border: none;
-          outline: none;
-        }
-      }
-      select {
-        height: 43px;
-        &:focus {
-          border: none;
-          outline: none;
-        }
-      }
-      .error {
-        position: absolute;
-        right: 10px;
-        bottom: -18px;
-      }
-    }
+    inset: 0;
+    // background: linear-gradient(to right,
+    //     rgba(255, 255, 255, 0.95) 0%,
+    //     rgba(255, 255, 255, 0.70) 30%,
+    //     rgba(255, 255, 255, 0.35) 55%,
+    //     rgba(255, 255, 255, 0.10) 75%,
+    //     rgba(255, 255, 255, 0) 100%) !important;
+    pointer-events: none;
   }
 }
 
-// responcive start
-@media (max-width: 768px) {
-  .form-cont1 {
-    display: block !important;
-  }
-  .posi-btn {
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  .cabcont {
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  .btns-cont {
-    button {
-      width: 100px !important;
-      height: 40px !important;
-    }
-  }
-  .posi-btn {
-    position: relative !important;
-    right: 0 !important;
-    bottom: 0 !important;
-  }
-  .posi-btn2 {
-    position: relative !important;
-    width: 100% !important;
-  }
-}
-// responcive end
+.hero-section2 {
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 
-.time-cont {
-  input {
-    width: 100px !important;
-    border: 0px;
-  }
-  select {
-    border: 0px;
-  }
-  .react-time-picker {
-    background: #fff;
-    border-radius: 8px;
-    padding: 5px;
-  }
-
-  /* Input Box */
-  .react-time-picker__inputGroup {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-  }
-
-  /* Drop-down Buttons */
-  .react-time-picker__wrapper {
-    border: none;
-  }
-
-  /* Clock Icon */
-  .react-time-picker__button {
-    color: #007bff;
-  }
-
-  /* AM/PM Dropdown */
-  .react-time-picker__clock {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    // background: linear-gradient(to right,
+    //     rgba(255, 255, 255, 0.95) 0%,
+    //     rgba(255, 255, 255, 0.70) 30%,
+    //     rgba(255, 255, 255, 0.35) 55%,
+    //     rgba(255, 255, 255, 0.10) 75%,
+    //     rgba(255, 255, 255, 0) 100%) !important;
+    pointer-events: none;
   }
 }
 
-.time-picker-container {
-  text-align: center;
-  margin-top: 20px;
+.icon_img {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+
+  img {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+
+  }
 }
 
-.open-clock-btn {
-  background-color: #007bff;
+
+.grad_bg {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.92) 20%,
+      rgba(255, 255, 255, 0.65) 40%,
+      rgba(255, 255, 255, 0.15) 70%,
+      rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  width: 1920px;
+  left: calc(50% - 1920px/2);
+}
+
+/* Rectangle 24026 */
+
+.img_size {
+  width: 30px;
+  height: 30px;
+
+  img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+  }
+}
+
+.cust_border {
+  border-top: 4.15934px solid #D6D6D6;
+  border-bottom: 4.15934px solid #D6D6D6;
+  box-shadow: -9.70513px 13.1712px 48.7336px rgba(0, 0, 0, 0.09);
+
+}
+
+.btn-primary {
+  font-family: "f2";
+  font-weight: 500;
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  background: linear-gradient(98deg, #55ABEE 1%, #52ACF4 56%, #79C0F8);
+  box-shadow:
+    0px 15px 50px rgba(0, 0, 0, 0.25),
+    inset 0px -2px 12px #71BBF6;
+  text-shadow: 0px 5.32px 20.5px rgba(0, 0, 0, 0.33);
 
-.open-clock-btn:hover {
-  background-color: #0056b3;
-}
-
-.time-input {
-  display: block;
-  margin: 10px auto;
-  padding: 5px;
-  font-size: 16px;
-  border: 2px solid #007bff;
-  border-radius: 5px;
-}
-
-.selected-time {
-  font-size: 18px;
-  margin-top: 10px;
-  color: #333;
-}
-
-/* Time Picker Input Field */
-
-// Booking form end
-
-.bosxont {
-  position: relative;
-  .top-hover {
-    position: absolute;
-    bottom: 100%; /* Position it below the button */
-    left: 50%;
-    transform: translateX(-50%) translateY(10px); /* Initially slightly below */
-    background-color: #fff;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  &:hover .top-hover {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0px);
+  span {
+    text-shadow: 0px 5.32px 20.5px rgba(0, 0, 0, 0.33);
   }
 
-  .top-hover {
-    &.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) translateY(0px);
-    }
-  }
+  // border: 3px solid #F1F1F1;
 }
 
-.poppup-cont {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  .poppup {
-    height: 40vh;
-    background: #fff;
-    .btnss {
-      height: 30px;
-      background: red;
-    }
-    .btnss2 {
-      height: 30px;
-      background: rgb(4, 82, 4);
-    }
-  }
-}
 
-.loading-comp {
-  height: 100vh;
-  .img-conts {
-    height: 150px;
-    width: 150px;
+
+/* Rectangle 24034 */
+
+
+
+
+// Responcive start
+@media (min-width: 1800px) {
+  .big_sizeh1 {
+    font-size: 46px !important;
+  }
+
+  .big_sizep {
+    font-size: 28px !important;
+  }
+
+  .big_btn {
+    font-size: 22.64px !important;
+  }
+
+  .btn-w {
+    width: 280.9px !important;
+    height: 62.59px !important;
+  }
+
+  .lineh {
+    line-height: 49px !important;
+  }
+
+  .res_mar {
+    margin: 0 10% !important;
+  }
+
+  .respad {
+    padding: 0 !important;
+  }
+
+  .min_title {
+    font-size: 22px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .min_title2 {
+    font-size: 22px !important;
+    // margin-bottom: 10px !important;
+  }
+
+  .min_desc {
+    font-size: 18px !important;
+  }
+
+  .icon_img {
+    height: 88px;
+    width: 88px;
+
     img {
-      height: 100%;
-      width: 100%;
+      height: 26px;
+      width: 26px;
       object-fit: contain;
     }
   }
+
+  .cust_pad {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .img_res {}
 }
 
-.enqiry-cont {
-  position: relative;
-  .poppup {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000000;
+// Responcive end
+
+
+
+// grid_res
+
+@media (max-width: 600px) {
+  .grid_res {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 70vw !important;
   }
 }
 
-.poppupss {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000000;
-}
-.dual-ring-spinner {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
+
+
+/* Frame 1321317585 */
+
+
+
+.whater_shadow {
+  background: #FFFFFF;
+  box-shadow:  0px 28.6592px 57.3183px -11.4637px rgba(50, 50, 93, 0.25), 0px 17.1955px 34.391px -17.1955px rgba(0, 0, 0, 0.3), inset 0px -1.14637px 3.4391px rgba(10, 37, 64, 0.35);
 }
 
-.dual-ring-spinner:after {
-  content: " ";
-  display: block;
-  width: 44px;
-  height: 44px;
-  margin: 2px;
-  border-radius: 50%;
-  border: 4px solid red;
-  border-color: red #ff61a00c red #ff61a00c;
-  animation: dual-ring-spin 1.2s linear infinite;
-}
-@keyframes dual-ring-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+.whater_img {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 85%;
+    width: 85%;
+    object-fit: contain;
   }
 }
+
+
+.explore_btn {
+  /* Frame 1321318277 */
+
+  background: #0C89D2;
+  border: 0.3px solid #EBF2F7;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+
+@media (max-width: 1000px) {
+  .bg-blur-box {
+    filter: blur(12px) !important; /* change level here */
+  }
+}
+
+
+
+

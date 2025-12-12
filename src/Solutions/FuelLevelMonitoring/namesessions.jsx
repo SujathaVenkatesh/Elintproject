@@ -1,93 +1,101 @@
 import React from "react";
-import { Plug, Wifi, Hand, BarChart3 } from "lucide-react";
 
 const steps = [
   {
-    icon: Plug,
+    img: "/install.png",
     title: "Install Sensors",
     description:
       "Plug-and-play sensors calibrated to tank size, material, and fluid type.",
   },
   {
-    icon: Wifi,
+    img: "/cloud.png",
     title: "Connect to Cloud",
     description:
       "Secure connectivity via 4G/LoRaWAN/Wi-Fi to a centralized platform.",
   },
   {
-    icon: Hand,
+    img: "/action.png",
     title: "Act Instantly",
     description:
       "Enable auto-refills, trigger theft protocols, or generate audit reports on demand.",
   },
   {
-    icon: BarChart3,
+    img: "/analyze.png",
     title: "Analyze in Dashboard",
     description:
       "Track fuel levels, consumption, refill history, and real-time alerts.",
   },
 ];
 
-const StepFeature = ({ icon: Icon, title, description }) => (
-  <div className="flex items-start text-left space-x-4">
-    <div className="flex-shrink-0 w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center bg-white">
-      <Icon className="w-5 h-5 text-gray-600" />
-    </div>
+const StepFeature = ({ img, title, description }) => (
+  <div className="flex items-start space-x-4">
+    <img src={img} alt={title} className="w-10 h-10 object-contain" />
     <div>
-      <h4 className="text-sm font-semibold text-gray-800">{title}</h4>
-      <p className="text-xs text-gray-500 mt-1 leading-snug">{description}</p>
+      <h4 className="text-sm font-semibold text-gray-900">{title}</h4>
+      <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+        {description}
+      </p>
     </div>
   </div>
 );
 
 const HowItWorksSection = () => {
-  const combinedDiagramImage = "/fueltank4.png";
-  const foregroundImage = "/bgimage.png";
+  const mainDiagram = "/fueltank.png";
 
   return (
-    <section className="w-full bg-white py-16 md:py-20 font-sans">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-normal text-gray-900 leading-tight mb-2">
+    <section className="w-full bg-white py-16 md:py-20 font-['Manrope'] overflow-hidden">
+      {/* TITLE */}
+      <div className="text-center mb-10">
+        <h2
+          className="  font-['Manrope'] text-[#3D3D3D] leading-[1.4]
+                text-[19px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[33px]
+                min-[1920px]:!text-[46px]"
+        >
           How It Works
         </h2>
-        <p className="text-base text-gray-600 mb-12 md:mb-16">
+        <p
+          className="font-['Manrope'] text-[#737373] mt-3 leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[19px]
+                2xl:max-[1920px]:text-[20px]
+                min-[1920px]:!text-[28px]"
+        >
           Fuel Monitoring. Engineered to Be Effortless
         </p>
+      </div>
 
-        <div className="relative w-full h-[420px] md:h-[520px] flex items-center justify-center mb-12">
-          <div
-            className="absolute inset-0 bg-center bg-no-repeat bg-contain"
-            style={{
-              backgroundImage: `url('${combinedDiagramImage}')`,
-            }}
-          ></div>
-          <img
-            src={foregroundImage}
-            alt="fore-image"
-            className="relative z-10 w-[160px] md:w-[240px] lg:w-[300px] object-contain drop-shadow-xl"/>
+      {/* FULL-WIDTH RESPONSIVE IMAGE */}
+      <div className="relative w-screen left-1/2 right-1/2 -ml-[51vw] -mr-[50vw] overflow-hidden">
+        <img
+          src={mainDiagram}
+          alt="Fuel Process"
+          className="
+      w-full h-auto object-contain
+      scale-[1.20] md:scale-[1.18]
+      translate-x-[60px] md:translate-x-[95px]
+      transition-all duration-300
+    "
+        />
+      </div>
+
+      {/* FOUR FEATURES */}
+      <div className="max-w-6xl mx-auto px-6 mt-14 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="space-y-10">
+          <StepFeature {...steps[0]} />
+          <StepFeature {...steps[2]} />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-x-20 text-left">
-          <div className="space-y-10">
-            <StepFeature
-              icon={steps[0].icon}
-              title={steps[0].title}
-              description={steps[0].description}/>
-            <StepFeature
-              icon={steps[2].icon}
-              title={steps[2].title}
-              description={steps[2].description}/>
-          </div>
-          <div className="space-y-10">
-            <StepFeature
-              icon={steps[1].icon}
-              title={steps[1].title}
-              description={steps[1].description}/>
-            <StepFeature
-              icon={steps[3].icon}
-              title={steps[3].title}
-              description={steps[3].description}/>
-          </div>
+        <div className="space-y-10">
+          <StepFeature {...steps[1]} />
+          <StepFeature {...steps[3]} />
         </div>
       </div>
     </section>

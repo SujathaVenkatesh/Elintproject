@@ -1,76 +1,138 @@
-import React from 'react';
-import { Clock, TrendingUp, ShieldCheck, Leaf, Briefcase } from 'lucide-react';
+import React from "react";
 
-const FeatureItem = ({ icon: Icon, title, description }) => (
-  <div className="flex items-start space-x-4">
-    <div className="flex-shrink-0">
-      <Icon className="w-6 h-6 text-gray-700" />
-    </div>
-    <div>
-      <h3 className="text-base font-semibold text-gray-800">{title}</h3>
-      <p className="mt-1 text-sm text-gray-600 leading-relaxed">{description}</p>
-    </div>
-  </div>
-);
+const featuresLeft = [
+  {
+    icon: "/sfm1.png",
+    title: "Cost Savings",
+    desc: "Track every drop. Eliminate fuel waste, optimize deliveries, and cut unnecessary expenses across the board."
+  },
+  {
+    icon: "/sfm2.png",
+    title: "Predictive Maintenance",
+    desc: "Detect abnormal usage before it becomes a problem. Reduce downtime and avoid surprise repair costs."
+  },
+  {
+    icon: "/sfm3.png",
+    title: "Built-In Compliance",
+    desc: "Every refill, tracked. Every report, ready. Stay compliant with digital logs that meet audit and regulatory needs."
+  }
+];
 
-const SmartFeaturesSection = () => {
-  const backgroundImage = 'uploaded:image_c00743.png-00000000-0000-0000-0000-000000000000'; // Placeholder for your background image
+const featuresRight = [
+  {
+    icon: "/sfm4.png",
+    title: "Peak Efficiency",
+    desc: "Automate routine checks. Empower teams with data that drives smarter planning, faster actions, and better outcomes."
+  },
+  {
+    icon: "/sfm5.png",
+    title: "Environmental Gains",
+    desc: "Use only what’s needed. Reduce fuel overuse, support carbon goals, and show your commitment to sustainability."
+  }
+];
 
+const SmartFuelBenefits = () => {
   return (
-    <section 
-      className="relative w-full py-16 md:py-20 font-sans overflow-hidden"
-      style={{
-        backgroundImage: `url('${backgroundImage}')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundColor: 'white', // Fallback color
-      }}
+    <div
+      className="
+        w-full 
+        bg-white 
+        py-20 px-4 md:px-10 lg:px-20 
+        font-['Manrope']
+        bg-[url('/sfmbg.png')]
+        bg-cover 
+        bg-center
+        bg-no-repeat font-['Manrope']
+      "
     >
-      {/* Semi-transparent white overlay to ensure text/icons are visible on the image background */}
-      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
+      {/* Container */}
+      <div className="max-w-6xl mx-auto text-center">
 
-      <div className="relative max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-normal text-gray-900 leading-tight mb-12 md:mb-16">
+        {/* Title */}
+        <h2 className="text-center 
+      text-[#3D3D3D]  leading-[1.4]
+                text-[18px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[46px]  mb-14">
           Discover What Smart Fuel Monitoring Can Do for You
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 text-left">
-          <div className="space-y-10">
-            <FeatureItem
-              icon={Clock}
-              title="Cost Savings"
-              description="Track every drop. Eliminate fuel waste, optimize deliveries, and cut unnecessary expenses across the board."
-            />
-            <FeatureItem
-              icon={ShieldCheck}
-              title="Predictive Maintenance"
-              description="Detect abnormal usage before it becomes a problem. Reduce downtime and avoid surprise repair costs."
-            />
-             <FeatureItem
-              icon={Briefcase}
-              title="Built-in Compliance"
-              description="Every refill tracked, every report ready. Stay compliant with digital logs that meet audit and regulatory needs."
-            />
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col  gap-10 ">
+            {featuresLeft.map((item, index) => (
+              <div key={index} className="flex items-start gap-5">
+                <img src={item.icon} alt={item.title} className="w-8 h-8 lg:w-10 lg:h-10" />
+
+                <div className="text-left">
+                  <h3 className="font-regular text-[#494949]  leading-[1.65]
+                text-[16px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[18px]
+                min-[1920px]:!text-[22px]">
+                    {item.title}
+                  </h3>
+                  <p className="
+                  text-[#83847F]  leading-[1.65] font-regular
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[14px]
+                min-[1920px]:!text-[20px] mt-1">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <div className="space-y-10 mt-0 md:mt-24">
-            <FeatureItem
-              icon={TrendingUp}
-              title="Peak Efficiency"
-              description="Automate routine checks. Empower teams with data that drives smarter planning, faster actions, and better outcomes."
-            />
-            <FeatureItem
-              icon={Leaf}
-              title="Environmental Gains"
-              description="Use only what’s needed. Reduce fuel overuse, support carbon goals, and show your commitment to sustainability."
-            />
+          {/* RIGHT COLUMN */}
+          <div className="flex flex-col gap-10">
+            {featuresRight.map((item, index) => (
+              <div key={index} className="flex items-start gap-5">
+                <img src={item.icon} alt={item.title} className="w-8 h-8 lg:w-10 lg:h-10 " />
+
+                <div className="text-left">
+                  <h3 className="font-regular text-[#494949]  leading-[1.65]
+                text-[16px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[18px]
+                min-[1920px]:!text-[22px]">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#83847F]  leading-[1.65] font-regular
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[14px]
+                min-[1920px]:!text-[20px] mt-1">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
+
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-
-export default SmartFeaturesSection;
+export default SmartFuelBenefits;

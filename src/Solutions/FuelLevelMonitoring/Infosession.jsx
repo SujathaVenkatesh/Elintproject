@@ -1,93 +1,124 @@
 import React from "react";
-import { Clock, Car } from "lucide-react"; 
 
-// Data for the two feature blocks (adapted from the original context)
-const nonNegotiableFeatures = [
+const items = [
   {
-    icon: Clock, // Represents 24/7 monitoring
-    title: "Imagine knowing the exact fuel level across all your tanks—24/7, from anywhere. Now imagine catching fuel theft before it happens.",
-    linkText: "That's not a dream. That's Elint",
-    linkUrl: "#",
+    icon: "/fm1.png",
+    text: (
+      <>
+        Imagine knowing the exact fuel level across all your tanks—24/7, from anywhere. <br />
+        Now imagine catching fuel theft before it happens. <br />
+        <span className="text-sky-500 font-medium cursor-pointer">
+          That’s not a dream. That’s Elint
+        </span>
+      </>
+    )
   },
   {
-    icon: Car, // Represents fleet/asset management
-    title: "Whether you're managing a fleet of vehicles, telecom sites, generators, or remote tanks—our fuel management system gives you full command over your fuel lifecycle",
-    linkText: null, // No link in the second block
-    linkUrl: null,
-  },
+    icon: "/fm2.png",
+    text: (
+      <>
+        Whether you’re managing a fleet of vehicles, telecom sites, generators, or remote tanks— <br />
+        our fuel management system gives you full command over your fuel lifecycle.
+      </>
+    )
+  }
 ];
 
-// Reusable component for a single feature highlight with the gradient background
-const FuelMonitoringHighlightCard = ({ icon: Icon, title, linkText, linkUrl }) => {
-    return (
-        // Gradient strip card with soft rounded corners
+const Infosession = () => {
+  return (
+   
+
+    <div className="w-full bg-white py-16 font-['Manrope']">
+
+  {/* Title */}
+  <h2 className="text-[#3D3D3D] leading-[1.4] 
+                text-[18px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[46px] mb-16 ms-20">
+    Why Fuel Monitoring Is Non-Negotiable Today
+  </h2>
+
+  <div className="max-w-6xl space-y-3">
+
+    {items.map((item, index) => (
+      <div key={index}>
+
+        {/* 📱 MOBILE CARD VERSION */}
+        <div className="md:hidden bg-white rounded-xl shadow-sm p-6 border border-gray-200">
+          
+          {/* ICON CENTERED */}
+          <div className="w-full flex justify-center mb-4">
+            <div className="w-[75px] h-[75px] bg-white rounded-lg shadow-lg flex items-center justify-center">
+              <img src={item.icon} alt="icon" className="w-10 h-10 opacity-80" />
+            </div>
+          </div>
+
+          {/* TEXT */}
+          <p className="text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[20px]">
+            {item.text}
+          </p>
+        </div>
+
+        {/* 💻 DESKTOP VERSION */}
         <div
           className="
-            flex items-center gap-6 md:gap-10
-            rounded-[18px]
-            px-6 md:px-10 py-7
-            w-full
-            my-4
+            hidden 
+            md:flex items-start gap-10 
+            bg-gradient-to-r from-[#EEEEEE] to-[#FFFFFF]
           "
-          style={{
-            // Very light grey-to-white horizontal gradient background
-            background:
-              "linear-gradient(90deg, rgba(248,249,252,1) 0%, rgba(255,255,255,1) 50%, rgba(248,249,252,1) 100%)",
-          }}
         >
-          {/* Left icon container: Rounded square, white background, soft shadow */}
-          <div className="flex-shrink-0">
-            <div className="w-14 h-14 rounded-xl bg-white shadow-[0_10px_25px_rgba(15,23,42,0.08)] flex items-center justify-center">
-              <Icon className="w-6 h-6 text-slate-600" />
+          {/* LEFT GRAY BLOCK */}
+          <div className="relative bg-[#efefef] w-[140px] flex-shrink-0">
+
+            {/* HANGING ICON */}
+            <div
+              className="
+                absolute left-16 top-0
+                w-[75px] h-[75px]
+                bg-white rounded-b-md shadow-lg
+                flex items-center justify-center
+              "
+            >
+              <img src={item.icon} alt="icon" className="w-11 h-11 opacity-75" />
             </div>
+
           </div>
 
-          {/* Right text content */}
-          <div className="flex-1 text-left">
-            {/* Paragraph Text */}
-            <p className="text-[13px] text-slate-700 leading-relaxed">
-              {title}
+          {/* TEXT BLOCK */}
+          <div
+            className="
+              flex-1 bg-[url('/pattern.png')] bg-left-top bg-no-repeat bg-cover
+              md:px-8 md:py-10
+              px-4 py-4 text-justify md:text-left
+            "
+          >
+            <p className="text-gray-700 text-[16px] md:text-[17px] leading-relaxed">
+              {item.text}
             </p>
-            
-            {/* Clickable Link/Button */}
-            {linkText && (
-                <button
-                    type="button"
-                    className="mt-2 text-[13px] font-medium text-sky-600 hover:text-sky-700 focus:outline-none"
-                >
-                    {linkText}
-                </button>
-            )}
           </div>
+
         </div>
-    );
+
+      </div>
+    ))}
+
+  </div>
+</div>
+
+
+
+
+  );
 };
 
-
-const NonNegotiableSection = () => {
-    return (
-        <section className="w-full bg-white py-16 md:py-20 font-sans">
-            <div className="max-w-7xl mx-auto px-6">
-                
-                {/* Title */}
-                <h2 className="text-3xl md:text-4xl font-normal text-gray-900 leading-tight mb-12">
-                    Why Fuel Monitoring Is Non-Negotiable Today
-                </h2>
-
-                {/* Feature Cards Container */}
-                <div className="flex flex-col items-center">
-                    {nonNegotiableFeatures.map((feature, index) => (
-                        <FuelMonitoringHighlightCard
-                            key={index}
-                            icon={feature.icon}
-                            title={feature.title}
-                            linkText={feature.linkText}
-                            linkUrl={feature.linkUrl}
-                        />
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
-export default NonNegotiableSection;
+export default Infosession;

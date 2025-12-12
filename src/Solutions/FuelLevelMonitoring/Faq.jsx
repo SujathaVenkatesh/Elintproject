@@ -5,39 +5,39 @@ import React, { useState } from "react";
 // FAQ data
 const faqItems = [
   {
-    question: "What is a smart water tank automation system?",
+    question: "What is a fuel level monitoring system?",
     answer:
-      "A smart water tank automation system uses sensors, controllers, and software to automatically manage water levels, pump operation, and fault protection in real-time, eliminating manual intervention.",
+      "A fuel level monitoring system uses smart sensors to track real-time fuel levels in tanks, vehicles, or generators.",
   },
   {
-    question: "How does remote water tank monitoring function?",
+    question: "How does real-time fuel monitoring work?",
     answer:
-      "Remote monitoring uses gateways to send data from tank sensors to a cloud platform, allowing users to view status and receive alerts via a mobile app or web dashboard from anywhere.",
+      "Real-time fuel monitoring uses tank sensors (ATG/ultrasonic) to send live data to a fuel monitoring dashboard via cloud.",
   },
   {
-    question: "Can multiple tanks be monitored in one system?",
+    question: " Why is fuel theft prevention important?",
     answer:
-      "Yes, a single gateway can typically handle multiple sensors and tanks, centralizing monitoring and control into one unified interface.",
+      "A fuel theft prevention system detects sudden drops, leaks, or unauthorized refills—helping stop fuel loss instantly.",
   },
   {
-    question: "How reliable is LoRaWAN for water tank systems?",
+    question: "Can a fuel management system reduce costs?",
     answer:
-      "LoRaWAN offers long range, low power consumption, and strong signal penetration, making it highly reliable in industrial environments.",
+      "Yes, a fuel management system eliminates manual records, prevents wastage, and optimizes refueling schedules.",
   },
   {
-    question: "How does water pump automation reduce maintenance costs?",
+    question: "How does a diesel monitoring system help?",
     answer:
-      "Automation prevents failures like dry runs, overloads, and overflows, optimizes runtime, and provides diagnostics for predictive maintenance.",
+      "A diesel fuel monitoring system tracks generator and fleet fuel use to improve efficiency and reduce downtime.",
   },
   {
-    question: "What is the Smart Starter in water tank automation?",
+    question: "Can fuel monitoring software integrate with ERP?",
     answer:
-      "The Smart Starter is an intelligent pump control unit that integrates automation logic, voltage protection, fault memory, and communication.",
+      "Yes, modern fuel monitoring software integrates with ERP, fleet, and inventory systems for unified reporting.",
   },
   {
-    question: "How does the Smart Starter enable remote control?",
+    question: "Can fuel monitoring work for remote sites?",
     answer:
-      "The Smart Starter connects to a cloud gateway so authorized users can remotely control the pump and adjust settings from their devices.",
+      " Yes. Cloud-connected sensors enable real-time monitoring for generators, storage tanks, and depots anywhere.",
   },
 ];
 
@@ -48,12 +48,18 @@ const AccordionItem = ({ question, answer }) => {
     <div className="mb-3">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between rounded-xl border border-gray-200 bg-white px-5 py-3 text-left text-[14px] text-gray-900 shadow-sm transition-all duration-200"
+        className="w-full flex items-center justify-between rounded-xl border border-gray-200 bg-white px-5 py-3 text-left text-[16px] text-gray-900 shadow-sm transition-all duration-200 font-semibold
+        sm:text-[20px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[22px] text-black"
       >
         <span>{question}</span>
 
         {/* arrow circle – only this reacts on hover */}
-        <span className="group flex h-7 w-7 items-center justify-center rounded-lg border border-gray-300 text-gray-500 text-sm cursor-pointer">
+        <span className="group flex h-7 w-7 items-center justify-center  text-gray-500 text-sm cursor-pointer">
           <svg
             className={`w-3.5 h-3.5 transform transition-transform duration-200 ${
               isOpen ? "rotate-45" : "rotate-0"
@@ -77,7 +83,13 @@ const AccordionItem = ({ question, answer }) => {
           isOpen ? "max-h-40 mt-2" : "max-h-0"
         }`}
       >
-        <p className="text-[13px] text-gray-600 px-1">{answer}</p>
+        <p className=" text-[14px] text-gray-600 leading-relaxed
+                sm:text-[20px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[14px]
+                min-[1920px]:!text-[20px] px-1">{answer}</p>
       </div>
     </div>
   );
@@ -89,11 +101,21 @@ const FAQSection = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         {/* heading */}
         <div className="mb-10">
-          <h2 className="text-[26px] md:text-[30px] font-semibold text-gray-900">
+          <h2 className="font-semibold  text-[20px] sm:text-[20px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[45px]">
             Got any Questions?
           </h2>
-          <p className="mt-1 text-[24px] md:text-[26px] font-semibold text-gray-400">
-            We&apos;ve got answers.
+          <p className="mt-1 font-semibold  text-[20px] sm:text-[20px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[45px] text-[#ABABAB]">
+            We've got answers.
           </p>
         </div>
 
@@ -114,10 +136,21 @@ const FAQSection = () => {
           <div className="flex">
             <div className="w-full rounded-2xl border border-gray-100 bg-white shadow-md px-6 py-8 flex flex-col justify-between">
               <div>
-                <h3 className="text-[16px] font-semibold text-gray-900 mb-2">
+                <h3 className=" text-[16px] sm:text-[20px] font-semibold
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[22px] text-black mt-[240px] min-[1920px]:mt-[400px]
+ ">
                   Do you have more questions?
                 </h3>
-                <p className="text-[13px] text-gray-600 leading-relaxed">
+                <p className="text-[14px] sm:text-[20px] font-medium
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[15px]
+                min-[1920px]:!text-[20px] leading-relaxed text-[#8C8D8E]">
                   Feel free to reach out. Our team is happy to assist with
                   product details, setup guidance, or custom monitoring needs.
                 </p>

@@ -1,5 +1,6 @@
 import React from "react";
 
+// The six features (combined into one list for easier mobile mapping)
 const allFeatures = [
   {
     icon: "/grp1.png",

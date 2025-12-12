@@ -1,46 +1,70 @@
-"use client";
-
-import Image from "next/image";
-
-export default function StayConnectedSection() {
+const SmartDashboard = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-8">
-          <h2 className="text-[20px] md:text-[22px] font-semibold text-gray-900">
-            Stay Connected to Every Day Tank—From Anywhere
+    <div className="w-full bg-white py-16 px-4 sm:px-6 lg:px-12 font-['Manrope']">
+      <div className="max-w-7xl mx-auto">
+        {/* TEXT SECTION */}
+        <div className="max-w-2xl mb-12">
+          <h2
+            className="text-left text-center 
+      text-[#3D3D3D]  leading-[1.4]
+                text-[18px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[46px] mb-8"
+          >
+            Your Fuel. Your Control. One Powerful Dashboard
           </h2>
-          <p className="mt-2 text-[12px] md:text-[13px] text-gray-600 max-w-xl">
-            Whether you&apos;re in the control room or out in the field, manage your fuel
-            system effortlessly from any device.
+
+          <p
+            className="text-[#737373] leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[28px]"
+          >
+            Elint’s smart dashboard transforms tank data into instant
+            insights—fuel levels, usage, and anomalies, all in one place
           </p>
         </div>
 
-        {/* device images */}
-        <div className="flex justify-center">
-          <div className="relative inline-flex items-center gap-6 md:gap-10">
-            {/* phone on left */}
-            <div className="relative h-40 w-20 md:h-48 md:w-24 rounded-3xl bg-black shadow-[0_18px_40px_rgba(15,23,42,0.35)] overflow-hidden">
-              <Image
-                src="/phone-ui.png" // replace with your phone UI image
-                alt="Mobile app"
-                fill
-                className="object-cover"
-              />
-            </div>
+        {/* DEVICE PREVIEW SECTION */}
+        <div className="relative flex flex-col sm:flex-row items-center sm:justify-center">
+          {/* MOBILE DEVICE */}
+          <div className="relative z-10 h-auto sm:h-[500px] md:h-[560px] flex items-center">
+            <img
+              src="/ftmob.png"
+              alt="Mobile ESP Dashboard"
+              className="
+      h-full
+      w-auto
+      object-contain
+      drop-shadow-xl
+    "
+            />
+          </div>
 
-            {/* desktop / tablet on right */}
-            <div className="relative h-44 w-[260px] md:h-56 md:w-[420px] rounded-[2rem] bg-white shadow-[0_22px_55px_rgba(15,23,42,0.20)] overflow-hidden border border-gray-100">
-              <Image
-                src="/desktop-ui.png" // replace with your desktop UI image
-                alt="Web dashboard"
-                fill
-                className="object-cover"
-              />
-            </div>
+          <div className="relative h-auto sm:h-[500px] md:h-[520px] flex items-center">
+            <img
+              src="/fttab.png"
+              alt="Tablet ESP Dashboard"
+              className="
+      h-full
+      w-auto
+      object-contain
+      drop-shadow-2xl
+    "
+            />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default SmartDashboard;

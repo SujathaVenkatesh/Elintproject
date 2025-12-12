@@ -1,144 +1,155 @@
-import React from "react";
-import {
-  ShieldAlert,
-  TrendingDown,
-  AlertTriangle,
-  Network,
-  FileWarning,
-  WalletMinimal,
-} from "lucide-react";
+"use client";
 
-const challenges = [
-  {
-    id: 1,
-    title: "Weak Policy Enforcement",
-    desc: "Overfills, untracked top-ups, and location violations slip through without automated control.",
-    icon: ShieldAlert,
-    position: "top",
-  },
-  {
-    id: 2,
-    title: "Losing the Competitive Edge",
-    desc: "While others go digital, outdated fuel practices slow down efficiency, visibility, and scale.",
-    icon: TrendingDown,
-    position: "right",
-  },
-  {
-    id: 3,
-    title: "Reactive Downtime",
-    desc: "Fuel shortages often get detected too late—triggering breakdowns and service failures.",
-    icon: AlertTriangle,
-    position: "bottom-right",
-  },
-  {
-    id: 4,
-    title: "Disconnected Teams & Sites",
-    desc: "Scattered operations mean fuel data stays isolated—slowing decisions and hurting coordination.",
-    icon: Network,
-    position: "bottom",
-  },
-  {
-    id: 5,
-    title: "No Fuel Accountability",
-    desc: "Manual records lack proof—leading to disputes, blind spots, and internal misuse.",
-    icon: FileWarning,
-    position: "bottom-left",
-  },
-  {
-    id: 6,
-    title: "Unpredictable Fuel Budgets",
-    desc: "Lack of usage clarity leads to inaccurate forecasts, weak vendor negotiations, and budget overruns.",
-    icon: WalletMinimal,
-    position: "left",
-  },
-];
+export default function HiddenChallenges() {
+  const challenges = [
+    {
+      title: "Weak Policy Enforcement",
+      text: "Overfills, untracked top-ups, and location violations slip through without automated control.",
+      left: "61%",
+      top: "-3%",
+      icon: "/Hicon-2.png",
+    },
+    {
+      title: "Losing the Competitive Edge",
+      text: "While others go digital, outdated fuel practices slow efficiency, visibility, and scale.",
+      left: "87%",
+      top: "39%",
+      icon: "/Hicon.png",
+    },
+    {
+      title: "Reactive Downtime",
+      text: "Fuel shortages often get noticed too late—triggering breakdowns and service failures.",
+      left: "65%",
+      top: "70%",
+      icon: "/Hicon-4.png",
+    },
+    {
+      title: "Disconnected Teams & Sites",
+      text: "Scattered operations mean fuel data stays isolated—slowing decisions and hurting coordination.",
+      left: "40%",
+      top: "100%",
+      icon: "/Hicon-5.png",
+    },
+    {
+      title: "No Fuel Accountability",
+      text: "Manual records lack proof—leading to disputes, blind spots, and internal misuse.",
+      left: "13%",
+      top: "72%",
+      icon: "/Hicon-6.png",
+    },
+    {
+      title: "Unpredictable Fuel Budgets",
+      text: "Lack of clarity leads to inaccurate forecasts, poor negotiations, and frequent overruns.",
+      left: "34%",
+      top: "39%",
+      icon: "/Hicon-3.png",
+    },
+  ];
 
-const posClass = {
-  top: "top-0 left-1/2 -translate-x-1/2 -translate-y-1/2",
-  right: "top-1/2 right-0 translate-x-1/2 -translate-y-1/2",
-  "bottom-right": "bottom-6 right-[18%] translate-y-1/2",
-  bottom: "bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2",
-  "bottom-left": "bottom-6 left-[18%] translate-y-1/2",
-  left: "top-1/2 left-0 -translate-x-1/2 -translate-y-1/2",
-};
-
-const HiddenChallengesSection = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-20">
-      <div className="max-w-5xl mx-auto px-4 text-center">
-        {/* Title */}
-        <h2 className="text-[20px] md:text-[22px] font-medium text-[#333333]">
+    <section className="w-full bg-white py-20 bg-no-repeat bg-center bg-cover md:bg-[url('/bgshapeimage.png')]">
+      <div className="max-w-[1250px] mx-auto text-center px-6 ">
+        {/* Heading */}
+        <h2
+          className="font-manrope font-normal
+font-['Manrope']
+ text-[#3D3D3D] leading-[1.4]
+                text-[19px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[33px]
+                min-[1920px]:!text-[46px] font-light "
+        >
           Hidden Challenges in Fuel-Intensive Operations
         </h2>
-        <p className="mt-2 text-[12px] md:text-[13px] text-[#777777]">
-          Even with the best teams, fuel mismanagement happens when visibility is lost.
+        <p
+          className="font-manrope font-normal
+font-['Manrope']
+ mt-1  font-normal
+font-['Manrope']
+ text-[#737373] mt-3 leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[20px]
+                min-[1920px]:!text-[28px] mt-2"
+        >
+          Even with the best teams, fuel mismanagement happens when visibility
+          is lost.
         </p>
 
-        {/* Circular flow container */}
-        <div className="relative mt-12 mx-auto w-[320px] h-[320px] md:w-[420px] md:h-[420px]">
-          {/* soft circular path */}
-          <div className="absolute inset-10 rounded-full border border-[#E5E7EB]" />
-          <div className="absolute inset-[60px] md:inset-[70px] rounded-full border border-[#F3F4F6]" />
-
-          {/* curved arrows (approximate) */}
-          <svg
-            className="absolute inset-0 w-full h-full pointer-events-none"
-            viewBox="0 0 200 200"
-          >
-            <defs>
-              <marker
-                id="arrow"
-                markerWidth="6"
-                markerHeight="6"
-                refX="5"
-                refY="3"
-                orient="auto"
+        {/* Challenges */}
+        <div className="relative w-full mt-20 h-[600px] hidden md:block">
+          {challenges.map((c, index) => (
+            <div
+              key={index}
+              className="absolute w-[240px] text-center"
+              style={{
+                left: c.left,
+                top: c.top,
+                transform: "translate(-50%, -50%)",
+              }}
+            >
+              <h3
+                className="font-manrope font-normal
+font-['Manrope']
+ mt-1  font-normal
+font-['Manrope']
+ text-[#737373] mt-3 leading-[1.65]
+                text-[11px]
+                sm:text-[12px]
+                md:text-[13px]
+                lg:text-[14px]
+                xl:text-[15px]
+                2xl:max-[1920px]:text-[17px]
+                min-[1920px]:!text-[28px] "
               >
-                <path d="M0,0 L6,3 L0,6" fill="#D1D5DB" />
-              </marker>
-            </defs>
-            <path
-              d="M40,95 C40,40 160,40 160,95"
-              fill="none"
-              stroke="#E5E7EB"
-              strokeWidth="1"
-              markerEnd="url(#arrow)"
-            />
-            <path
-              d="M160,105 C160,160 40,160 40,105"
-              fill="none"
-              stroke="#E5E7EB"
-              strokeWidth="1"
-              markerEnd="url(#arrow)"
-            />
-          </svg>
-
-          {/* challenge nodes */}
-          {challenges.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.id}
-                className={`absolute ${posClass[item.position]} flex flex-col items-center text-center max-w-[170px]`}
+                {c.title}
+              </h3>
+              <p
+                className="font-manrope font-normal
+font-['Manrope']
+ mt-1  font-normal
+font-['Manrope']
+ text-[#737373] mt-3 leading-[1.65]
+                text-[11px]
+                sm:text-[12px]
+                md:text-[13px]
+                lg:text-[14px]
+                xl:text-[15px]
+                2xl:max-[1920px]:text-[13px]
+                min-[1920px]:!text-[28px] mt-1"
               >
-                {/* icon circle */}
-                <div className="w-10 h-10 rounded-full border border-[#E5E7EB] bg-white flex items-center justify-center shadow-[0_4px_10px_rgba(15,23,42,0.05)]">
-                  <Icon className="w-4 h-4 text-[#6B7280]" />
-                </div>
-                {/* text */}
-                <h3 className="mt-3 text-[12px] font-semibold text-[#444444]">
-                  {item.title}
-                </h3>
-                <p className="mt-1 text-[11px] leading-snug text-[#9CA3AF]">
-                  {item.desc}
-                </p>
-              </div>
-            );
-          })}
+                {c.text}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile / Tablet Layout */}
+        {/* Mobile / Tablet Layout */}
+        <div className="md:hidden mt-10 grid gap-6 grid-cols-1 sm:grid-cols-2">
+          {challenges.map((c, index) => (
+            <div key={index} className="text-center">
+              <img
+                src={c.icon}
+                alt={c.title}
+                className="mx-auto mb-2 w-12 h-12 sm:w-12 sm:h-12"
+              />
+              <h3 className="text-[16px] text-[#4A4A4A] font-medium">
+                {c.title}
+              </h3>
+              <p className="text-[13px] text-[#6D6D6D] leading-[1.45] mt-1">
+                {c.text}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default HiddenChallengesSection;
+}

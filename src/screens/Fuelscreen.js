@@ -3,6 +3,7 @@ import SolutionSection from "@/Solutions/FuelLevelMonitoring/6cardsession";
 import FuelInfoSection from "@/Solutions/FuelLevelMonitoring/Bannerhero";
 import FeaturedSolutions from "@/Solutions/FuelLevelMonitoring/CardSection";
 import FAQSection from "@/Solutions/FuelLevelMonitoring/Faq";
+import Featuresmontoring from "@/Solutions/FuelLevelMonitoring/Featuresmontoring";
 import FuelHero from "@/Solutions/FuelLevelMonitoring/Hero";
 import NonNegotiableSection from "@/Solutions/FuelLevelMonitoring/Infosession";
 import HowItWorksSection from "@/Solutions/FuelLevelMonitoring/namesessions";
@@ -18,7 +19,8 @@ const FuelTank = () => {
            <FuelInfoSection/>
            <NonNegotiableSection/>
            <SolutionSection/>
-           {/* <HiddenChallengesSection/> */}
+           <Featuresmontoring/>
+           <HiddenChallengesSection/>
            <HowItWorksSection/>
            <SmartFeaturesSection/>
 

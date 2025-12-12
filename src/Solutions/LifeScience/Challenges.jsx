@@ -1,15 +1,15 @@
 const challenges = [
   {
-    text: "Inventory visibility is poor due to the lack of a real-time IBC fill level monitoring system",
+    text: "Absence of Real-Time Visibility: Inconsistencies in environment and tank level data across sites",
   },
   {
-    text: "Insufficient inventory planning and demand forecasting",
+    text: "Poor Inventory Control: Excess or stockouts gave on by irregular planning.",
   },
   {
-    text: "Limited supply chain information creates delays and compliance at risk",
+    text: "Compliance at Risk: Audits are impacted by manual mistakes and missing logs.",
   },
   {
-    text: "Without remote tank level monitoring sensors, critical tank risks go undetected.",
+    text: "Rising Operational Costs : Increased site visits and emergency refills translate into higher operating costs",
   },
 ];
 
@@ -19,13 +19,13 @@ const Challenges = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-medium text-gray-900">
-          Common Challenges Without Smart Monitoring
+          Without Smart Monitoring – Here's What Can Go Wrong
         </h2>
 
         {/* Sub Text */}
         <p className="mt-2 text-sm md:text-base text-gray-500 max-w-3xl">
-          Here are the real-world issues industries face without intelligent IBC
-          tracking and remote monitoring
+          Here’s what industries face without real-time monitoring and intelligent tank management.
+          
         </p>
 
         {/* Challenges Row */}

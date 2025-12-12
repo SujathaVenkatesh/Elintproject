@@ -45,7 +45,7 @@ const OverTheAirManagement = () => {
               <div key={index} className="flex items-start space-x-4">
                 {/* icon circle container */}
                 <div className="flex items-center justify-center">
-                  <img src={item.icon} alt="icon" className="w-20 h-20" />
+                  <img src={item.icon} alt="icon" className="w-26 h-20" />
                 </div>
 
                 {/* text */}

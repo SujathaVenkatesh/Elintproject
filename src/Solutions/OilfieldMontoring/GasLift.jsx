@@ -1,52 +1,56 @@
 const GasLift = () => {
   return (
-    <div className="w-full bg-white py-14 px-4 sm:px-6 lg:px-12">
+    <div className="w-full bg-white py-14 px-4 sm:px-2 lg:px-12 font-['Manrope']">
 
-      {/* ✅ TITLE */}
-      <h2 className="text-center text-lg sm:text-xl md:text-2xl font-medium text-gray-600 mb-12">
+      {/* TITLE */}
+      <h2 className="text-center 
+      text-[#3D3D3D]  leading-[1.4]
+                text-[17px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[46px] mb-12">
         Seamless Gas Lift Monitoring with Intelligent ESP Data Transfer
       </h2>
 
-      {/* ✅ MAIN DIAGRAM LAYOUT */}
+      {/* MAIN DIAGRAM LAYOUT */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-10">
 
-        {/* ✅ LEFT: LORAWAN NODES IMAGE */}
-        <div className="flex flex-col items-center">
+        {/* LEFT: LORAWAN NODES IMAGE */}
+        <div className="flex flex-col items-left">
           <img
-            src="/lorawan-nodes.png" // ✅ left circular nodes image
+            src="/glof.png"
             alt="LoRaWAN Nodes"
             className="w-full max-w-xs object-contain"
           />
-          <p className="mt-4 text-sm font-medium text-gray-500">LoRaWAN Nodes</p>
+
         </div>
 
-        {/* ✅ CENTER: GATEWAY + NETWORK SERVER */}
+        {/* CENTER: GATEWAY + NETWORK SERVER */}
         <div className="flex flex-col items-center">
           <img
-            src="/GasLift2.png" // ✅ center device + bubbles image
+            src="/glofcen.png"
             alt="LoRaWAN Gateway & Network Server"
             className="w-full max-w-sm object-contain"
           />
-          <p className="mt-4 text-sm font-medium text-gray-500">
-            LoRaWAN Master + Network Server
-          </p>
+
         </div>
 
-        {/* ✅ RIGHT: CLOUD + APPLICATION */}
-        <div className="flex flex-col items-center">
+        {/* RIGHT: CLOUD + APPLICATION */}
+        <div className="flex flex-col items-end">
           <img
-            src="/GasLift3.png" // ✅ right cloud + screens image
+            src="/glrof.png"
             alt="Cloud & Application"
-            className="w-full max-w-xs object-contain"
+            className="w-full max-w-sm object-contain"
           />
-          <p className="mt-4 text-sm font-medium text-gray-500">
-            Application
-          </p>
+
         </div>
 
       </div>
 
-      {/* ✅ BOTTOM PROTOCOL LABELS */}
+      {/* BOTTOM PROTOCOL LABELS */}
       <div className="max-w-6xl mx-auto mt-12 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500 gap-6">
 
         <div className="flex items-center gap-2">

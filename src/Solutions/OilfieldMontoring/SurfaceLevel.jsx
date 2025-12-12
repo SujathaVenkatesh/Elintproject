@@ -1,174 +1,6 @@
-// const SurfaceLevel = () => {
-//   return (
-//     <div className="w-full bg-white py-14 px-4 sm:px-6 lg:px-12">
-
-//       {/* ✅ TITLE */}
-//       <h2 className="text-center text-lg sm:text-xl md:text-2xl font-medium text-gray-800 mb-10">
-//         Surface-Level ESP Monitoring for Mission-Critical Operations
-//       </h2>
-
-//       {/* ✅ TOP SECTION */}
-//       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-14">
-
-//         {/* ✅ LEFT INFO PANELS */}
-//         <div className="space-y-6">
-
-//           {/* Panel 1 */}
-//           <div className="bg-gradient-to-r from-sky-400 to-sky-300 text-white p-5 rounded-md shadow">
-//             <h4 className="text-sm font-semibold mb-3">
-//               Real-time LoRaWAN wireless monitoring of:
-//             </h4>
-//             <ul className="text-xs space-y-1">
-//               <li>• Wellhead Pressure</li>
-//               <li>• Wellhead Temperature</li>
-//               <li>• Casing Pressure</li>
-//               <li>• Flowline Pressure</li>
-//               <li>• Flowline Temperature</li>
-//             </ul>
-//           </div>
-
-//           {/* Panel 2 */}
-//           <div className="bg-gradient-to-r from-sky-400 to-sky-300 text-white p-5 rounded-md shadow">
-//             <h4 className="text-sm font-semibold mb-3">
-//               With integrated Wireless Actuator, you unlock:
-//             </h4>
-//             <ul className="text-xs space-y-1">
-//               <li>• Remote choke valve actuation</li>
-//               <li>• Rapid fault handling</li>
-//               <li>• Optimized flow optimization – no manual intervention</li>
-//             </ul>
-//           </div>
-
-//         </div>
-
-//         {/* ✅ RIGHT PRODUCT IMAGE */}
-//         <div className="flex justify-center">
-//           <img
-//             src="/oil8.png"   // ✅ replace with your top-right image
-//             alt="Surface ESP Valve"
-//             className="w-full max-w-sm object-contain"
-//           />
-//         </div>
-
-//       </div>
-
-//       {/* ✅ BOTTOM DIAGRAM IMAGE WITH CALLOUTS */}
-//       <div className="max-w-5xl mx-auto flex justify-center">
-//         <img
-//           src="/oil9.png"   // ✅ replace with your bottom image
-//           alt="Surface ESP Annotated Diagram"
-//           className="w-full object-contain"
-//         />
-//       </div>
-
-//     </div>
-//   );
-// };
-
-// export default SurfaceLevel;
-
-
-// const SurfaceLevel = () => {
-//   return (
-//     <div className="w-full bg-white py-12 px-4 sm:px-6 lg:px-12">
-
-//       {/* ✅ TITLE */}
-//       <h2 className="text-center text-lg sm:text-xl md:text-2xl font-medium text-gray-700 mb-8">
-//         Surface-Level ESP Monitoring for Mission-Critical Operations
-//       </h2>
-
-//       {/* ✅ TOP SECTION */}
-//       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-10">
-
-//         {/* ✅ LEFT INFO BARS (MATCH IMAGE STYLE) */}
-//         <div className="space-y-6">
-
-//           {/* ✅ BAR 1 */}
-//           <div className="bg-gradient-to-r from-sky-400/90 to-sky-100/10 p-5 rounded-sm">
-//             <h4 className="text-sm font-semibold mb-3 text-white">
-//               Real-time LoRaWAN wireless monitoring of:
-//             </h4>
-//            </div>
-
-//             <ul className="text-xs space-y-2 text-gray-700">
-//               <li className="flex items-center gap-2">
-//                 <span className="w-1.5 h-1.5 bg-gray-500 rounded-full" />
-//                 Wellhead Pressure
-//               </li>
-//               <li className="flex items-center gap-2">
-//                 <span className="w-1.5 h-1.5 bg-gray-500 rounded-full" />
-//                 Wellhead Temperature
-//               </li>
-//               <li className="flex items-center gap-2">
-//                 <span className="w-1.5 h-1.5 bg-gray-500 rounded-full" />
-//                 Casing Pressure
-//               </li>
-//               <li className="flex items-center gap-2">
-//                 <span className="w-1.5 h-1.5 bg-gray-500 rounded-full" />
-//                 Flowline Pressure
-//               </li>
-//               <li className="flex items-center gap-2">
-//                 <span className="w-1.5 h-1.5 bg-gray-500 rounded-full" />
-//                 Flowline Temperature
-//               </li>
-//             </ul>
-         
-
-//           {/* ✅ BAR 2 */}
-//           <div className="bg-gradient-to-r from-sky-400/90 to-sky-100/10 p-5 rounded-sm">
-//             <h4 className="text-sm font-semibold mb-3 text-white">
-//               With integrated Wireless Actuator, you unlock:
-//             </h4>
-//            </div>
-
-//             <ul className="text-xs space-y-2 text-gray-700">
-//               <li className="flex items-center gap-2">
-//                 <span className="w-1.5 h-1.5 bg-gray-500 rounded-full" />
-//                 Remote choke valve actuation
-//               </li>
-//               <li className="flex items-center gap-2">
-//                 <span className="w-1.5 h-1.5 bg-gray-500 rounded-full" />
-//                 Rapid fault handling
-//               </li>
-//               <li className="flex items-center gap-2">
-//                 <span className="w-1.5 h-1.5 bg-gray-500 rounded-full" />
-//                 Optimized flow optimization – no manual intervention
-//               </li>
-//             </ul>
-          
-
-//         </div>
-
-//         {/* ✅ RIGHT PRODUCT IMAGE */}
-//         <div className="flex justify-center">
-//           <img
-//             src="/oil8.png"
-//             alt="Surface ESP Valve"
-//             className="w-full max-w-xs object-contain"
-//           />
-//         </div>
-
-//       </div>
-
-//       {/* ✅ BOTTOM DIAGRAM IMAGE (MATCH IMAGE SCALE) */}
-//       <div className="max-w-4xl mx-auto flex justify-center">
-//         <img
-//           src="/oil9.png"
-//           alt="Surface ESP Annotated Diagram"
-//           className="w-full object-contain"
-//         />
-//       </div>
-
-//     </div>
-//   );
-// };
-
-// export default SurfaceLevel;
-
-
 const SurfaceLevel = () => {
 
-  // ✅ ICON + TEXT DATA
+  //  ICON + TEXT DATA
   const monitoringList = [
     { text: "Wellhead Pressure", icon: "/oil30.png" },
     { text: "Wellhead Temperature", icon: "/oil31.png" },
@@ -184,84 +16,123 @@ const SurfaceLevel = () => {
   ];
 
   return (
-    <div className="w-full bg-white py-12 px-4 sm:px-6 lg:px-12">
+    <div className="w-full bg-[#F9F9F9] py-12 px-0 font-['Manrope']">
 
-      {/* ✅ TITLE */}
-      <h2 className="text-center text-lg sm:text-xl md:text-2xl font-medium text-gray-600 mb-8">
+      {/* TITLE */}
+      <h2 className="text-center text-[#3D3D3D]  leading-[1.4]
+                text-[17px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[46px] mb-8">
         Surface-Level ESP Monitoring for Mission-Critical Operations
       </h2>
 
-      {/* ✅ TOP SECTION */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-10">
+      {/* TOP SECTION */}
+      <div className="mb-10">
 
-        {/* ✅ LEFT INFO BARS */}
-        <div className="space-y-6">
+        {/* BAR 1 — TRUE FULL LEFT EDGE */}
 
-          {/* ✅ BAR 1 */}
-          <div className="bg-gradient-to-r from-sky-400/90 to-sky-100/10 p-5 rounded-sm">
-            <h4 className="text-base font-semibold mb-3 text-white">
+        <div className="bg-gradient-to-r from-sky-400/90 to-sky-100/10 py-5 
+                w-[85%] sm:w-[80%] lg:w-[75%] rounded-r-md">
+          <div className="pl-6 sm:pl-10 lg:pl-12">
+            <h4 className="font-semibold text-white leading-[1.4]
+      text-[16px]
+      sm:text-[20px]
+      md:text-[21px]
+      lg:text-[22px]
+      xl:text-[25px]
+      2xl:max-[1920px]:text-[20px]
+      min-[1920px]:!text-[32px]">
               Real-time LoRaWAN wireless monitoring of:
             </h4>
           </div>
+        </div>
 
-          {/* ✅ ICON LIST (7 DIFFERENT ICONS SUPPORTED) */}
-          <ul className="text-base space-y-2 text-gray-600">
-            {monitoringList.map((item, i) => (
-              <li key={i} className="flex items-center gap-2">
-                <img
-                  src={item.icon}
-                  alt="icon"
-                  className="w-8 h-8 object-contain"
-                />
-                {item.text}
-              </li>
-            ))}
-          </ul>
 
-          {/* ✅ BAR 2 */}
-          <div className="bg-gradient-to-r from-sky-400/90 to-sky-100/10 p-5 rounded-sm">
-            <h4 className="text-base font-semibold mb-3 text-white">
-              With integrated Wireless Actuator, you unlock:
-            </h4>
+        {/* GRID (PADDED CONTENT ONLY) */}
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mt-6 px-6 lg:px-12">
+
+          {/* LEFT ICON LIST */}
+          <div className="space-y-6 px-0">
+
+            <ul className="space-y-6 text-[16px] sm:text-[15px] text-gray-500
+        md:text-[17px]
+        lg:text-[18px]
+        xl:text-[20px]
+       2xl:max-[1920px]:text-[16px]
+        min-[1920px]:!text-[28px]">
+              {monitoringList.map((item, i) => (
+                <li key={i} className="flex items-center gap-4">
+                  <img src={item.icon} alt="icon" className="w-10 h-10 object-contain min-[1920px]:w-[50px] min-[1920px]:h-[50px]" />
+                  {item.text}
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* ✅ ICON LIST (USES REMAINING ICONS) */}
-          <ul className="text-base space-y-2 text-gray-600">
-            {actuatorList.map((item, i) => (
-              <li key={i} className="flex items-center gap-2">
-                <img
-                  src={item.icon}
-                  alt="icon"
-                  className="w-8 h-8 object-contain"
-                />
-                {item.text}
-              </li>
-            ))}
-          </ul>
+          {/* RIGHT PRODUCT IMAGE — STICKS RIGHT */}
+          <div className="flex justify-end">
+            <img
+              src="/oil8.png"
+              alt="Surface ESP Valve"
+              className="w-full max-w-lg object-contain"
+            />
+          </div>
 
         </div>
 
-        {/* ✅ RIGHT PRODUCT IMAGE */}
-        <div className="flex justify-center">
+        {/* BAR 2 — TRUE FULL LEFT EDGE */}
+        <div className="bg-gradient-to-r from-sky-400/90 to-sky-100/10 py-5 
+                w-[85%] sm:w-[80%] lg:w-[75%] rounded-r-md mt-10">
+          <div className="pl-6 sm:pl-10 lg:pl-12">
+            <h4 className="font-semibold text-white leading-[1.4]
+        text-[16px]
+        sm:text-[20px]
+        md:text-[21px]
+        lg:text-[22px]
+        xl:text-[25px]
+        2xl:max-[1920px]:text-[20px]
+        min-[1920px]:!text-[32px]">
+              With integrated Wireless Actuator, you unlock:
+            </h4>
+          </div>
+        </div>
+
+        {/* ACTUATOR ICON LIST */}
+        <div className="max-w-7xl mx-4 px-2 sm:px-4 mt-4">
+          <ul className="space-y-6 text-[16px] sm:text-[15px] text-gray-500
+      md:text-[17px]
+      lg:text-[18px]
+      xl:text-[20px]
+      2xl:max-[1920px]:text-[16px]
+      min-[1920px]:!text-[28px]">
+            {actuatorList.map((item, i) => (
+              <li key={i} className="flex items-center gap-4">
+                <img src={item.icon} alt="icon" className="w-10 h-10 object-contain min-[1920px]:w-[50px] min-[1920px]:h-[50px]" />
+                {item.text}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* BOTTOM DIAGRAM IMAGE */}
+        <div className="max-w-2xl mx-auto mt-10 flex justify-center">
           <img
-            src="/oil8.png"
-            alt="Surface ESP Valve"
-            className="w-full max-w-sm object-contain"
+            src="/oil9.png"
+            alt="Surface ESP Annotated Diagram"
+            className="w-full  object-contain"
           />
         </div>
 
       </div>
 
-      {/* ✅ BOTTOM DIAGRAM IMAGE */}
-      <div className="max-w-4xl mx-auto flex justify-center">
-        <img
-          src="/oil9.png"
-          alt="Surface ESP Annotated Diagram"
-          className="w-full  object-contain"
-        />
-      </div>
 
     </div>
+
+
   );
 };
 

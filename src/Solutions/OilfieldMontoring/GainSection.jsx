@@ -39,53 +39,97 @@ const GainSection = () => {
   ];
 
   return (
-    <div className="w-full bg-white py-14 px-4 sm:px-6 lg:px-12 relative overflow-hidden">
+    <div className="w-full bg-white py-14 px-4 sm:px-6 lg:px-12 relative overflow-hidden font-['Manrope']">
 
-      {/* ✅ LEFT PIPE IMAGE */}
-      <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2">
+      {/* LEFT PIPE IMAGE */}
+      {/* <div className="block absolute left-0 top-1/3 -translate-y-1/2">
         <img
           src="/oil5.png"     
           alt="Left Pipe"
-          className="w-56 object-contain"
+          className="w-56 object-contain "
+        />
+      </div> */}
+
+      <div
+        className="
+    absolute left-0 
+    top-[120px] sm:top-[150px] lg:top-[180px]
+    z-0
+    pointer-events-none
+  "
+      >
+
+        <img
+          src="/oil5.png"
+          alt="Left Pipe"
+          className="
+      w-40 sm:w-56 md:w-64 lg:w-72 min-[1920px]:w-[360px]
+      object-contain
+      opacity-90
+    "
         />
       </div>
 
-      {/* ✅ RIGHT PIPE IMAGE */}
-      <div className="hidden lg:block absolute right-0 bottom-0">
+
+
+      {/* RIGHT PIPE IMAGE */}
+      <div className="block absolute right-0 -bottom-10">
         <img
-          src="/oil6.png"   
+          src="/oil6.png"
           alt="Right Pipe"
           className="w-48 object-contain"
         />
       </div>
 
-      {/* ✅ MAIN CONTENT */}
+      {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto">
 
         {/* Title */}
-        <h2 className="text-left text-lg sm:text-xl md:text-2xl font-medium text-gray-600 mb-10">
+        <h2 className="text-center text-[#3D3D3D]  leading-[1.4]
+                text-[18px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[46px] ">
           What You Gain with intelligent well optimization
         </h2>
 
-        {/* ✅ BENEFITS GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
+        {/* BENEFITS GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8
+                pt-24 sm:pt-25 lg:ms-10">
+
 
           {gains.map((item, index) => (
             <div key={index} className="space-y-1">
 
               {/* Title with underline dot */}
-             <div className="flex items-center gap-3">
-  <h4 className="text-base font-medium text-gray-800">
-    {item.title}
-  </h4>
-</div>
+              <div className="flex items-center gap-3">
+                <h4 className="font-medium text-[16px] text-gray-600
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[16px]
+                min-[1920px]:!text-[28px]">
+                  {item.title}
+                </h4>
+              </div>
 
 
 
               {/* Description */}
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <p className="font-regular text-gray-500 leading-relaxed text-[14px]
+               sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[14px]
+                min-[1920px]:!text-[20px]">
                 {item.desc}
               </p>
+              <img src="/Line 54.png" />
 
             </div>
           ))}

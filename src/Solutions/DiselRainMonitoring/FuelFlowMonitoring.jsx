@@ -16,7 +16,7 @@ const FuelMonitoring = () => {
     backgroundRepeat: "no-repeat",
     backgroundSize: "contain",
     backgroundPosition: "left center",
-    minHeight: "500px",
+    minHeight: "300px",
   }}
 ></div>
 

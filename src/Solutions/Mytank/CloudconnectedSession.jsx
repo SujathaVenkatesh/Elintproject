@@ -1,7 +1,39 @@
+<<<<<<< HEAD
+// import React from "react";
+// Using lucide-react icons for consistency
+import { Zap, Wifi, HardHat, Sun, Gauge, Droplet, Cloud, GitFork, Minimize2 } from "lucide-react"; 
+
+// Data for the Cloud features (all aligned on the left in this design)
+const cloudFeatures = [
+  {
+    icon: Cloud,
+    title: "Real-Time Sync",
+    desc: "Pushes all sensor and device data to the Elint Cloud Dashboard."
+  },
+  {
+    icon: GitFork,
+    title: "Multi-Site Management",
+    desc: "Manage multiple tanks and locations under one platform."
+  },
+  {
+    icon: Minimize2, // Using a suitable icon for control/scheduling
+    title: "Remote Control",
+    desc: "Enables ON/OFF actions, alerts, and scheduling from mobile or web interfaces."
+  }
+];
+
+// Reusable component for displaying a feature item (Text | Icon)
+
+
+
+// Modified to use the layout where text is on the left and icon/circle is on the right
+const FeatureItem = ({ icon: Icon, title, desc }) => {
+=======
 import React from "react";
 
 // Single Feature Item (text left, icon right)
 const FeatureItem = ({ icon, title, description }) => {
+>>>>>>> 7223ce348779e8708afcefe5f8bcb2d25c5d99c9
   return (
     <div className="relative flex items-center justify-between max-w-md mb-12">
 

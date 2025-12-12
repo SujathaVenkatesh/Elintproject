@@ -1,6 +1,5 @@
 const ParametersMonitored = () => {
 
-  // ✅ SURFACE LEVEL WITH ICONS
   const surfaceParams = [
     { label: "Flow Meter (Oil, Gas & Water)", icon: "/parameter1.png" },
     { label: "Tank Level", icon: "/parameter2.png" },
@@ -13,7 +12,6 @@ const ParametersMonitored = () => {
     { label: "Casing Head Pressure", icon: "/parameter9.png" },
   ];
 
-  // ✅ DOWNHOLE LEVEL WITH ICONS
   const downholeParams = [
     { label: "ESP Vibration", icon: "/oil23.png" },
     { label: "ESP Alarms", icon: "/oil24.png" },
@@ -25,80 +23,98 @@ const ParametersMonitored = () => {
   ];
 
   return (
-    <div className="w-full bg-white py-12 px-4 sm:px-6 lg:px-12">
+    <div className="w-full bg-white py-12 px-4 sm:px-6 lg:px-12 relative font-['Manrope']">
 
-      {/* ✅ TITLE */}
-      <div className="max-w-7xl mx-auto mb-6">
-        <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-gray-600">
+      {/* TITLE */}
+      <div className="max-w-7xl mx-auto mb-0">
+        <h2 className="text-[#3D3D3D]  leading-[1.4]
+                text-[18px]
+                sm:text-[20px]
+                md:text-[21px]
+                lg:text-[22px]
+                xl:text-[25px]
+                2xl:max-[1920px]:text-[25px]
+                min-[1920px]:!text-[46px] font-regular">
           Parameters Monitored
         </h2>
       </div>
 
-      {/* ✅ SURFACE LEVEL BADGE + PARAMS */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between mb-6 gap-6">
-
-        {/* Badge */}
-        <div className="bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-medium">
-          Surface-Level Monitoring
-        </div>
-
-        {/* ✅ Top Parameters WITH ICONS */}
+      {/* SURFACE GRID (TOP RIGHT) */}
+      <div className="max-w-7xl mx-auto flex justify-end mb-6 mt-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-3xl">
           {surfaceParams.map((item, index) => (
             <div
               key={index}
-              className="flex items-center justify-between border rounded-md px-3 py-2 text-xs text-gray-700 bg-white shadow-sm"
+              className="flex items-center justify-between border rounded-md px-5 py-2 shadow-sm font-regular text-[#494949]  leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[15px]
+                min-[1920px]:!text-[20px]"
             >
               <span>{item.label}</span>
-
-              {/* ✅ REAL ICON ADDED */}
               <img
                 src={item.icon}
                 alt={item.label}
-                className="w-5 h-5 object-contain"
+                className="w-8 h-8 object-contain"
               />
             </div>
           ))}
         </div>
-
       </div>
 
-      {/* ✅ CENTER WELL IMAGE */}
-      <div className="w-full flex justify-center my-8">
+      {/* IMAGE + SURFACE BADGE OVER IT */}
+      <div className="relative w-full my-10">
+
+        {/* SURFACE BADGE ON IMAGE (CENTER) */}
+        <div className="absolute -top-8 lg:top-15 lg:left-1/4 lg:-translate-x-1/4 z-10">
+          <div className="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg text-sm font-medium shadow">
+            Surface-Level Monitoring
+          </div>
+        </div>
+
+        {/* WELL IMAGE */}
         <img
           src="/oil4.png"
           alt="Well Monitoring"
-          className="w-full max-w-6xl object-contain rounded"
+          className="w-full object-cover"
         />
-      </div>
 
-      {/* ✅ DOWNHOLE LEVEL BADGE + PARAMS */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-6">
-
-        {/* Badge */}
-        <div className="bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-medium">
-          Downhole Monitoring
+        {/* DOWNHOLE BADGE BELOW IMAGE (CENTER) */}
+        <div className="absolute -bottom-11 left-[15%] -translate-x-0   lg:left-1/3 lg:-translate-x-[-50px] z-10">
+          <div className="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg text-sm font-medium shadow">
+            Downhole Monitoring
+          </div>
         </div>
 
-        {/* ✅ Bottom Parameters WITH ICONS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-3xl">
+      </div>
+
+      {/* DOWNHOLE GRID (BOTTOM RIGHT) */}
+      <div className="max-w-7xl mx-auto flex justify-end mt-15">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-3xl ">
           {downholeParams.map((item, index) => (
             <div
               key={index}
-              className="flex items-center justify-between border rounded-md px-3 py-2 text-xs text-gray-700 bg-white shadow-sm"
+              className="flex items-center justify-between border rounded-md px-5 py-2 shadow-sm font-regular text-[#494949]  leading-[1.65]
+                text-[14px]
+                sm:text-[16px]
+                md:text-[17px]
+                lg:text-[18px]
+                xl:text-[20px]
+                2xl:max-[1920px]:text-[15px]
+                min-[1920px]:!text-[20px]"
             >
               <span>{item.label}</span>
-
-              {/* ✅ REAL ICON ADDED */}
               <img
                 src={item.icon}
                 alt={item.label}
-                className="w-5 h-5 object-contain"
+                className="w-8 h-8 object-contain"
               />
             </div>
           ))}
         </div>
-
       </div>
 
     </div>
